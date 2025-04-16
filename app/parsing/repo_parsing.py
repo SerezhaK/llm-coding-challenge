@@ -119,7 +119,7 @@ class GitParser:
 
 # Test
 if __name__ == "__main__":
-    analyzer = GitAnalyzer()
+    analyzer = GitParser()
     while True:
         repo_url = input("Введите URL Git репозитория: ")
         clone_path = input("Введите путь для клонирования (оставьте пустым для автоматического выбора): ") or None
