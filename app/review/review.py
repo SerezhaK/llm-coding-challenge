@@ -15,3 +15,4 @@ def process_code_review(client, query: str):
     except Exception as e:
         st.error(f"Ошибка при обработке запроса: {str(e)}")
         return None
+    
