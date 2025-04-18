@@ -1,28 +1,7 @@
 import streamlit as st
 import os
-
-
-def configure_session_state():
-    if "OPENAI_API_KEY" not in st.session_state:
-        st.session_state["OPENAI_API_KEY"] = ""
-    if "GIT_URL" not in st.session_state:
-        st.session_state["GIT_URL"] = ""
-
-
-def set_open_api_key(api_key: str):
-    st.session_state["OPENAI_API_KEY"] = api_key
-    os.environ["OPENAI_API_KEY"] = api_key
-
-
-def set_git_url(git_url: str):
-    st.session_state["GITHUB_BOT_ACCESS_TOKEN"] = git_url
-    os.environ["GITHUB_BOT_ACCESS_TOKEN"] = git_url
-    os.environ["github_secret"] = git_url
-
-и
-def set_git_ATP(git_url: str):
-    st.session_state["GIT_URL"] = git_url
-    os.environ["GIT_URL"] = git_url
+from .user_date_validation import configure_session_state, set_open_api_key, set_git_ATP, set_yandex_folder_id
+from urllib.parse import urlparse
 
 
 def sidebar():
@@ -30,24 +9,35 @@ def sidebar():
 
     with st.sidebar:
         st.markdown("## Настройки")
+
         api_key = st.text_input(
-            "OpenAI API Key",
+            "Yandex API Key",
             type="password",
-            placeholder="Введите ваш API ключ (sk-...)",
-            value=st.session_state["OPENAI_API_KEY"]
+            placeholder="Введите ваш API ключ",
+            value=st.session_state["YANDEX_API_KEY"]
         )
 
-        repo_url = st.text_input(
-            "Repository URL",
-            placeholder="Ссылка на репозиторий (https://github.com/...)",
-            value=st.session_state["GIT_URL"]
+        folder_id = st.text_input(
+            "Yandex folder id",
+            placeholder="Идентификатор каталога",
+            value=st.session_state["FOLDER_ID"]
+        )
+
+        git_pat = st.text_input(
+            "GitHub PAT",
+            type="password",
+            placeholder="Ваш GitHub PAT",
+            value=st.session_state["GITHUB_BOT_ACCESS_TOKEN"]
         )
 
         if api_key:
             set_open_api_key(api_key)
-        if repo_url:
-            set_git_url(repo_url)
+        if folder_id:
+            set_yandex_folder_id(folder_id)
+        if git_pat:
+            set_git_ATP(git_pat)
 
-        if not (api_key and repo_url):
-            st.warning("⚠️ Требуется API ключ и ссылка на репозиторий")
+        if not (api_key and folder_id and git_pat):
+            st.warning("⚠️ Пожалуйста введите все данные для работы. \nPAT можно получить: "
+                       "GitHub->settings->Developer Settings->Personal access tokens")
             st.stop()

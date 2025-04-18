@@ -40,3 +40,44 @@ def make_api_request(url, headers, params=None):
     except Exception as e:
         print(f"An unexpected error occurred during API request to {url}: {e}")
         return None
+
+
+import requests
+import argparse
+
+URL = "https://llm.api.cloud.yandex.net/foundationModels/v1/completion"
+
+
+def make_api_request_2(iam_token, folder_id, user_text):
+    data = {}
+    data["modelUri"] = f"gpt://{folder_id}/yandexgpt"
+
+    # Настраиваем опции
+    data["completionOptions"] = {"temperature": 0.3, "maxTokens": 1000}
+    # Указываем контекст для модели
+    data["messages"] = [
+        {"role": "system", "text": "Исправь ошибки в тексте."},
+        {"role": "user", "text": f"{user_text}"},
+    ]
+
+    # Отправляем запрос
+    response = requests.post(
+        URL,
+        headers={
+            "Accept": "application/json",
+            "Authorization": f"Bearer {iam_token}"
+        },
+        json=data,
+    ).json()
+
+    # Распечатываем результат
+    print(response)
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--iam_token", required=True, help="IAM token")
+    parser.add_argument("--folder_id", required=True, help="Folder id")
+    parser.add_argument("--user_text", required=True, help="User text")
+    args = parser.parse_args()
+    run(args.iam_token, args.folder_id, args.user_text)

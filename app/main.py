@@ -4,9 +4,9 @@ from openai import OpenAI
 from pathlib import Path
 from components.sidebar import sidebar
 from components.page import init_page, init_openai_client
-from review.review import process_code_review
-
-# Отключаем предупреждения
+from datetime import datetime, timedelta
+from components.user_date_validation import url_validations
+# Отключаем предупреждения :)
 logging.getLogger().setLevel(logging.ERROR)
 
 
@@ -14,27 +14,43 @@ def main():
     init_page()
     sidebar()
 
-    if not st.session_state.get("open_api_key_configured"):
-        st.warning("☝️ Добавьте API ключ в боковой панели")
-        st.stop()
+    github_url = st.text_input(
+        "Ссылка на GitHub репозиторий",
+        placeholder="https://github.com/username/repo",
+        help="Введите ссылку на конкретный репозиторий"
+    )
 
-    client = init_openai_client()
+    github_username = st.text_input("Username для ревью", placeholder="Введите логин пользователя GitHub")
+
+    selected_dates = st.date_input(
+        "Выберите диапазон дат для ревью",
+        value=[datetime.now() - timedelta(days=7), datetime.now()],  # По умолчанию: последние 7 дней
+        format="YYYY-MM-DD",  # Формат даты
+        help="Выберите начальную и конечную дату",
+    )
+
+    # Проверяем, что выбрано 2 даты (диапазон)
+    if len(selected_dates) == 2:
+        start_date, end_date = selected_dates
+        st.success(f"Выбран период с {start_date} по {end_date}")
+    elif len(selected_dates) == 1:
+        st.warning("Выберите диапазон дат (дважды кликните на календаре)")
+        start_date = end_date = selected_dates[0]
+    else:
+        st.error("Ошибка при выборе дат")
 
     st.subheader("Запрос на анализ кода")
     user_query = st.text_area(
-        "Введите код или опишите, что нужно проанализировать:",
+        "Если хотите уточнить запрос к review, то можете написать тут:",
         height=150
     )
 
     if st.button("Выполнить code review"):
-        if user_query:
-            with st.spinner("Анализирую код..."):
-                response = process_code_review(client, user_query)
-                if response:
-                    st.markdown("### Результат анализа")
-                    st.markdown(response)
-        else:
-            st.warning("Введите код или запрос для анализа")
+        with st.spinner("Анализирую код..."):
+            response = "Чипи чипи чапа чапа"
+            if response:
+                st.markdown("### Результат анализа")
+                st.markdown(response)
 
 
 if __name__ == "__main__":
