@@ -15,6 +15,12 @@ def set_open_api_key(api_key: str):
 
 
 def set_git_url(git_url: str):
+    st.session_state["GITHUB_BOT_ACCESS_TOKEN"] = git_url
+    os.environ["GITHUB_BOT_ACCESS_TOKEN"] = git_url
+    os.environ["github_secret"] = git_url
+
+и
+def set_git_ATP(git_url: str):
     st.session_state["GIT_URL"] = git_url
     os.environ["GIT_URL"] = git_url
 
