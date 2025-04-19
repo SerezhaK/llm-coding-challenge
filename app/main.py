@@ -3,9 +3,9 @@ import streamlit as st
 from openai import OpenAI
 from pathlib import Path
 from components.sidebar import sidebar
-from components.page import init_page, init_openai_client
+from components.page import init_page
 from datetime import datetime, timedelta
-from components.user_date_validation import url_validations
+from components.hello_world import hello_world
 
 import sys
 from pathlib import Path
@@ -14,7 +14,7 @@ sys.path.append(str(Path(__file__).parent.parent))
 
 from llm_logic.api_request import make_api_request
 
-# Отключаем предупреждения :)
+# Отключаем предупреждения:)
 logging.getLogger().setLevel(logging.ERROR)
 
 

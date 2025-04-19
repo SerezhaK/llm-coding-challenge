@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 
 class GitParser:
-    def __init__(self, db_path='.\\.\\git_analysis.db'):
+    def __init__(self, db_path='git_analysis.db'):
         self.engine = create_engine(f'sqlite:///{db_path}')
         Base.metadata.create_all(self.engine)
         self.Session = sessionmaker(bind=self.engine)
@@ -94,7 +94,7 @@ class GitParser:
                             if current_line is not None:
                                 content = line[1:]
                                 line_content.append(content)
-
+                                print(line_content)
                                 # Сохраняем изменение строки
                                 line_change = LineChange(
                                     file_id=db_file.id,
@@ -105,6 +105,7 @@ class GitParser:
                                 session.add(line_change)
 
                                 current_line += 1
+
                         elif line.startswith('-') and not line.startswith('--'):
                             # Удаленная строка
                             if current_line is not None:

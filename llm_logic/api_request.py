@@ -1,38 +1,37 @@
 import requests
 import os
 from .prompt import typical_prompt
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 def make_api_request(
-        user_text,
-        system_text=typical_prompt,
-        temperature=0.3,
-        max_tokens=10000):
-    folder_id = os.environ.get("FOLDER_ID")
-    api_key = os.environ.get("YANDEX_API_KEY")
+        url,
+        headers,
+        params=None,
+        timeout=100):
+    """Helper function for making GET requests to the GitHub API."""
 
-    data = {
-        "modelUri": f"gpt://{folder_id}/yandexgpt",
-        "completionOptions": {"temperature": temperature, "maxTokens": max_tokens},
-        "messages": [
-            {"role": "system",
-             "text": f"{system_text}"},
+    headers['X-GitHub-Api-Version'] = '2022-11-28'
 
-            {"role": "user",
-             "text": f"{user_text}"},
-        ]}
-
-    response = requests.post(
-        "https://llm.api.cloud.yandex.net/foundationModels/v1/completion",
-        headers={
-            "Accept": "application/json",
-            "Authorization": f"Bearer {api_key}"
-        },
-        json=data,
-    ).json()
-
-    # only text
     try:
-        return response['result']['alternatives'][0]['message']['text']
-    except KeyError:
-        return [response, api_key]
+        response = requests.get(url, headers=headers, params=params, timeout=timeout)
+        response.raise_for_status()
+        return response
+
+    except requests.exceptions.Timeout:
+        logger.warning(f"Timeout error making API request to {url}")
+        return None
+
+    except requests.exceptions.HTTPError as e:
+        logger.warning(f"HTTP error making API request to {url}: {e}")
+        return None
+
+    except requests.exceptions.RequestException as e:
+        logger.warning(f"Error making API request to {url}: {e}")
+        return None
+
+    except Exception as e:
+        logger.warning(f"An unexpected error occurred during API request to {url}: {e}")
+        return None
