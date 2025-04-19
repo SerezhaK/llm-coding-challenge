@@ -1,4 +1,5 @@
 import streamlit as st
+from .hello_world import hello_world
 
 
 def init_page():
@@ -9,11 +10,4 @@ def init_page():
         initial_sidebar_state="expanded"
     )
     st.header("Code Review Assistant")
-
-
-def init_openai_client():
-    try:
-        return OpenAI(api_key=st.session_state["OPENAI_API_KEY"])
-    except Exception as e:
-        st.error(f"Ошибка инициализации OpenAI: {str(e)}")
-        st.stop()
+    hello_world()
