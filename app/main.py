@@ -1,21 +1,16 @@
 import logging
 import streamlit as st
-from openai import OpenAI
-from pathlib import Path
 from components.sidebar import sidebar
 from components.page import init_page
 from datetime import datetime, timedelta
-from components.hello_world import hello_world
-
+from components.user_selector import user_selector, get_contributors
 import sys
 from pathlib import Path
+import os
 
 sys.path.append(str(Path(__file__).parent.parent))
 
 from llm_logic.api_request import make_api_request
-
-# Отключаем предупреждения:)
-logging.getLogger().setLevel(logging.ERROR)
 
 
 def main():
@@ -28,7 +23,14 @@ def main():
         help="Введите ссылку на конкретный репозиторий"
     )
 
+    # if github_url:
+    # st.markdown( get_contributors(github_url, token=os.environ.get("GITHUB_TOKEN")))
+    # github_username = user_selector(contributors)
+
     github_username = st.text_input("Username для ревью", placeholder="Введите логин пользователя GitHub")
+
+    branch_for_merge_history = st.text_input("Ветка для анализа коммитов",
+                                             placeholder="master/main ")
 
     selected_dates = st.date_input(
         "Выберите диапазон дат для ревью",
@@ -54,13 +56,16 @@ def main():
     )
 
     if st.button("Выполнить code review"):
-        with st.spinner("Анализирую код..."):
+        if github_url and (len(github_username) != 0) and (len(branch_for_merge_history) != 0):
+            with st.spinner("Анализирую код..."):
 
-            # big analysis
-            response = make_api_request(user_query)
-            if response:
-                st.markdown("### Результат анализа")
-                st.markdown(response)
+                # big analysis
+                response = make_api_request(user_query)
+                if response:
+                    st.markdown("### Результат анализа")
+                    st.markdown(response)
+        else:
+            st.warning("Пожалуйста заполните данные")
 
 
 if __name__ == "__main__":
