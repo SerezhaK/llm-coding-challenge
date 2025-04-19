@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+  <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'css/pace-theme-default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/select2.min.css' %}">
+  <script src="{% static 'js/pace.js' %}"></script>
+  <script src="{% static 'fontawesome_free/js/all.min.js' %}"></script>
+  <link href="{% static 'fontawesome_free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'fontawesome_free/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'fontawesome_free/css/brands.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'fontawesome_free/css/solid.css' %}" rel="stylesheet" type="text/css">
+  <script src="{% static 'js/jquery-3.4.1.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}" ></script>
+  <script src="{% static 'js/select2.min.js' %}" ></script>
+  <script type="text/javascript">
+        window.PAGE_TIME = Date.now();
+    </script>
+  <title>
+      {% block title %}
+          ACL - портал
+      {% endblock %}
+  </title>
+</head>
+<body>
+    <header class="header">
+         <div class="row align-items-center" style="min-width: 280px;max-height: 32px;">
+            <div class="ml-3 d-inline-flex">
+                 <a class="btn btn-danger btn-open-menu" href="/" role="button">
+                    <i class="fas fa-align-left"></i> <span>Меню</span>
+                 </a>
+                 {% if user.is_staff %}
+                <a class="badge badge-danger badge-admin ml-2" href="/admin" style="height: 20px">Администратор</a>
+                <a class="badge badge-warning badge-admin ml-2" href="/teams/" style="height: 20px">Команды</a>
+                 {% endif %}
+
+{#                 {% if user.approve_persone.core_filters.approve %}#}
+{#                <a class="badge badge-info badge-admin ml-2" href="/teams/" style="height: 20px">Ваши согласование {{ user.approve_persone.core_filters.approve }}</a>#}
+{#                 {% endif %}#}
+            </div>
+         </div>
+
+    <div class="center-block" style="width: 90%;margin: 0 auto;">
+      <div class="header-block col-lg-6 col-md-8 col-sm-12">
+        <form action="{%  url 'search' %}" method="GET" autocomplete="off" name="search-text" class="w-100" role="search" >
+            <input type="text" class="search-input" id="search-input-text" placeholder="Поиск IP, домена, uuid обращения">
+            <div class="spinner-border text-danger search-spinner" role="status" style="display: none">
+              <span class="sr-only">Loading...</span>
+            </div>
+        </form>
+
+      </div>
+   </div>
+   <div class="col-2 d-flex justify-content-end align-items-center">
+    <h6 class="mb-0 text-white ml-auto">version: {{ commit_tag }}</h6>
+  </div>
+    <script type="text/javascript">
+    $("form[name='search-text']").on("submit", function(e){
+            $(".search-spinner").hide();
+            e.preventDefault();
+            if ($("#search-input-text").val().trim() != '')
+            {
+                $(".search-spinner").removeClass("d-none").show();
+                window.location = '/search/'+encodeURI(document.getElementById("search-input-text").value);
+            }
+    });
+    </script>
+</header>
+
+<div class="wrapper">
+{% if user.id is None %}
+ <div class="modal modal-auth" tabindex="-1" role="dialog" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Добро пожаловать</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+<div class="modal-body">
+    <div class="photo rounded pr-2" style="width: 60px; height: 60px; color: #6c757d;border-radius: 50%!important;border:1px solid #ccc;margin:0 auto;margin-bottom: 10px">
+    <div class="w-80" style="margin-top: 10px;margin-left: 15px;">
+    <svg class="svg-inline--fa fa-user fa-w-14 fa-2x" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path></svg><!-- <i class="fas fa-user fa-2x"></i> Font Awesome fontawesome.com -->
+    </div>
+    </div>
+    {% if form.errors %}
+      <p class="text-danger">Неправильное имя пользователя или пароль</p>
+    {% endif %}
+
+    {% if next %}
+      {% if user.is_authenticated %}
+        <p>У вас нехватает прав для данной страницы</p>
+      {% else %}
+        <p>Пожалуйста, авторизуйтесь</p>
+      {% endif %}
+    {% endif %}
+            {% for item in form.fields %}
+                {{ item.value }}
+            {%endfor %}
+     <form id="loginform" class="form-horizontal p-2" role="form" method="post" name="loginform" action="{% url 'login' %}">
+                                {% csrf_token %}
+                                <div style="margin-bottom: 25px" class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                            <input id="login-username" value="{{ request.POST.username }}" type="text" class="form-control" name="username" value="" placeholder="Имя пользователя (IvanovII)" autofocus required>
+                                        </div>
+                                <div style="margin-bottom: 25px" class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                            <input id="login-password" type="password" class="form-control" name="password" placeholder="Пароль" value="{{ request.POST.password }}" required>
+                                        </div>
+                                    <div style="margin-top:10px" class="form-group">
+                                        <div class="col-sm-12 controls">
+                                          <input type="submit" value="Войти" class="btn btn-danger w-100" role="button">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-12 control">
+                                            <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%">
+                                                Забыли пароль !?
+                                             <a href="mailto:sd@alfastrah.ru?subject=Восстановление пароля">
+                                                Восстановить
+                                            </a>
+                                            </div>
+                                        </div>
+                                    </div>
+    </form>
+</div>
+  </div>
+</div>
+
+</div>
+
+{% endif %}
+           <div class="menu-sidebar">
+            <div class="user p-3 d-inline-flex">
+                {% if user.id is not None %}
+                    <div class="user__icon"></div>
+                    <div class="info rounded align-bottom pl-3">
+                       <span style="display: inline-block; vertical-align: middle;"> <p style="font-weight:600;font-size:14px;color:#545b62">{{ user.first_name }}</p></span> <br>
+                        <a href="{% url 'logout' %}" class="text-danger mt-2" style="font-weight: 600;font-size: 13px;">Выйти</a>
+                   </div>
+                 {% else %}
+                    <div class="text-center" style="padding-left: 30px">
+                        <a href="{% url 'login' %}" class="btn btn-danger">Войти</a>
+                    </div>
+                 {% endif %}
+
+             </div>
+
+                <div class="menu-sidebar-text">
+                  <nav class="nav-group">
+                    {% if 'acl' in request.path and 'history' not in request.path %}
+                        <a href="{% url 'acldemo_urls' %}" class="nav-link nav-link--active">
+                    {% else %}
+                        <a href="{% url 'acldemo_urls' %}" class="nav-link">
+                    {% endif %}
+                      <span class="nav-text">
+                        <i class="fas fa-file-signature pr-1"></i> Создание ACL
+                      </span>
+                    </a>
+                   {% if 'vpn' in request.path %}
+                    <a href="{% url 'vpn' %}" class="nav-link nav-link--active d-none">
+                   {% else %}
+                       <a href="{% url 'vpn' %}" class="nav-link d-none">
+                   {% endif %}
+                      <span class="nav-text d-none">
+                       <i class="fas fa-laptop-house pr-1"></i> Ресурсы VPN
+                      </span>
+                    </a>
+                  {% if 'history' in request.path %}
+                        <a href="{% url 'aclhistory_urls' %}" class="nav-link nav-link--active">
+                    {% else %}
+                        <a href="{% url 'aclhistory_urls' %}" class="nav-link">
+                    {% endif %}
+
+                      <span class="nav-text">
+                        <i class="fas fa-clipboard-list pr-1"></i> История обращений
+                      </span>
+                    </a>
+
+                    {% if 'iptable' in request.path %}
+                    <a href="{% url 'iptable_urls' %}" class="nav-link nav-link--active">
+                    {% else %}
+                        <a href="{% url 'iptable_urls' %}" class="nav-link">
+                    {% endif %}
+                      <span class="nav-text">
+                       <i class="fas fa-list-ul pr-1"></i> IP-адреса
+                      </span>
+                    </a>
+                  </nav>
+                {% if request.user.is_superuser %}
+                <nav class="nav-group">
+                    <a href="{% url 'panel_adm' %}?view=10&&severity=1" class="nav-link">
+                      <span class="nav-text">
+                         <i class="fas fa-user-cog pr-1"></i> Администрирование
+                      </span>
+                    </a>
+                </nav>
+                {% endif %}
+
+               </div>
+        </div>
+    <div class="content">
+             {% block content %}
+                Добро пожаловать
+            {% endblock %}
+                           {% if messages %}
+                                  {% for message in messages %}
+                                      {% if message.tags == 'error' %}
+                                          <script>ShowNotify(0, "{{ message }}")</script>
+                                      {% elif message.tags == 'warning' %}
+                                          <script>ShowNotify(1, "{{ message }}")</script>
+                                      {% else %}
+                                          <script>ShowNotify(2, "{{ message }}")</script>
+                                      {% endif %}
+                                  {% endfor %}
+                        {% endif %}
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        console.log("Time until DOMready: ", Date.now() - window.PAGE_TIME);
+
+        $(".btn-open-menu").click(function(e){
+            e.preventDefault();
+            $(".wrapper").toggleClass('toggled');
+        });
+    });
+
+    window.addEventListener("load", function(event){
+         console.log("Time until everything: ", Date.now() - window.PAGE_TIME);
+    });
+
+</script>
+
+ </body>
+</html>

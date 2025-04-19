@@ -1,0 +1,9 @@
+@@ -44,7 +44,7 @@ def send_acl(acl_id, gitlab_repo_url):
+             f"[acl_portal][Celery send_acl] Не удалось сформировать docx файл:{e}."
+         )
+         return False
+-    docx_url = f"https://acl.vesta.ru/{doc_result[22:]}"
++    docx_url = f"https://test.ru/{doc_result[22:]}"
+     send_to_mattermost(
+         f"[acl_portal][Celery send_acl] Старт отправки ACL({acl_object.id}) в omnitracker. Сформированный файл : {docx_url}"
+     )

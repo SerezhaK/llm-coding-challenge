@@ -1,0 +1,748 @@
+{% extends 'acl_base.html' %}
+{% load static %}
+{% block row %}
+{% if LOCAL_STORAGE %}
+ <div class="col-12">
+<div class="pl-3 pr-3 pt-3">
+           <div class="main-block">
+           <div class="col-12 pb-3" style="padding-top: 30px">
+                <div class="card border-danger" style="max-width: 655px;">
+                    <div class="card-header card-header bg-danger text-white" style="background-color: #fe0808b0 !important;">Обратите внимание*</div>
+                      <div class="card-body">
+                        <p class="card-text">
+                            В данный момент присутствует ошибка при работе в нескольких вкладках!
+                            Из-за данной ошибки могут попасть не те данные в Omnitracker.<br><br>
+                                <b>ПОЖАЛУЙСТА, РАБОТАЙТЕ ТОЛЬКО С ОДНОЙ ОТКРЫТОЙ ВКЛАДКОЙ ПОРТАЛА ACL.VESTA.RU ДЛЯ ИЗБЕЖАНИЯ ОШИБКИ.</b>
+                        </p>
+                      </div>
+                </div>
+            </div>
+           <div class="main-title-block d-inline-flex w-100 mb-3">
+                   <div class="justify-content-start">
+                       <h4 class="main-title">1. Контактная информация <span class="badge badge-danger">Нужно заполнить</span></h4>
+                   </div>
+                    <div class="col align-self-end">
+
+                    </div>
+                    {% if status == 'WTE' %}
+                        {% if not debtor %}
+                        <div class="justify-content-end approve-dialog">
+                            <div class="d-flex">
+                                <p class="pr-2">Ожидает согласования</p> <a href="{% url 'acl_pending_urls' %}{{acl_id}}/">Подробнее</a> {#?prepare=true#}
+{#                                  {% if acl_owner %}#}
+{#                                        <a class="text-danger font-weight-bold approve__cancel" style="cursor: pointer">Отменить</a>#}
+{#                                   {% endif %}#}
+                            </div>
+{#                              <div class="p-1">#}
+{#                                  <div class="ae-select"><span class="mr-1">#}
+{#                                      <img src="/static/img/user.png" style="margin-top: -5px; max-width: 32px; max-height: 32px;">#}
+{#                                  </span>#}
+{#                                      <span class="ae-select-content font-weight-light" style="color:#0a4e97">{{ app_person.last_name }} {{ app_person.first_name }}</span>#}
+{#                                  </div>#}
+{#                              </div>#}
+                        </div>
+
+                          {% else %}
+                             <div class="justify-content-end approve-dialog">
+                              <div class="d-flex">
+                                  <p class="pr-2">Ожидается Ваше согласование</p> <a href="{% url 'acl_pending_urls' %}{{acl_id}}/?prepare=true">Подробнее</a>
+                              </div>
+{#                              <div class="p-2 text-center">#}
+{#                                 <a class="text-primary font-weight-bold" href="{% url 'acl_pending_urls' %}{{ acl_id }}/?token={{ token }}">Согласовать</a>#}
+{#                              </div>#}
+                          </div>
+                        {% endif %}
+                  {% elif status == 'APRV' %}
+                     <div class="justify-content-end approve-dialog">
+                         <p class="text-success pr-2">ACL cогласован </p> <a href="{% url 'acl_pending_urls' %}{{acl_id}}/?prepare=true">Подробнее</a>
+{#                         <br>(теперь можно сформировать обращение)#}
+                    </div>
+                  {% elif status == 'JOB' %}
+                     <div class="justify-content-end approve-dialog">
+                         <p class="text-info pr-2">ACL На исполнении </p> </p> <a href="{% url 'acl_pending_urls' %}{{acl_id}}/?prepare=true">Подробнее</a>
+                    </div>
+
+                  {% elif status == 'CMP' %}
+                     <div class="justify-content-end approve-dialog">
+                         <p class="text-success pr-2">ACL выполнено </p> <a href="{% url 'acl_pending_urls' %}{{acl_id}}/?prepare=true">Подробнее</a>
+                    </div>
+
+                  {% elif status == 'CNL'%}
+                     <div class="justify-content-end approve-dialog">
+                         <p class="text-secondary pr-2">ACL отклонён </p> <a href="{% url 'acl_pending_urls' %}{{acl_id}}/?prepare=true">Подробнее</a>
+
+                    </div>
+                  {% endif %}
+
+                    {%  if 'new' not in request.path %}
+                    <div class="justify-content-end d-inline-flex">
+                        {% if status != 'JOB' and status != 'CMP' and status != 'WTE' %}
+                         <a class="btn btn-success m-1" href="{% url 'acloverview_urls' %}{{acl_id}}" style="max-height: 38px">Выполнить ACL</a>
+                         <button class="btn btn-danger btn-remove m-1" style="max-height: 38px">Удалить</button>
+                        {% elif status == 'WTE' %}
+                            <a class="btn btn-success m-1" href="{% url 'acloverview_urls' %}{{acl_id}}" style="max-height: 38px">Перейти к согласованию</a>
+                        {% endif %}
+                    </div>
+                        {% else %}
+                          <form action="{%  url 'acl_template_urls' %}" method="post" enctype="multipart/form-data" id="upload_template">
+                             <input type="file" id="input--file--upload" name="input--file--upload" class="btn-secondary m-1" accept=".docx" disabled>
+                             <label for="input--file--upload" class="btn btn-upload btn-secondary m-1 input--file--label" style="display:none;">Загрузить ACL из файла</label>
+                             {% csrf_token %}
+                         </form>
+                        </form>
+                        <div>
+                          <button type="button" class="btn btn-upload btn-secondary btn-lg m-1" id="btn-upload-from-git" data-toggle="modal" data-target="#upload-from-gitlab">Загрузить из gitlab</button>
+                        </div>
+                  {% endif %}
+                  {% if request.user.is_superuser %}
+                      <div class="justify-content-end d-inline-flex">
+                        <a href="{% url 'acl_download_file' acl_id=acl_id %}?file_type=docx" class="btn btn-secondary m-1 text-light make_and_download_file" role="button">Сформировать word</a>
+                        <a href="{% url 'acl_download_file' acl_id=acl_id %}?file_type=md" class="btn btn-secondary m-1 text-light make_and_download_file" role="button">Сформировать md</a>
+                      </div>
+                  {% endif %}
+          </div>
+          <div class="col-sm-2">
+   {% if '/new/' in request.path %}
+        <form method="post" action="{% url 'aclcreate_urls' acl_id=acl_id %}" id="aclcreate-form-contacts" name="acl-form-contacts">
+    {% else %}
+        <form method="post" action="{% url 'aclcreate_urls'%}{{ acl_id }}/" id="aclcreate-form-contacts" name="acl-form-contacts">
+    {% endif %}
+    {% csrf_token %}
+          <div class="main-form">
+            <div class="contact-form">
+              <label class="contact-form__label">
+                <span class="contact-form__text">ФИО</span>
+                <input type="text" class="contact__input" value="{% if LOCAL_STORAGE %}{{ LOCAL_STORAGE.full_name }}{% endif %}" placeholder="Иванов Иван" name="full_name" pattern="[А-Яа-яЁё\s\.]{3,32}"  autofocus required>
+                <span class="validity"></span>
+
+              </label>
+                <div>
+                    <label class="contact-form__label">
+                        <span class="contact-form__text">Отдел/Управление</span>
+                        {% if team %}
+                            <input type="text" id="department" name="department" value="{{ team.name }}" class="contact__input" placeholder="УИБ" pattern="[А-Яа-яЁёA-Za-z\s]{2,32}" required readonly>
+                            <input type="hidden" id="teamid" name="teamid" value="{{ team.id }}" class="contact__input">
+                        {% else %}
+                            <input type="text" id="department" name="department" value="{% if LOCAL_STORAGE %}{{ LOCAL_STORAGE.department }}{% endif %}" class="contact__input" placeholder="УИБ" pattern="[А-Яа-яЁёA-Za-z\s]{2,32}" required readonly>
+                            <input type="hidden" id="teamid" name="teamid" value="0" class="contact__input">
+                        {% endif %}
+                        <span class="validity"></span>
+                        <a href="{% url 'teams' %}" style="position: absolute; left: 50em" class="button_teams">Выбрать</a>
+                  </label>
+
+                </div>
+
+
+
+              <label class="contact-form__label">
+                <span class="contact-form__text">Email</span>
+                <input type="email" name="email" value="{% if LOCAL_STORAGE %}{{ LOCAL_STORAGE.email }}{% endif %}" class="contact__input" placeholder="Norepl@Alfastrah.ru" pattern=".+@alfastrah.ru" required>
+                <span class="validity"></span>
+              </label>
+
+              <label class="contact-form__label">
+                <span class="contact-form__text" style="margin-right: 74px;">Проект/ИС</span>
+                  <select class="contact__input" id="gitlab_proj_upload_dropdown" name="project" required>
+                        <option value="" {% if not LOCAL_STORAGE %} selected {% endif %} data-gitlab-url="">Не выбрано</option>
+                        {% for acl_from_git in acl_gitlab_store %}
+                            <option value="{{ acl_from_git.project }}" data-gitlab-url="{{ acl_from_git.gitlab_url }}"{% if LOCAL_STORAGE.project == acl_from_git.project %}selected{% endif %}>{{ acl_from_git.project }}</option>
+                        {% endfor %}
+                  </select>
+                <span class="validity"></span>
+              </label>
+
+              <label class="contact-form__label">
+                <span class="contact-form__text">Телефон</span>
+                <input type="tel" name="phone" value="{% if LOCAL_STORAGE %}{{ LOCAL_STORAGE.phone }}{% endif %}"  class="contact__input" placeholder="89096971821" pattern="^(\+?[0-9]{11}|Нет)$">
+                   <span class="validity"></span>
+              </label>
+
+
+             <label class="contact-form__label">
+                <span class="contact-form__text" style="max-width: 140px">Описание проекта (wiki)</span>
+                <input type="url" name="description" value="{% if LOCAL_STORAGE %}{{ LOCAL_STORAGE.description }}{% endif %}" class="contact__input" placeholder="https://wiki.alfastrah.ru/pages/viewpage.action?pageId=133435707" pattern="^https:\/\/wiki.(alfastrah|aslife).ru(.*)$" title="https://wiki.alfastrah.ru/pages/viewpage.action?pageId=133435707" readonly>
+                <span class="validity"></span>
+            </label>
+
+            <label class="contact-form__label">
+                <span class="contact-form__text" style="max-width: 140px">Имя файла ACL</span>
+                <input type="text" id="acl_filename" name="file_name" class="contact__input" value="{% if LOCAL_STORAGE %}{{ LOCAL_STORAGE.file_name }}{% endif %}" readonly>
+                <span class="validity"></span>
+            </label>
+</div>
+
+          </div>
+</div>
+          <div class="form-row__bottom form-check-inline">
+ <div class="contact-form__dates">
+
+              <label class="contact-form__label-checkbox">
+                <span class="contact-form__text">Дата ввода в эсплуатацию </span>
+                 <input type="date" class="contact__input" name="start_date" id="contact__input__start" min="2010-01-01" max="2040-01-01" placeholder="21.01.2020" value="{{LOCAL_STORAGE.start_date}}" required>
+
+                <span class="validity"></span>
+              </label>
+
+              <label class="contact-form__label-checkbox">
+                <span class="contact-form__text">Дата вывода из эксплуатации</span>
+               {% if LOCAL_STORAGE.end_date == 'Нет' %}
+				<input type="date" class="contact__input" id="contact__input__term" value="" name="end_date" placeholder="30.12.2030" min="2020-01-01" max="2040-01-01" required disabled>
+				{% else %}
+				<input type="date" class="contact__input" id="contact__input__term" value="{{ LOCAL_STORAGE.end_date}}" name="end_date" placeholder="30.12.2030" min="2020-01-01" max="2040-01-01" required>
+				{% endif %}
+                <span class="validity"></span>
+                <div style="white-space:nowrap;padding-top:5px;">
+                    <input type="checkbox" class="checkbox__real" id="checkbox__real__term" name="d_complete" {% if LOCAL_STORAGE.end_date == 'Нет' %}checked{% endif %}>
+                    <label for="checkbox__real__term" style="vertical-align: bottom;">Бессрочно</label>
+                </div>
+              </label>
+
+              <label class="contact-form__label-checkbox">
+                <span class="contact-form__text contact-form__text-active">Дата заполнения</span>
+                <input type="date" class="contact__input" value="{% if LOCAL_STORAGE %}{{ LOCAL_STORAGE.created_at }}{% endif %}" name="created_at" id="contact__input__date" placeholder="21.01.2020" min="2020-01-01" max="2040-01-01" required>
+                <span class="validity"></span>
+            </label>
+            </div>
+              {% if LOCAL_STORAGE %}
+                <script>
+                {% if LOCAL_STORAGE.end_date == 'Нет' %}
+                    $("#checkbox__real__term").attr('checked', true);
+                    $("#contact__input__term").attr('disabled', true);
+                {% endif %}
+                </script>
+              {% endif %}
+          </div>
+          <div class="form-row__footer__ col-6 col-md-8 col-sm-12">
+              <div class="contact-form__submit" style="margin: 15px">
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" name="action_make_docx" id="action_make_docx" checked style="display:none;">
+                    </div>
+                    {% if status != 'WTE' %}
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="action_make_git" name="action_make_git" checked style="display:none;">
+                    </div>
+
+
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" style="width: 1.55rem; height: 1.55rem; top: .8rem; display:none;" type="checkbox" id="action_make_omni" name="action_make_omni" checked>
+                    </div>
+                   {% endif %}
+              </div>
+
+              <div class="m-2 float-right">
+                   <input type="submit" class="btn btn-success" id="save-form-btn" value="Сохранить и продолжить">
+{#                  {% if status == 'APRV' %}#}
+{#                   <a class="btn btn-primary" value="">Сформировать обращение</a>#}
+{#                  {% endif %}#}
+              </div>
+
+          </div>
+</div>
+
+<script>
+    $(".post-sidebar").removeClass("d-none");
+    {% if not LOCAL_STORAGE %}
+        $("#contact__input__date, #contact__input__start").val(GetCurrentDate());
+    {% endif %}
+</script>
+</form>
+</div>
+</div>
+</div>
+
+{% else%}
+
+<div class="col-12">
+
+<div class="pl-3 pr-3 pt-3">
+           <div class="main-block">
+           <div class="col-12 pb-3">
+                        <div class="card border-danger" style="max-width: 655px;">
+                            <div class="card-header card-header bg-danger text-white" style="background-color: #fe0808b0 !important;">Обратите внимание*</div>
+                              <div class="card-body">
+                                <p class="card-text">
+                                    В данный момент присутствует ошибка при работе в нескольких вкладках!
+                                    Из-за данной ошибки могут попасть не те данные в Omnitracker.<br><br>
+                                        <b>ПОЖАЛУЙСТА, РАБОТАЙТЕ ТОЛЬКО С ОДНОЙ ОТКРЫТОЙ ВКЛАДКОЙ ПОРТАЛА ACL.VESTA.RU ДЛЯ ИЗБЕЖАНИЯ ОШИБКИ.</b>
+                                </p>
+                              </div>
+                        </div>
+                    </div>
+           <div class="main-title-block d-inline-flex w-100 mb-3">
+                   <div class="justify-content-start">
+                       <h4 class="main-title">1. Контактная информация <span class="badge badge-danger">Нужно заполнить</span></h4>
+                   </div>
+                    <div class="col align-self-end">
+                    </div>
+                    {%  if 'new' not in request.path and status != 'JOB' and status != 'WTE' %}
+                    <div class="justify-content-end">
+                         <button class="btn btn-danger btn-remove m-1" style="max-height: 38px">Удалить</button>
+                    </div>
+                     {% else %}
+                      <div class="justify-content-end">
+                         <form action="{%  url 'acl_template_urls' %}" method="post" enctype="multipart/form-data" id="upload_template">
+{#                             parse_file_form#}
+                             <input type="file" id="input--file--upload" name="input--file--upload" class="btn-secondary m-1" accept=".docx" disabled>
+                             <label for="input--file--upload" class="btn btn-upload btn-secondary m-1 input--file--label" style="display:none;">Загрузить ACL из файла</label>
+                             {% csrf_token %}
+{#                             <button type="button"  class="btn btn-upload btn-secondary btn-lg m-1">Загрузить ACL из файла</button>#}
+                         </form>
+                              <div>
+                                  <button type="button" class="btn btn-upload btn-secondary btn-lg m-1" id="btn-upload-from-git" data-toggle="modal" data-target="#upload-from-gitlab">Загрузить из gitlab</button>
+                              </div>
+                    </div>
+                  {% endif %}
+          </div>
+          <div class="col-sm-2">
+          <div class="main-form">
+ {% if '/new/' in request.path %}
+        <form method="post" action="{% url 'aclcreate_urls' acl_id=acl_id %}" id="aclcreate-form-contacts" name="acl-form-contacts">
+    {% else %}
+        <form method="post" action="{% url 'aclcreate_urls'%}{{ acl_id }}/" id="aclcreate-form-contacts" name="acl-form-contacts">
+    {% endif %}
+    {% csrf_token %}
+            <div class="contact-form">
+              <label class="contact-form__label">
+                <span class="contact-form__text">ФИО</span>
+                <input type="text" class="contact__input" value="{{ user.last_name}} {{user.first_name }}" placeholder="Иванов Иван" name="full_name" pattern="[А-Яа-яЁё\s\.]{3,32}" autofocus required>
+                <span class="validity"></span>
+
+              </label>
+              <div>
+                    <label class="contact-form__label">
+                        <span class="contact-form__text">Отдел/Управление</span>
+                        {% if team %}
+                            <input type="text" id="department" name="department" value="{{ team.name }}" class="contact__input" placeholder="УИБ" pattern="[А-Яа-яЁёA-Za-z\s]{2,32}" required readonly>
+                            <input type="hidden" id="teamid" name="teamid" value="{{ team.id }}" class="contact__input">
+                        {% else %}
+                            {% if LOCAL_STORAGE %}
+                                <input type="text" id="department" name="department" value="{{ LOCAL_STORAGE.department }}" class="contact__input" placeholder="УИБ" pattern="[А-Яа-яЁёA-Za-z\s]{2,32}" required readonly>
+                            {% else %}
+                                <input type="text" id="department" name="department" value="{{ user.department }}" class="contact__input" placeholder="УИБ" pattern="[А-Яа-яЁёA-Za-z\s]{2,32}" required readonly>
+                            {% endif %}
+                            <input type="hidden" id="teamid" name="teamid" value="0" class="contact__input">
+                        {% endif %}
+                        <span class="validity"></span>
+                        <a href="{% url 'teams' %}" style="position: absolute; left: 50em" class="button_teams">Выбрать</a>
+                  </label>
+               </div>
+
+
+              <label class="contact-form__label">
+                <span class="contact-form__text">Email</span>
+                <input type="email" name="email" value="{{ user.email }}" class="contact__input" placeholder="Norepl@Alfastrah.ru" pattern=".+@alfastrah.ru" required>
+                <span class="validity"></span>
+              </label>
+
+              <label class="contact-form__label">
+                <span class="contact-form__text" style="margin-right: 74px;">Проект/ИС</span>
+                  <select class="contact__input" id="gitlab_proj_upload_dropdown" name="project" required>
+                        <option value="" data-gitlab-url="" selected >Не выбрано</option>
+                        {% for acl_from_git in acl_gitlab_store %}
+                            <option value="{{ acl_from_git.project }}" data-gitlab-url="{{ acl_from_git.gitlab_url }}">{{ acl_from_git.project }}</option>
+                        {% endfor %}
+                  </select>
+                <span class="validity"></span>
+              </label>
+
+              <label class="contact-form__label">
+                <span class="contact-form__text">Телефон</span>
+                <input type="tel" name="phone" value="{{ user.mphone }}"  class="contact__input" placeholder="89096971821" pattern="(\+)?[0-9()+\s-]{4,}|(Нет)?">
+                   <span class="validity"></span>
+              </label>
+
+
+             <label class="contact-form__label">
+                <span class="contact-form__text" style="max-width: 140px">Описание проекта (wiki)</span>
+                <input type="url" name="description" value="{% if LOCAL_STORAGE %}{{ LOCAL_STORAGE.description }}{% endif %}" class="contact__input" placeholder="https://wiki.alfastrah.ru/pages/viewpage.action?pageId=133435707" pattern="^https:\/\/wiki.(alfastrah|aslife).ru(.*)$" title="https://wiki.alfastrah.ru/pages/viewpage.action?pageId=133435707" readonly>
+                <span class="validity"></span>
+              </label>
+
+             <label class="contact-form__label">
+                <span class="contact-form__text" style="max-width: 140px">Имя файла ACL</span>
+                <input type="text" id="acl_filename" name="file_name" class="contact__input" value="{% if LOCAL_STORAGE %}{{ LOCAL_STORAGE.file_name }}{% endif %}" readonly>
+                <span class="validity"></span>
+            </label>
+</div>
+
+          </div>
+               </div>
+<div class="form-row__bottom form-check-inline">
+ <div class="contact-form__dates">
+
+              <label class="contact-form__label-checkbox">
+                <span class="contact-form__text">Дата ввода в эсплуатацию </span>
+                 <input type="date" class="contact__input" name="start_date" id="contact__input__start" min="2010-01-01" max="2040-01-01" placeholder="21.01.2020" value="" required>
+                <span class="validity"></span>
+              </label>
+
+              <label class="contact-form__label-checkbox">
+                <span class="contact-form__text">Дата вывода из эксплуатации</span>
+                <input type="date" class="contact__input" id="contact__input__term" value="" name="end_date" placeholder="30.12.2030" min="2010-01-01" max="2040-01-01" required>
+                <span class="validity"></span>
+                <div style="white-space:nowrap;padding-top:5px;">
+                    <input type="checkbox" class="checkbox__real" id="checkbox__real__term" name="d_complete">
+                    <label for="checkbox__real__term" style="vertical-align: bottom;">Бессрочно</label>
+                </div>
+              </label>
+
+              <label class="contact-form__label-checkbox">
+                <span class="contact-form__text contact-form__text-active">Дата заполнения </span>
+                <input type="date" class="contact__input" value="" name="created_at" id="contact__input__date" placeholder="21.01.2020" min="2010-01-01" max="2040-01-01" required>
+                <span class="validity"></span>
+            </label>
+</div>
+</div>
+          <div class="form-row__footer__ col-6 col-md-8 col-sm-12">
+              <div class="contact-form__submit" style="margin: 15px">
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" name="action_make_docx" id="action_make_docx" checked style="display:none;">
+                    </div>
+
+                     <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="action_make_git" name="action_make_git" checked style="display:none;">
+                    </div>
+
+
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" style="width: 1.55rem; height: 1.55rem; top: .8rem; display:none;" type="checkbox" id="action_make_omni" name="action_make_omni" checked>
+                    </div>
+              </div>
+
+              <div class="m-2 float-right">
+                   <input type="submit" class="btn btn-success" id="save-form-btn" value="Сохранить и продолжить">
+              </div>
+
+          </div>
+</div>
+<script>
+    $(".post-sidebar").removeClass("d-none");
+    $("#contact__input__date, #contact__input__start").val(GetCurrentDate());
+</script>
+</form>
+{#</div>#}
+{# </div>#}
+{# </div>#}
+ {% endif%}
+ <div class="modal modal-git" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Интерграция с git</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+           <form method="post" action="{% url 'aclgit_urls' %}" name="acl-form-git">
+             {% csrf_token %}
+               <h4 class="main-title ml-2 mt-2 mb-2">Вы загрузите следующий файл: </h4>
+               <input type="text" id="check_file_to_push" class="form-control" readonly>
+               <div class="modal-footer">
+                   <button type="button" class="btn btn-secondary btn-reset" type="reset" data-dismiss="modal" value="Очистить">Отмена</button>
+                   <button type="submit" class="btn btn-success btn-submit" type="submit" value="Сохранить">Подтвердить и закрыть</button>
+               </div>
+           </form>
+       </div>
+    </div>
+  </div>
+ </div>
+<!-- Модальное окно для загрузки из gitlab -->
+<div class="modal fade" id="upload-from-gitlab" tab-index="-1" role="dialog" aria-labelledby="upload-from-gitlab-label">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="upload-from-gitlab-label">Загрузка ACL из gitlab</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="{% url 'gitlab_upload_acl' %}" id="gitlab_upload_template" enctype="multipart/form-data" method="post">
+                    {% csrf_token %}
+                <h4 class="main-title ml-2 mt-2 mb-2">Доступные ACL: </h4>
+                <div class="contact-form__label">
+                    <select class="form-control" id="gitlab_file_upload_from_dropdown" name="gitlab_file_selected_option">
+                    </select>
+                </div>
+                    <button type="submit" class="btn btn-secondary m-1" id="upload-from-git-btn">Загрузить</button>
+                </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+    $projectSelect = $("#gitlab_proj_upload_dropdown").select2({
+        placeholder: 'Выбрать проект',
+        theme: false,
+        dropdownCssClass: 'select2-dropdown-overflow'
+    });
+    $projectSelect.data("select2").$container.addClass("contact__input");
+
+});
+
+</script>
+
+<script>
+    function CheckPage(id, status, result)
+    {
+        if (result && result !== 'UNK' && result !== '')
+        {
+            if ('{{ status }}' != result)
+            {
+                ShowNotify(2, 'Данный ACL уже изменен, обновляем данные ...');
+                refresh();
+            }
+        }
+    }
+    $(document).ready(function(){
+           if (isIE())
+    {
+        ShowNotify(1, 'Обратите внимание, данный браузер не поддерживается. Рекомендуем открыть в Chrome.');
+    }
+     window.acl_id = '{{acl_id}}';
+
+        setEventHandlerUpload("#upload_template > #input--file--upload", "#upload_template");
+            if (window.location.href.indexOf('?ch_team=') > 0 && document.referrer.indexOf('approve') > 0)
+        {
+            $(".modal-teams").modal('show');
+        }
+
+    let uuid = extractUuid(window.location.href);
+                 try {
+                     GetTaskStatus(uuid, CheckPage);
+                 } catch (e) {
+                     //GetTaskStatus();
+                 }
+        if ($("#action_make_git").prop('checked')){
+            var git_project_select = document.getElementById('gitlab_proj_upload_dropdown');
+            var selected_project = git_project_select.options[git_project_select.selectedIndex];
+
+            var git_url = selected_project.getAttribute('data-gitlab-url');
+            var git_file = document.getElementById('acl_filename').value;
+            git_url = $.trim(git_url);
+            SetGitURL(git_url, git_file);
+        }
+    });
+
+    document.getElementById('upload-from-git-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        upload_from_git_btn = document.getElementById('upload-from-git-btn');
+        upload_from_git_btn.disabled = true;
+
+        var gitlab_project_select = document.getElementById('gitlab_proj_upload_dropdown');
+        var gitlab_project_name = gitlab_project_select.options[gitlab_project_select.selectedIndex].value;
+        var upload_git_form = document.getElementById('gitlab_upload_template');
+        gitlab_project_select.setAttribute('form', 'gitlab_upload_template');
+
+        var gitlab_uploaded_filename_select = document.getElementById('gitlab_file_upload_from_dropdown');
+        var gitlab_uploaded_filename = gitlab_uploaded_filename_select.options[gitlab_uploaded_filename_select.selectedIndex].value;
+
+        var department_value = document.getElementById('department').value;
+        var teamid_value = document.getElementById('teamid').value;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open(upload_git_form.method, upload_git_form.action, true);
+        ShowNotify(1, 'Идёт загрузка. Подождите');
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                var response = JSON.parse(xhr.responseText);
+                console.log("response", response)
+                if(response.error){
+                    ShowNotify(0, response.error);
+                    upload_from_git_btn.disabled = false;
+                }
+                else{
+                    if ("project_desc" in response){
+                        localStorage.setItem('uploaded_project_desc', response["project_desc"]);
+                    }
+                    if ("LOCAL_STORAGE" in response){
+                        localStorage.setItem('local_storage_is_exist', 1);
+                    }
+                    else{
+                        localStorage.setItem('local_storage_is_exist', 0);
+                    }
+                    localStorage.setItem('response', response);
+                    localStorage.setItem('uploaded_project_name', gitlab_project_name);
+                    localStorage.setItem('uploaded_filename', gitlab_uploaded_filename);
+                    localStorage.setItem('uploaded_department', department_value);
+                    localStorage.setItem('uploaded_teamid', teamid_value);
+                    localStorage.setItem('showNotification', 'true');
+                    location.reload();
+                }
+            } else {
+                ShowNotify(0, 'Ошибка при загрузке ACL');
+                upload_from_git_btn.disabled = false;
+            }
+        };
+        xhr.onerror = function() {
+            ShowNotify(0, 'Ошибка при выполнении запроса');
+        };
+        xhr.send(new FormData(upload_git_form));
+    });
+
+   if (localStorage.getItem('showNotification') === 'true'){
+
+       document.getElementById('department').value = localStorage.getItem('uploaded_department');
+       document.getElementById('teamid').value = localStorage.getItem('uploaded_teamid');
+
+        document.getElementById('acl_filename').value = localStorage.getItem('uploaded_filename');
+        if(localStorage.getItem('uploaded_project_desc') !== null){
+            document.getElementsByName('link')[0].value = localStorage.getItem('uploaded_project_desc');
+        }
+        project_select = document.getElementById('gitlab_proj_upload_dropdown');
+        for (var i=0; i < project_select.options.length; i++){
+            if(project_select.options[i].value === localStorage.getItem('uploaded_project_name')){
+                project_select.options[i].selected = true;
+                break;
+            }
+        }
+        ShowNotify(2, 'ACL Успешно загружен');
+        localStorage.removeItem('uploaded_filename');
+        localStorage.removeItem('uploaded_project_name');
+        localStorage.removeItem('uploaded_project_desc');
+        localStorage.removeItem('uploaded_department');
+        localStorage.removeItem('uploaded_teamid');
+        localStorage.removeItem('showNotification');
+        document.getElementById('save-form-btn').click();
+   }
+
+    $('#gitlab_proj_upload_dropdown').on('change', function() {
+        var selectedOption = $(this).val();
+        var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
+        $.ajax({
+            url: '/acl/git_get_files/',
+            type: 'POST',
+            data: { 'gitlab_project': selectedOption },
+            headers: {'X-CSRFToken': csrfToken},
+            success: function(response) {
+                var files = JSON.parse(response);
+                var fromGitDropdown = $('#gitlab_file_upload_from_dropdown');
+                fromGitDropdown.empty();
+                $.each(files, function(index, value) {
+                    fromGitDropdown.append($('<option>').text(value).attr('value', value));
+                });
+                if(selectedOption != ""){
+                    document.getElementById("btn-upload-from-git").click();
+                }
+            },
+            error: function(xhr, status, error) {
+                ShowNotify(0, 'Ошибка при отображении проектов');
+            }
+        });
+    });
+
+    var check_local_storage = localStorage.getItem('local_storage_is_exist');
+    if (check_local_storage == 0){
+        document.getElementById('input--file--upload').disabled = false;
+        document.querySelector('label[for="input--file--upload"]').style.display = 'block';
+    }
+</script>
+<script>
+$('#gitlab_proj_upload_dropdown').on('click', function() {
+    var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
+    $.ajax({
+        url: '/acl/git_update_projects/',
+        type: 'GET',
+        headers: {'X-CSRFToken': csrfToken},
+        success: function(data) {
+            project_list = JSON.parse(data);
+            $.each(project_list, function(index, value){
+                var newOption = new Option(value.project, value.project);
+                $(newOption).attr('data-gitlab-url', value.gitlab_url);
+                $('#gitlab_proj_upload_dropdown').append(newOption);
+            });
+            // Установка фокуса после обновления
+            $('#gitlab_proj_upload_dropdown').select2('open');
+            $('#gitlab_proj_upload_dropdown').data("select2").dropdown.$search.focus();
+        },
+        error: function(xhr, status, error) {
+            ShowNotify(0, 'Ошибка при синхронизации проектов');
+        }
+    });
+});
+</script>
+
+<script>
+    if(localStorage.getItem('uploaded_filename_docx') !== null){
+        if(localStorage.getItem('uploaded_project_name_docx') !== null){
+            project_select = document.getElementById('gitlab_proj_upload_dropdown');
+            for (var i=0; i < project_select.options.length; i++){
+                if(project_select.options[i].value === localStorage.getItem('uploaded_project_name_docx')){
+                    project_select.options[i].selected = true;
+                    break;
+                }
+            }
+        }
+        if(document.getElementById(('department').value == "" && document.getElementById('teamid').value == "")){
+            document.getElementById('department').value = localStorage.getItem('uploaded_department');
+            document.getElementById('teamid').value = localStorage.getItem('uploaded_teamid');
+            localStorage.removeItem('uploaded_department');
+            localStorage.removeItem('uploaded_teamid');
+        }
+
+        if(document.getElementById('acl_filename').value == ""){
+            document.getElementById('acl_filename').value = localStorage.getItem('uploaded_filename_docx');
+            localStorage.removeItem('uploaded_filename_docx');
+            $("input:checkbox[name='action_make_git']").prop('checked', true);
+            document.getElementById('save-form-btn').click();
+        }
+    }
+</script>
+<script>
+    const form = document.getElementById('aclcreate-form-contacts');
+    form.addEventListener('submit', function(event) {
+        const acl_filename_input = document.getElementById('acl_filename');
+        if(acl_filename_input.value === '' || acl_filename_input.value === 'Нет'){
+            event.preventDefault();
+            ShowNotify(idx=1, text='Имя файла не указано. Для продолжения, загрузите проект из Gitlab');
+        }
+    });
+</script>
+
+<script>
+<!--  check project for btn-upload-from-git file list  -->
+    $(document).ready(function() {
+        $('#btn-upload-from-git').click(function(e) {
+            var git_project_select = document.getElementById('gitlab_proj_upload_dropdown');
+            var selected_option = git_project_select.options[git_project_select.selectedIndex];
+            var selected_project = selected_option.getAttribute("value");
+            if (selected_project == ""){
+                e.preventDefault();
+                ShowNotify(0, 'Для отображения файлов необходимо выбрать Проект/ИС');
+            }
+            else{
+                if($('#gitlab_file_upload_from_dropdown option').length == 0){
+                    var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
+            $.ajax({
+                url: '/acl/git_get_files/',
+                type: 'POST',
+                data: { 'gitlab_project': selected_project },
+                headers: {'X-CSRFToken': csrfToken},
+                success: function(response) {
+                    var files = JSON.parse(response);
+                    var fromGitDropdown = $('#gitlab_file_upload_from_dropdown');
+                    fromGitDropdown.empty();
+                    $.each(files, function(index, value) {
+                        fromGitDropdown.append($('<option>').text(value).attr('value', value));
+                    });
+                },
+                error: function(xhr, status, error) {
+                    ShowNotify(0, 'Ошибка при отображении файлов');
+                }
+            });
+                }
+            }
+        });
+    });
+</script>
+<script>
+    window.addEventListener('load', function() {
+        team_name = document.getElementById('department').value;
+        if (team_name != ""){
+            SetTeamIdAndFilterProjects(team_name);
+        }
+    });
+</script>
+
+{% endblock %}

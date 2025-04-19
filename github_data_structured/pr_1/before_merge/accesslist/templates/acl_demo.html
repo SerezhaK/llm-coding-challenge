@@ -1,0 +1,91 @@
+{% extends 'acl_base.html' %}
+{% load static %}
+{% block row %}
+ <div class="col d-none d-md-block d-lg-block" style="max-width: 375px;">
+            <img class="img-fluid" src="{% static 'img/demo.png' %}" style="min-height: 550px">
+            </div>
+            <div class="col-7 mt-3">
+              <div class="card text-center border-0">
+                    <div class="col-12 pb-3" style="padding-top: 30px">
+                        <div class="card border-danger" style="max-width: 655px;">
+                            <div class="card-header card-header bg-danger text-white" style="background-color: #fe0808b0 !important;">Обратите внимание*</div>
+                              <div class="card-body">
+                                <p class="card-text">
+                                    В данный момент присутствует ошибка при работе в нескольких вкладках!
+                                    Из-за данной ошибки могут попасть не те данные в Omnitracker.<br><br>
+                                        <b>ПОЖАЛУЙСТА, РАБОТАЙТЕ ТОЛЬКО С ОДНОЙ ОТКРЫТОЙ ВКЛАДКОЙ ПОРТАЛА ACL.VESTA.RU ДЛЯ ИЗБЕЖАНИЯ ОШИБКИ.</b>
+                                </p>
+                              </div>
+                        </div>
+                    </div>
+                      <div class="card-body">
+                          <h5 class="card-title">Инициатива по оптимизации внутренних процессов</h5>
+                          <p class="text-secondary">Для обеспечения гибкости взаимодействия, мы запустили данный портал.
+                              Главным образом мы хотели, чтобы процесс управления сетевым доступом (ACL) стал более удобным.</p>
+                        <div class="pt-3">
+                            <p class="font-weight-bold">Инструкция для работы с порталом:
+                                <br><a href="https://wiki.alfastrah.ru/pages/viewpage.action?pageId=292226481" target="_blank">На Confluence</a>
+                                <br><a href="{% url 'aclinstruction_urls' %}">На портале</a>
+                            </p>
+                            <p class="text-success font-weight-bold">Обращения по созданию сетевого доступа (ACL) должны учитывать несколько важных принципов:</p>
+                            <div class="list-group text-left">
+                                <ul class="form-group">
+                                <li class="text-secondary" style="padding: 0.75rem 1.25rem;"><i class="fas fa-bug mr-2"></i>Перед публикацией проекта во внешней сети Интернет проект должен пройти аудит защищённости, проводимый командой Отдела технической безопасности.</li>
+                                <li class="text-secondary" style="padding: 0.75rem 1.25rem;"><i class="fas fa-server mr-2"></i>Сервер, с которого осуществляется доступ во внешнюю сеть, должен быть размещен в DMZ, либо отдельном сегменте сети.</li>
+                                <li class="text-secondary" style="padding: 0.75rem 1.25rem;"><i class="fab fa-hubspot mr-2"></i>Открытие доступа по управляющим протоколам (в т.ч. ssh, rdp, smb и пр.) с серверов ИС, размещенных в DMZ, в другие сегменты ЛВС Компании запрещено и не осуществляется.</li>
+                                <li class="text-secondary" style="padding: 0.75rem 1.25rem;"><i class="fas fa-database mr-2"></i>Сервера баз данных должны размещаться не в DMZ, а в сегментах сети Компании, в  которые и из которых доступ во внешние сети отсутствует.</li>
+                                <li class="text-secondary" style="padding: 0.75rem 1.25rem;"><i class="fas fa-server mr-2"></i>ВНИМАНИЕ !!! Для установки обновлений на Linux сервера открытие портов через ACL не требуется ! Устанавливайте обновления стандартным способом.
+                                    <p>
+                                        см <a href="https://wiki.alfastrah.ru/pages/viewpage.action?pageId=215226155"> https://wiki.alfastrah.ru/pages/viewpage.action?pageId=215226155</a>
+                                    </p>
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                          {% if user.is_authenticated %}
+                          <div class="form-check form-check-inline start-0">
+                            <div class="mr-5">
+                                <input class="form-check-input" type="checkbox" id="flexAgreementCheck" required>
+                                <label class="form-check-label" for="flexAgreementCheck">
+                                    Всё понятно
+                                </label>
+                             </div>
+                         <a href="{% url 'aclcreate_urls' %}" class="btn btn-success btn-lg btn-start not-active">Начать</a>
+                        </div>
+                          {% else %}
+                              <div class="text-center" style="padding-left: 30px">
+                                <a href="/accounts/login/" class="btn-lg btn-danger btn-auth">Войти</a>
+                            </div>
+                          {% endif %}
+                      </div>
+                </div>
+            </div>
+<script>
+    $(".post-sidebar").addClass("d-none");
+    $(".btn-auth").click(function(e){
+        e.preventDefault();
+        $(".modal-auth").modal('show');
+        $("#login-username").focus();
+    });
+    $(function(){
+        function animatedownload(){
+                $(".spinner-border").hide();
+                $(".card-download-file").parent().removeClass("d-none");
+
+        };
+        window.setTimeout(animatedownload, 3000);
+    });
+
+{% if not user.is_authenticated %}
+    $(".modal-auth").modal('show');
+    $("#login-username").focus();
+{% endif %}
+
+    $(document).ready(function() {
+        if (isIE()) {
+            ShowNotify(1, 'Обратите внимание, данный браузер не поддерживается. Рекомендуем открыть в Chrome.');
+        }
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,18 @@
+@@ -24,7 +24,7 @@ <h5 class="card-title">Инициатива по оптимизации внут
+                               Главным образом мы хотели, чтобы процесс управления сетевым доступом (ACL) стал более удобным.</p>
+                         <div class="pt-3">
+                             <p class="font-weight-bold">Инструкция для работы с порталом:
+-                                <br><a href="https://wiki.alfastrah.ru/pages/viewpage.action?pageId=292226481" target="_blank">На Confluence</a>
++                                <br><a href="https://wiki.test.ru/pages/viewpage.action?pageId=292226481" target="_blank">На Confluence</a>
+                                 <br><a href="{% url 'aclinstruction_urls' %}">На портале</a>
+                             </p>
+                             <p class="text-success font-weight-bold">Обращения по созданию сетевого доступа (ACL) должны учитывать несколько важных принципов:</p>
+@@ -36,7 +36,7 @@ <h5 class="card-title">Инициатива по оптимизации внут
+                                 <li class="text-secondary" style="padding: 0.75rem 1.25rem;"><i class="fas fa-database mr-2"></i>Сервера баз данных должны размещаться не в DMZ, а в сегментах сети Компании, в  которые и из которых доступ во внешние сети отсутствует.</li>
+                                 <li class="text-secondary" style="padding: 0.75rem 1.25rem;"><i class="fas fa-server mr-2"></i>ВНИМАНИЕ !!! Для установки обновлений на Linux сервера открытие портов через ACL не требуется ! Устанавливайте обновления стандартным способом.
+                                     <p>
+-                                        см <a href="https://wiki.alfastrah.ru/pages/viewpage.action?pageId=215226155"> https://wiki.alfastrah.ru/pages/viewpage.action?pageId=215226155</a>
++                                        см <a href="https://wiki.test.ru/pages/viewpage.action?pageId=215226155"> https://wiki.test.ru/pages/viewpage.action?pageId=215226155</a>
+                                     </p>
+                                 </li>
+                                 </ul>
