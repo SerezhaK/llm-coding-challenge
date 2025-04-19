@@ -11,11 +11,13 @@ def configure_session_state():
         st.session_state["FOLDER_ID"] = ""
     if "GITHUB_BOT_ACCESS_TOKEN" not in st.session_state:
         st.session_state["GITHUB_BOT_ACCESS_TOKEN"] = ""
+    if "YAM_TOKEN" not in st.session_state:
+        st.session_state["YAM_TOKEN"] = ""
 
 
-def set_open_api_key(api_key: str):
-    st.session_state["OPENAI_API_KEY"] = api_key
-    os.environ["OPENAI_API_KEY"] = api_key
+def set_yandex_api_key(api_key: str):
+    st.session_state["YANDEX_API_KEY"] = api_key
+    os.environ["YANDEX_API_KEY"] = api_key
 
 
 def set_git_ATP(atp: str):
@@ -26,6 +28,11 @@ def set_git_ATP(atp: str):
 def set_yandex_folder_id(folder_id: str):
     st.session_state["FOLDER_ID"] = folder_id
     os.environ["FOLDER_ID"] = folder_id
+
+
+def set_yandex_iam_token(yam_token: str):
+    st.session_state["YAM_TOKEN"] = yam_token
+    os.environ["YAM_TOKEN"] = yam_token
 
 
 def set_repo_url(github_url: str):

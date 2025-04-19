@@ -6,6 +6,14 @@ from components.sidebar import sidebar
 from components.page import init_page, init_openai_client
 from datetime import datetime, timedelta
 from components.user_date_validation import url_validations
+
+import sys
+from pathlib import Path
+
+sys.path.append(str(Path(__file__).parent.parent))
+
+from llm_logic.api_request import make_api_request
+
 # Отключаем предупреждения :)
 logging.getLogger().setLevel(logging.ERROR)
 
@@ -47,7 +55,9 @@ def main():
 
     if st.button("Выполнить code review"):
         with st.spinner("Анализирую код..."):
-            response = "Чипи чипи чапа чапа"
+
+            # big analysis
+            response = make_api_request(user_query)
             if response:
                 st.markdown("### Результат анализа")
                 st.markdown(response)
