@@ -1,0 +1,18 @@
+@@ -84,7 +84,7 @@ <h4 class="main-title text-center mb-1">2. Описание доступа к р
+ 
+                                     </td>
+                                     <td>
+-                                            <textarea class="form-control" placeholder="Доступ до z14-1709-gw.alfastrah.ru" rows="1" cols="40"  name="acl_dmz_resources[{{forloop.counter0}}][description]" pattern=".{3,}" required>{{item.description}}</textarea>
++                                            <textarea class="form-control" placeholder="Доступ до z14-000-gw.alfastrah.ru" rows="1" cols="40"  name="acl_dmz_resources[{{forloop.counter0}}][description]" pattern=".{3,}" required>{{item.description}}</textarea>
+                                             <span class="validity"></span>
+                                     </td>
+                                     <td>
+@@ -109,7 +109,7 @@ <h4 class="main-title text-center mb-1">2. Описание доступа к р
+                             </div>
+                         </td>
+                         <td>
+-                            <textarea class="form-control" placeholder="Доступ до z14-1709-gw.alfastrah.ru" rows="1" cols="40" name="acl_dmz_resources[0][description]" pattern=".{3,}" required></textarea>
++                            <textarea class="form-control" placeholder="Доступ до z14-000-gw.alfastrah.ru" rows="1" cols="40" name="acl_dmz_resources[0][description]" pattern=".{3,}" required></textarea>
+                             <span class="validity"></span>
+                         </td>
+                         <td>

@@ -1,29 +1,11 @@
 import os
-import os
-import requests
-import json
-import base64
 import time
-import re
-import tempfile
 import streamlit as st
-import shutil
-import csv
 from datetime import datetime
 from dateutil.parser import isoparse  # Import for parsing ISO 8601 dates
-from tqdm import tqdm
-# Imports for the RAG system
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.text_splitter import RecursiveCharacterTextSplitter, Language
-from langchain.vectorstores import Chroma
-# Import the YandexGPT LLM
-from langchain_community.llms import YandexGPT
-# Removed HuggingFacePipeline, AutoTokenizer, AutoModelForCausalLM as they are no longer needed for the LLM
-# from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
-# from langchain.llms import HuggingFacePipeline
-
 import logging
-
+from .core import fetch_github_data, CodeChangeRAG
+from datetime import datetime, timezone
 logger = logging.getLogger(__name__)
 
 OUTPUT_DIR_BASE = "github_data_structured"
@@ -37,25 +19,23 @@ def code_review(
         coder_to_analyze_login,
         branch_for_merge_history='master',
         analysis_start_date_str="2025-01-01T00:00:00Z",
-        analysis_end_date_str="2025-04-18T23:59:59Z",
-        github_secret=os.environ.get('GITHUB_BOT_ACCESS_TOKEN'),
+        analysis_end_date_str="2025-04-18T23:59:59Z"
 ):
     # --- Date Range for Filtering Changes for Analysis ---
     # Set the start and end dates for filtering changes for coder analysis
     # The format should be ISO 8601:YYYY-MM-DDTHH:MM:SSZ
     # Example: "2024-01-01T00:00:00Z"
-
-    try:
-        analysis_start_date = isoparse(analysis_start_date_str) if analysis_start_date_str else None
-        analysis_end_date = isoparse(analysis_end_date_str) if analysis_end_date_str else None
-        if analysis_start_date and analysis_end_date and analysis_start_date > analysis_end_date:
-            print("Warning: analysis_start_date is after analysis_end_date. No changes will be analyzed.")
-            analysis_start_date = analysis_end_date = None  # Invalidate date range if illogical
-    except ValueError as e:
-        print(
-            f"Error parsing date strings: {e}. Please ensure dates are in ISO 8601 format (YYYY-MM-DDTHH:MM:SSZ). Skipping date filtering for analysis.")
-        analysis_start_date = None
-        analysis_end_date = None
+    # try:
+    #     analysis_start_date = isoparse(analysis_start_date_str) if analysis_start_date_str else None
+    #     analysis_end_date = isoparse(analysis_end_date_str) if analysis_end_date_str else None
+    #     if analysis_start_date and analysis_end_date and analysis_start_date > analysis_end_date:
+    #         print("Warning: analysis_start_date is after analysis_end_date. No changes will be analyzed.")
+    #         analysis_start_date = analysis_end_date = None  # Invalidate date range if illogical
+    # except ValueError as e:
+    #     print(
+    #         f"Error parsing date strings: {e}. Please ensure dates are in ISO 8601 format (YYYY-MM-DDTHH:MM:SSZ). Skipping date filtering for analysis.")
+    #     analysis_start_date = None
+    #     analysis_end_date = None
 
     # --- Data Fetching ---
 
@@ -120,51 +100,44 @@ def code_review(
     changes_for_coder_analysis = []
     all_fetched_changes = fetched_pr_data + fetched_merge_history
 
-    if all_fetched_changes and analysis_start_date and analysis_end_date and coder_to_analyze_login != 'your_coder_login':
-        print(
-            f"\nFiltering fetched changes by date ({analysis_start_date_str} to {analysis_end_date_str}) and coder ({coder_to_analyze_login}) for analysis...")
-        for change in all_fetched_changes:
-            change_type = change.get('request_type')
-            change_id = change.get('request_id')
-            change_date_str = None
-            author_login = None
-            committer_login = None
-            merged_by_login = None
+    logging.info(
+        f"\nFiltering fetched changes by date ({analysis_start_date_str} to {analysis_end_date_str}) and coder ({coder_to_analyze_login}) for analysis...")
+    for change in all_fetched_changes:
+        change_type = change.get('request_type')
+        change_id = change.get('request_id')
+        change_date_str = None
+        author_login = None
+        committer_login = None
+        merged_by_login = None
 
-            # Determine the relevant date and author/committer based on change type
-            if change_type == 'pr':
-                change_date_str = change.get('merged_at') or change.get('closed_at') or change.get('updated_at')
-                author_login = change.get('author_login')
-                merged_by_login = change.get('merged_by_login')
-            elif change_type == 'merge_commit':
-                change_date_str = change.get('committer_date') or change.get('author_date')
-                author_login = change.get('api_author_login')
-                committer_login = change.get('api_committer_login')
+        # Determine the relevant date and author/committer based on change type
+        if change_type == 'pr':
+            change_date_str = change.get('merged_at') or change.get('closed_at') or change.get('updated_at')
+            author_login = change.get('author_login')
+            merged_by_login = change.get('merged_by_login')
+        elif change_type == 'merge_commit':
+            change_date_str = change.get('committer_date') or change.get('author_date')
+            author_login = change.get('api_author_login')
+            committer_login = change.get('api_committer_login')
 
-            if change_date_str:
-                try:
-                    change_date = isoparse(change_date_str)
-                    # Check if the change is within the date range AND the coder is the author, committer, or merger
-                    if analysis_start_date <= change_date <= analysis_end_date:
-                        if author_login == coder_to_analyze_login or \
-                                committer_login == coder_to_analyze_login or \
-                                merged_by_login == coder_to_analyze_login:
-                            changes_for_coder_analysis.append(change)
-                except ValueError:
-                    logging.warning(
-                        f"Warning: Could not parse date '{change_date_str}' for {change_type.upper()} {change_id}. Skipping filtering for this change.")
-                    pass  # Skip if date parsing fails
-        logging.info(
-            f"Found {len(changes_for_coder_analysis)} changes (PRs and Merge Commits) by {coder_to_analyze_login} within the specified date range for analysis.")
-    elif all_fetched_changes and (analysis_start_date is None or analysis_end_date is None):
-        logging.info("\nDate range for filtering changes is not valid. Skipping coder analysis date filtering.")
-        # If date range is invalid, don't perform analysis
-        changes_for_coder_analysis = []
-    elif coder_to_analyze_login == 'your_coder_login':
-        logging.info("\nCoder login for analysis is not set. Skipping coder analysis.")
-        changes_for_coder_analysis = []
-    else:
-        logging.info("\nNo change data fetched or available for filtering.")
+        if change_date_str:
+            try:
+                start_date = datetime.fromisoformat(analysis_start_date_str).replace(tzinfo=timezone.utc)
+                end_date = datetime.fromisoformat(analysis_end_date_str).replace(tzinfo=timezone.utc)
+                change_date = isoparse(change_date_str).astimezone(timezone.utc)  # Convert to UTC
+
+                # Check if the change is within the date range AND the coder is the author, committer, or merger
+                if start_date <= change_date <= end_date:
+                    if author_login in coder_to_analyze_login or \
+                            committer_login in coder_to_analyze_login or \
+                            merged_by_login in coder_to_analyze_login:
+                        changes_for_coder_analysis.append(change)
+            except ValueError:
+                logging.warning(
+                    f"Warning: Could not parse date '{change_date_str}' for {change_type.upper()} {change_id}. Skipping filtering for this change.")
+                pass  # Skip if date parsing fails
+    logging.info(
+        f"Found {len(changes_for_coder_analysis)} changes (PRs and Merge Commits) by {coder_to_analyze_login} within the specified date range for analysis.")
 
     # --- Coder Activity Analysis ---
     if not changes_for_coder_analysis:
@@ -187,41 +160,49 @@ def code_review(
             os.makedirs(CODER_ANALYSIS_OUTPUT_DIR, exist_ok=True)
             print(f"\nSaving coder analysis results to directory: {CODER_ANALYSIS_OUTPUT_DIR}")
 
-            # Save the analysis results to a file
-            analysis_filename = os.path.join(CODER_ANALYSIS_OUTPUT_DIR,
-                                             f"coder_analysis_{coder_to_analyze_login}_{datetime.now().strftime('%Y%m%d')}.txt")
-            with open(analysis_filename, 'w', encoding='utf-8') as analysis_file:
-                analysis_file.write(f"Coder Activity Analysis for {coder_to_analyze_login}\n")
-                analysis_file.write(f"Period: {analysis_start_date_str} to {analysis_end_date_str}\n")
-                analysis_file.write(f"Repository: {github_owner}/{github_repo}\n")
-                analysis_file.write("-" * 40 + "\n\n")
+    # Создаем красивый заголовок анализа
+    st.header(f"📊 Анализ активности разработчика: {coder_to_analyze_login}")
+    st.caption(
+        f"Репозиторий: {github_owner}/{github_repo} • Период: {analysis_start_date_str} — {analysis_end_date_str}")
 
-                analysis_file.write("Quantitative Metrics:\n")
-                analysis_file.write(
-                    f"Total Changes Analyzed (PRs + Merge Commits): {coder_analysis_results.get('total_changes_analyzed', 0)}\n")
-                analysis_file.write(
-                    f"Total Commits (including those in PRs): {coder_analysis_results.get('total_commits', 0)}\n")
-                analysis_file.write(f"Total Lines Added: {coder_analysis_results.get('total_additions', 0)}\n")
-                analysis_file.write(f"Total Lines Deleted: {coder_analysis_results.get('total_deletions', 0)}\n")
-                analysis_file.write("-" * 40 + "\n\n")
+    # Раздел с количественными метриками
+    with st.container(border=True):
+        st.subheader("📈 Количественные метрики")
 
-                analysis_file.write("Qualitative Analysis (Generated by RAG):\n")
-                rag_analysis = coder_analysis_results.get('analysis_results')
-                if isinstance(rag_analysis, dict):
-                    for question, result in rag_analysis.items():
-                        analysis_file.write(f"Question: {question}\n")
-                        analysis_file.write(f"Answer: {result.get('answer', 'N/A')}\n")
-                        # Optionally include sources in the output file
-                        # analysis_file.write("Sources:\n")
-                        # if result.get('sources'):
-                        #     for i, source in enumerate(result['sources']):
-                        #         analysis_file.write(f"  Source {i+1}: {source['content_snippet']}\n")
-                        # else:
-                        #     analysis_file.write("  No relevant sources found.\n")
-                        analysis_file.write("---\n\n")
-                else:
-                    analysis_file.write(str(rag_analysis))  # Print error message or other non-dict result
+        cols = st.columns(4)
+        cols[0].metric("Всего изменений", coder_analysis_results.get('total_changes_analyzed', 0))
+        cols[1].metric("Всего коммитов", coder_analysis_results.get('total_commits', 0))
+        cols[2].metric("Добавлено строк", coder_analysis_results.get('total_additions', 0))
+        cols[3].metric("Удалено строк", coder_analysis_results.get('total_deletions', 0))
 
-            print(f"\nSuccessfully saved coder analysis for {coder_to_analyze_login} to {analysis_filename}")
+    # Раздел с качественным анализом
+    st.subheader("🧠 Качественный анализ (RAG)")
+    rag_analysis = coder_analysis_results.get('analysis_results')
+
+    if isinstance(rag_analysis, dict):
+        tabs = st.tabs([f"Вопрос {i + 1}" for i in range(len(rag_analysis))])
+
+        for i, (question, result) in enumerate(rag_analysis.items()):
+            with tabs[i]:
+                st.markdown(f"**❓ Вопрос:** {question}")
+                st.markdown(f"**💡 Ответ:** {result.get('answer', 'N/A')}")
+
+                # Дополнительно можно показать источники
+                with st.expander("🔍 Показать источники"):
+                    if result.get('sources'):
+                        for j, source in enumerate(result['sources']):
+                            st.markdown(f"**Источник {j + 1}:**\n{source.get('content_snippet', 'N/A')}")
+                    else:
+                        st.info("Нет релевантных источников")
+    else:
+        st.warning(str(rag_analysis))
+
+    # Добавляем кнопку для экспорта (если все же нужно)
+    if st.button("📥 Экспортировать анализ в PDF", help="Сохранить результаты анализа в файл"):
+        # Здесь можно реализовать экспорт в PDF
+        st.toast("Экспорт в PDF пока не реализован", icon="⚠️")
+
+    # Уведомление об успешном завершении
+    st.toast(f"Анализ для {coder_to_analyze_login} успешно завершен!", icon="✅")
 
     print("\n--- Script Finished ---")

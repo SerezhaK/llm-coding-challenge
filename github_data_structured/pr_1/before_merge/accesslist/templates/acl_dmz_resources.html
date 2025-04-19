@@ -1,0 +1,180 @@
+{% extends 'acl_base.html' %}
+{% load static %}
+{% load random_numbers %}
+{% block row %}
+<div class="col-8 pt-3">
+        <div class="main-block">
+             <h4 class="main-title text-center mb-1">2. Описание доступа к ресурсам <span class="badge badge-danger">Нужно заполнить</span></h4>
+             {% if latest_local_storage %}
+                    <button id="arrow-down" class="btn text-dark arrow-down" data-toggle-state="false">Просмотр предыдущей заявки</button>
+                    <div id="prev-info-container" class="border" style="display:none;">
+                        <div class="col-12 mt-1">
+                            <div>
+                                <p class="text-dark font-weight-bold">uuid: <u class="text-info">{{ latest_uuid }}</u></p>
+                                <p class="text-dark font-weight-bold">project: <u class="text-info">{{ latest_project }}</u></p>
+                                <p class="text-dark font-weight-bold">filename: <u class="text-info">{{ latest_git_file }}</u></p>
+                                <hr>
+                            </div>
+                            <div>
+                                <p class="text-success font-weight-bold"><u>Список DMZ ресурсов (СГ АльфаСтрахование)</u></p>
+                            </div>
+                            {% for key in latest_local_storage.items %}
+                               {% if key.0 == 'acl_dmz_resources.html' %}
+                                    <div>
+                                         <table class="border-0 traffic-table table-hover">
+                                             <thead class="text-secondary border-bottom small">
+                                                 <th>IP-адрес источника</th>
+                                                 <th>Префикс-сети</th>
+                                                 <th>Описание (цель)</th>
+                                             </thead>
+                                             <tbody>
+                                             {% for el in key.1 %}
+                                                 <tr>
+                                                     <td>{{ el.0 }}</td>
+                                                     <td>{{ el.1 }}</td>
+                                                     <td>{{ el.2 }}</td>
+                                                 </tr>
+                                             {% endfor %}
+                                             </tbody>
+                                         </table>
+                                    </div>
+                               {% endif %}
+                           {% endfor %}
+                        </div>
+                    </div>
+            {% else %}
+               <p class="text-danger">Заявки по проекту с выбранным файлом не найдены.</p>
+            {% endif %}
+            <p class="main-description">2.2 Список DMZ ресурсов (СГ АльфаСтрахование)</p>
+        </div>
+ {% if '/new/' in request.path %}
+    <form method="post" class="form-inline" action="{% url 'acldmz_urls' acl_id=acl_id %}" name="acl-form-contacts">
+{% else %}
+    <form method="post" class="form-inline" action="{% url 'acldmz_urls'%}{{ acl_id }}/" name="acl-form-contacts">
+{% endif %}
+{% csrf_token %}
+        <div class="form-row">
+            <table class="table table-md table-ip-internal" border="0">
+                <thead>
+                     <tr>
+                         <th>IP-адрес источника</th>
+                         <th style="min-width: 160px;">Префикс-сети* <span class="help-icon-mask"><i class="far fa-question-circle" style="cursor: pointer;margin-left: 5px"></i></span></th>
+                         <th>Описание</th>
+                         <th></th>
+                     </tr>
+
+              </thead>
+                <tbody>
+                {% if LOCAL_STORAGE|length > 0 %}
+                    {% for item in LOCAL_STORAGE %}
+                         <tr>
+                                    <td class="">
+                                       <input type="text"  class="form-control input__ip__external" value="{{ item.0}}" placeholder="195.239.64.79" name="input__ip_{% random_int 0 100 %}" autofocus minlength="7" maxlength="15" size="15" pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" required>
+                                        <span class="validity"></span>
+                                    </td>
+
+                                    <td class="">
+                                          <div class="input-group mb-2">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">/</div>
+                                                </div>
+                                            <input type="number" value="{{ item.1}}" class="form-control" placeholder="32" name="input__mask_{% random_int 0 100 %}"  style="max-width: 110px;" pattern="^([0-9]){1,2}$" min="1" max="32" required>
+                                            <span class="validity"></span>
+                                          </div>
+
+                                    </td>
+                                    <td>
+                                            <textarea class="form-control" placeholder="Доступ до z14-1709-gw.alfastrah.ru" rows="1" cols="40"  name="input_descr_{% random_int 0 100 %}" pattern=".{3,}" required>{{item.2}}</textarea>
+                                            <span class="validity"></span>
+                                    </td>
+                                    <td>
+                                                <button class="btn btn-danger btn-sm btn-action btn-action-rm ml-3" type="button">-</button>
+                                                <button class="btn btn-success btn-sm btn-action btn-action-add ml-1" type="button">+</button>
+                                    </td>
+                         </tr>
+                    {% endfor %}
+                {% else %}
+                                     <tr>
+                                <td class="">
+                                   <input type="text"  class="form-control input__ip__external" placeholder="195.239.64.79" name="input__ip" autofocus minlength="7" maxlength="18" size="15" pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" required>
+                                    <span class="validity"></span>
+                                </td>
+
+                                <td class="">
+                                      <div class="input-group mb-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">/</div>
+                                            </div>
+                                        <input type="number" class="form-control" placeholder="32" name="input__mask"  style="max-width: 110px;" pattern="^([0-9]){1,2}$" min="1" max="32" required>
+                                        <span class="validity"></span>
+                                      </div>
+
+                                </td>
+                                <td>
+                                        <textarea class="form-control" placeholder="Доступ до z14-1709-gw.alfastrah.ru" rows="1" cols="40"  name="input_descr" pattern=".{3,}" required></textarea>
+                                        <span class="validity"></span>
+                                </td>
+                                <td>
+                                            <button class="btn btn-danger btn-sm btn-action btn-action-rm ml-3" type="button">-</button>
+                                            <button class="btn btn-success btn-sm btn-action btn-action-add ml-1" type="button">+</button>
+                                </td>
+                     </tr>
+                {% endif %}
+                </tbody>
+            </table>
+        </div>
+
+
+<div class="d-flex justify-content-end mt-3 pt-3 bottom-form-save" style="min-width: 95%!important;">
+ <input type="submit" class="btn btn-success" value="Сохранить и продолжить">
+</div>
+</form>
+
+<div class="col-12 pb-3" style="padding-top: 30px">
+    <div class="card border-danger" style="max-width: 655px;">
+        <div class="card-header card-header bg-danger text-white" style="background-color: #fe0808b0 !important;">Обратите внимание*</div>
+          <div class="card-body">
+            <p class="card-text">К DMZ-ресурсам АльфаСтрахование относятся хосты, принадлежащие к сетям:</p>
+              <table class="table table-sm table-ip-internal-dmz">
+                  <thead>
+                        <th>IP-Адресс</th>
+                        <th>Подсети/Префикс</th>
+                        <th>Описание</th>
+                  </thead>
+                  <tbody>
+                        <tr><td>195.239.64.0</td><td>255.255.255.128/25</td><td>PUBLIC</td></tr>
+                        <tr><td>195.239.64.128</td><td>255.255.255.192</td><td>PUBLIC-2</td></tr>
+                        <tr><td>195.239.64.192</td><td>255.255.255.248/29</td><td>SAP</td></tr>
+                        <tr><td>195.239.64.200</td><td>255.255.255.248/29</td><td>MAILFILE</td></tr>
+                        <tr><td>195.239.64.224</td><td>255.255.255.240/28</td><td>PARTNERS</td></tr>
+                        <tr><td>172.31.7.0</td><td>255.255.255.0</td><td>VIRTUAL-DMZ</td></tr>
+                        <tr><td>10.255.12.48</td><td>255.255.255.240</td><td>KeyCloak-DMZ</td></tr>
+                        <tr><td>10.255.13.64 </td><td>255.255.255.224</td><td>DMZ-DMS</td></tr>
+                        <tr><td>10.255.17.0</td><td>255.255.255.0</td><td>VM-DMZ-TEST-01</td></tr>
+                        <tr><td>10.255.20.0</td><td>255.255.255.0</td><td>DMZ-1303</td></tr>
+                  </tbody>
+              </table>
+          </div>
+    </div>
+</div>
+<script>
+    $(".post-sidebar").removeClass("d-none");
+</script>
+</div>
+
+<script>
+    {# Просмотр предыдущей заявки #}
+      $(document).ready(function() {
+        $('#arrow-down').on('click', function() {
+          var toggleState = $(this).data('toggle-state');
+          if (toggleState) {
+            $('#prev-info-container').slideUp();
+            $(this).data('toggle-state', false);
+          } else {
+            $('#prev-info-container').slideDown();
+            $(this).data('toggle-state', true);
+          }
+        });
+      });
+</script>
+{% endblock %}

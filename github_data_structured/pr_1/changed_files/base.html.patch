@@ -1,0 +1,9 @@
+@@ -124,7 +124,7 @@ <h5 class="modal-title">Добро пожаловать</h5>
+                                         <div class="col-md-12 control">
+                                             <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%">
+                                                 Забыли пароль !?
+-                                             <a href="mailto:sd@alfastrah.ru?subject=Восстановление пароля">
++                                             <a href="mailto:test@t.ru?subject=Восстановление пароля">
+                                                 Восстановить
+                                             </a>
+                                             </div>

@@ -1,0 +1,36 @@
+@@ -136,7 +136,7 @@ <h4 class="main-title">1. Контактная информация <span class=
+ 
+               <label class="contact-form__label">
+                 <span class="contact-form__text">Email</span>
+-                <input type="email" name="email" value="{% if LOCAL_STORAGE %}{{ LOCAL_STORAGE.email }}{% endif %}" class="contact__input" placeholder="Norepl@Alfastrah.ru" pattern=".+@alfastrah.ru" required>
++                <input type="email" name="email" value="{% if LOCAL_STORAGE %}{{ LOCAL_STORAGE.email }}{% endif %}" class="contact__input" placeholder="Norepl@Alfastrah.ru" pattern=".+@test.ru" required>
+                 <span class="validity"></span>
+               </label>
+ 
+@@ -160,7 +160,7 @@ <h4 class="main-title">1. Контактная информация <span class=
+ 
+              <label class="contact-form__label">
+                 <span class="contact-form__text" style="max-width: 140px">Описание проекта (wiki)</span>
+-                <input type="url" name="description" value="{% if LOCAL_STORAGE %}{{ LOCAL_STORAGE.description }}{% endif %}" class="contact__input" placeholder="https://wiki.alfastrah.ru/pages/viewpage.action?pageId=133435707" pattern="^https:\/\/wiki.(alfastrah|aslife).ru(.*)$" title="https://wiki.alfastrah.ru/pages/viewpage.action?pageId=133435707" readonly>
++                <input type="url" name="description" value="{% if LOCAL_STORAGE %}{{ LOCAL_STORAGE.description }}{% endif %}" class="contact__input" placeholder="https://wiki.test.ru/pages/viewpage.action?pageId=133435707" pattern="^https:\/\/wiki.(test|aslife).ru(.*)$" title="https://wiki.test.ru/pages/viewpage.action?pageId=133435707" readonly>
+                 <span class="validity"></span>
+             </label>
+ 
+@@ -330,7 +330,7 @@ <h4 class="main-title">1. Контактная информация <span class=
+ 
+               <label class="contact-form__label">
+                 <span class="contact-form__text">Email</span>
+-                <input type="email" name="email" value="{{ user.email }}" class="contact__input" placeholder="Norepl@Alfastrah.ru" pattern=".+@alfastrah.ru" required>
++                <input type="email" name="email" value="{{ user.email }}" class="contact__input" placeholder="Norepl@Alfastrah.ru" pattern=".+@test.ru" required>
+                 <span class="validity"></span>
+               </label>
+ 
+@@ -354,7 +354,7 @@ <h4 class="main-title">1. Контактная информация <span class=
+ 
+              <label class="contact-form__label">
+                 <span class="contact-form__text" style="max-width: 140px">Описание проекта (wiki)</span>
+-                <input type="url" name="description" value="{% if LOCAL_STORAGE %}{{ LOCAL_STORAGE.description }}{% endif %}" class="contact__input" placeholder="https://wiki.alfastrah.ru/pages/viewpage.action?pageId=133435707" pattern="^https:\/\/wiki.(alfastrah|aslife).ru(.*)$" title="https://wiki.alfastrah.ru/pages/viewpage.action?pageId=133435707" readonly>
++                <input type="url" name="description" value="{% if LOCAL_STORAGE %}{{ LOCAL_STORAGE.description }}{% endif %}" class="contact__input" placeholder="https://wiki.test.ru/pages/viewpage.action?pageId=133435707" pattern="^https:\/\/wiki.(test|aslife).ru(.*)$" title="https://wiki.test.ru/pages/viewpage.action?pageId=133435707" readonly>
+                 <span class="validity"></span>
+               </label>
+ 

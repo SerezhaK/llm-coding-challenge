@@ -1,0 +1,259 @@
+@@ -439,7 +439,7 @@ def DeepSearch(request, string: str = ""):
+                 if (
+                     ".vesta.ru" in tmp
+                     or ".alfastrah.ru" in tmp
+-                    or ".dyn.vesta.ru" in tmp
++                    or ".dyn.test.ru" in tmp
+                 ):
+                     tmp = tmp.split(".")[0]
+ 
+@@ -2397,21 +2397,21 @@ def send_onmitracker(
+ 
+     try:
+         send_to_mattermost(
+-            f"Попытка отправки обращения в omnitracker. sender: {sender}; title:{title}; Ссылка на ACL :https://acl.vesta.ru/acl/info/{str(uid)}"
++            f"Попытка отправки обращения в omnitracker. sender: {sender}; title:{title};"
+         )
+     except Exception as e:
+         logger.warning(f"[SEND_TO_MATTERMOST EXCEPTION] {e}")
+     bodyNotEncoded = f"""<?xml version="1.0" encoding="utf-8"?>
+-                <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.omninet.de/OtWebSvc/v1">
++                <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:s="http://www.w3.org/2001/XMLSchema">
+         <soap:Body>
+             <tns:InvokeScript>
+-               <tns:Script name="OmniAPI" runAt="Server">
++               <tns:Script name="Test" runAt="TestServer">
+                     <tns:Parameters>
+-                        <tns:StringVal name='strFunction'>CreateIncidentFromTemplateWithAttachmentAndExternalNumber</tns:StringVal>
++                        <tns:StringVal name='strFunction'>Create</tns:StringVal>
+                         <tns:StringVal name='strEMail'>{sender}</tns:StringVal>
+                         <tns:StringVal name='strTitle'>{title}</tns:StringVal>
+                         <tns:StringVal name='strDescription'>{text}</tns:StringVal>
+-                        <tns:StringVal name='strTemplateCode'>SH0458</tns:StringVal>
++                        <tns:StringVal name='strTemplateCode'>1234</tns:StringVal>
+                         <tns:StringVal name='strExternalNumber'>{str(uid)}</tns:StringVal>
+                         <tns:StringVal name='strAttachmentPath'>{attach}</tns:StringVal>
+                     </tns:Parameters>
+@@ -2461,7 +2461,6 @@ def send_onmitracker(
+                 send_to_mattermost(
+                     f"Попытка подключения номер: {i}.",
+                     f"res: {res.text}",
+-                    f"Ссылка на ACL: https://acl.vesta.ru/acl/info/{str(uid)}",
+                 )
+             if res and res.status_code == 200:
+                 result = res.text
+@@ -2485,7 +2484,6 @@ def send_onmitracker(
+                             send_to_mattermost(
+                                 f"[TRACE] Сервер omni вернул неправильный ответ: {res.text}"
+                                 f"Попытка номер: {i}",
+-                                f"Ссылка на ACL :https://acl.vesta.ru/acl/info/{str(uid)}",
+                             )
+                             if settings.DEBUG:
+                                 logger.error(
+@@ -2523,7 +2521,6 @@ def send_onmitracker(
+                 "Подключение не удалось по таймауту (Timeout).",
+                 f"Попытка подключения номер: {i}.",
+                 f"OMNITRACKER_URL: {settings.OMNITRACKER_URL}",
+-                f"Ссылка на ACL: https://acl.vesta.ru/acl/info/{str(uid)}",
+             )
+             logger.error(
+                 f"[TRACE] Подключение не удалось по таймауту к {settings.OMNITRACKER_URL}"
+@@ -2541,7 +2538,6 @@ def send_onmitracker(
+                 "Сервис не отвечает (Connection Error).",
+                 f"Попытка подключения номер: {i}.",
+                 f"OMNITRACKER_URL: {settings.OMNITRACKER_URL}",
+-                f"Ссылка на ACL: https://acl.vesta.ru/acl/info/{str(uid)}",
+             )
+             logger.error(f"[TRACE] Сервис {settings.OMNITRACKER_URL} не отвечает")
+             update_callback_status(
+@@ -2557,7 +2553,6 @@ def send_onmitracker(
+                 f"Ошибка Omni request: {e}.",
+                 f"Попытка номер: {i}.",
+                 f"OMNITRACKER_URL: {settings.OMNITRACKER_URL}",
+-                f"Ссылка на ACL: https://acl.vesta.ru/acl/info/ {str(uid)}",
+             )
+             update_callback_status(
+                 request,
+@@ -2572,19 +2567,19 @@ def send_onmitracker(
+     if not result:
+         return 0
+     send_to_mattermost(
+-        f"Обращение [https://acl.vesta.ru/acl/info/{str(uid)}] успешно отправлено. Получен ответ: [result:{result}]. Отправитель:{sender}"
++        f"Обращение успешно отправлено. Получен ответ: [result:{result}]. Отправитель:{sender}"
+     )
+     return result
+ 
+ 
+ def omni_check_status(id=None, proxy=None):
+     body = f"""<?xml version="1.0" encoding="utf-8"?>
+-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.omninet.de/OtWebSvc/v1">
++<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:s="http://www.w3.org/2001/XMLSchema">
+ <soap:Body>
+    <tns:InvokeScript>
+-     <tns:Script name="OmniAPI" runAt="Server">
++     <tns:Script name="Test" runAt="TestServer">
+                                <tns:Parameters>
+-                                               <tns:StringVal name="strFunction">GetIncStateByNumber</tns:StringVal>
++                                               <tns:StringVal name="strFunction">Get</tns:StringVal>
+                                                <tns:LongIntVal name="lngNumber">{id}</tns:LongIntVal>
+                               </tns:Parameters>
+     </tns:Script>
+@@ -2672,25 +2667,22 @@ def SendMessageToApprove(acl_id, acl_owner, user, token=""):
+     <tr style="padding-top: 10px"> <td colspan="2" style="padding-top: 10px">Запрос от:</td> 
+     <td style="font-weight: bold;">%s</td> </tr><tr style="padding-top: 10px"><td colspan="2">Подробнее:</td> 
+     <td><a href="%s" style="color:#1a73e8;">Перейти на портал</a></td> </tr></table><div class="footer">
+-    <p>Данное сообщение сформировано автоматически порталом acl.vesta.ru, просьба не отвечать на него.</p><div> 
++    <p>Данное сообщение сформировано автоматически порталом, просьба не отвечать на него.</p><div> 
+     </div>
+     </body>
+     </html>
+                                     """ % (
+         acl_owner,
+-        f"https://acl.vesta.ru/acl/pending/{acl_id}/?token={token}",
+     )
+ 
+     e = EmailMessage(
+         subject="Согласование обращения " + str(user.username),
+         body=EMAIL_APPROVE,
+-        from_email="acl@alfastrah.ru",
++        from_email="test@alfastrah.ru",
+         to=[user.email],
+     )
+     e.content_subtype = "html"
+     e.send(fail_silently=settings.DEBUG)
+-    if settings.DEBUG:
+-        print(f"https://acl.vesta.ru/acl/pending/{acl_id}/?token={token}")
+ 
+ 
+ def send_to_mattermost(*messages):
+@@ -2716,8 +2708,7 @@ def send_to_mattermost(*messages):
+ def get_gitlab_project_info(session, repo_url: str, mode: str = ""):
+     try:
+         logger.info("[GET_GITLAB_PROJECT_INFO] Получение информации о проекте.")
+-        # base_api_url = f"https://{request.session['GIT_USERNAME']}%40alfastrah.ru:{request.session['GIT_PASSWORD']}@gitlab.alfastrah.ru/api/v4/projects"
+-        base_api_url = "https://gitlab.alfastrah.ru/api/v4/projects"
++        base_api_url = "https://test.gitlab.ru/api/v4/projects"
+         project_namespace = "/".join(repo_url.split("/")[3:-1]).replace("/", "%2F")
+         logger.info(
+             f"[GET_GITLAB_PROJECT_INFO] Получен project namespace:{project_namespace}"
+@@ -2752,7 +2743,7 @@ def get_files_from_gitlab(repo_url: str, branch_name: str = "develop"):
+         session = requests.Session()
+         session.headers.update({"PRIVATE-TOKEN": settings.GIT_ACCESS_TOKEN})
+         project_id = get_gitlab_project_info(session, repo_url)["project_id"]
+-        base_api_url = "https://gitlab.alfastrah.ru/api/v4/projects"
++        base_api_url = "https://test.gitlab.ru/api/v4/projects"
+         get_file_list_api = (
+             f"{base_api_url}/{project_id}/repository/tree?ref={branch_name}"
+         )
+@@ -2779,7 +2770,7 @@ def get_acl_from_gitlab(
+         session = requests.Session()
+         session.headers.update({"PRIVATE-TOKEN": settings.GIT_ACCESS_TOKEN})
+         project_id = get_gitlab_project_info(session, repo_url)["project_id"]
+-        get_file_content_api = f"https://gitlab.alfastrah.ru/api/v4/projects/{project_id}/repository/files/{file_name}?ref={branch_name}"
++        get_file_content_api = f"https://test.gitlab.ru/api/v4/projects/{project_id}/repository/files/{file_name}?ref={branch_name}"
+         response = session.get(get_file_content_api)
+         if response.status_code == 200:
+             logger.info(
+@@ -2946,12 +2937,12 @@ def check_taskId_by_uuid(uuid, proxy=None):
+     """Функция проверяет номер SD по номеру UUID в omnitracker"""
+ 
+     body = f"""<?xml version="1.0" encoding="utf-8"?>
+-    <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.omninet.de/OtWebSvc/v1">
++    <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:s="http://www.w3.org/2001/XMLSchema">
+       <soap:Body>
+         <tns:InvokeScript>
+-          <tns:Script name="OmniAPI" runAt="Server">
++          <tns:Script name="Test" runAt="TestServer">
+             <tns:Parameters>
+-              <tns:StringVal name="strFunction">GetIncInfoByExternalNumber</tns:StringVal>
++              <tns:StringVal name="strFunction">Get</tns:StringVal>
+               <tns:StringVal name="strExternalNumber">{str(uuid)}</tns:StringVal>
+             </tns:Parameters>
+           </tns:Script>
+@@ -3011,7 +3002,7 @@ def sync_acl_portal_projects_list(group_name: str = "ACL"):
+     def get_subgroup_projects(group_id, path=""):
+         try:
+             url_get_projects = (
+-                f"https://gitlab.alfastrah.ru/api/v4/groups/{group_id}/projects"
++                f"https://test.gitlab.ru/api/v4/groups/{group_id}/projects"
+             )
+             response = session.get(url_get_projects)
+             if response.status_code == 200:
+@@ -3028,7 +3019,7 @@ def get_subgroup_projects(group_id, path=""):
+ 
+         try:
+             url_get_subgroups = (
+-                f"https://gitlab.alfastrah.ru/api/v4/groups/{group_id}/subgroups"
++                f"https://test.gitlab.ru/api/v4/groups/{group_id}/subgroups"
+             )
+             response = session.get(url_get_subgroups)
+             if response.status_code == 200:
+@@ -3040,7 +3031,7 @@ def get_subgroup_projects(group_id, path=""):
+ 
+     try:
+         url_get_subgroups = (
+-            f"https://gitlab.alfastrah.ru/api/v4/groups/{group_name}/subgroups"
++            f"https://test.gitlab.ru/api/v4/groups/{group_name}/subgroups"
+         )
+         response = session.get(url_get_subgroups)
+         if response.status_code == 200:
+@@ -3055,7 +3046,7 @@ def get_subgroup_projects(group_id, path=""):
+ def get_project_desc_from_git(session=None, project_id=""):
+     project_desc = ""
+     try:
+-        get_custom_attributes_from_git = f"https://gitlab.alfastrah.ru/api/v4/projects/{project_id}/custom_attributes/project_description"
++        get_custom_attributes_from_git = f"https://test.gitlab.ru/api/v4/projects/{project_id}/custom_attributes/project_description"
+         response = session.get(get_custom_attributes_from_git)
+         if response.status_code == 200:
+             project_desc = response.json()["value"]
+@@ -3068,16 +3059,16 @@ def get_project_desc_from_git(session=None, project_id=""):
+ 
+ def celery_send_omnitracker(sender, title, text, attach, uuid=None):
+     bodyNotEncoded = f"""<?xml version="1.0" encoding="utf-8"?>
+-                <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.omninet.de/OtWebSvc/v1">
++                <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:s="http://www.w3.org/2001/XMLSchema">
+         <soap:Body>
+             <tns:InvokeScript>
+-               <tns:Script name="OmniAPI" runAt="Server">
++               <tns:Script name="Test" runAt="TestServer">
+                     <tns:Parameters>
+-                        <tns:StringVal name='strFunction'>CreateIncidentFromTemplateWithAttachmentAndExternalNumber</tns:StringVal>
++                        <tns:StringVal name='strFunction'>Create</tns:StringVal>
+                         <tns:StringVal name='strEMail'>{sender}</tns:StringVal>
+                         <tns:StringVal name='strTitle'>{title}</tns:StringVal>
+                         <tns:StringVal name='strDescription'>{text}</tns:StringVal>
+-                        <tns:StringVal name='strTemplateCode'>SH0458</tns:StringVal>
++                        <tns:StringVal name='strTemplateCode'>1234</tns:StringVal>
+                         <tns:StringVal name='strExternalNumber'>{str(uuid)}</tns:StringVal>
+                         <tns:StringVal name='strAttachmentPath'>{attach}</tns:StringVal>
+                     </tns:Parameters>
+@@ -3132,7 +3123,6 @@ def celery_send_omnitracker(sender, title, text, attach, uuid=None):
+                             send_to_mattermost(
+                                 f"[TRACE] Сервер omni вернул неправильный ответ: {res.text}"
+                                 f"Попытка номер: {i}",
+-                                f"Ссылка на ACL :https://acl.vesta.ru/acl/info/{str(uuid)}",
+                             )
+                             result = None
+                 return result
+@@ -3154,21 +3144,18 @@ def celery_send_omnitracker(sender, title, text, attach, uuid=None):
+                 "Подключение не удалось по таймауту (Timeout).",
+                 f"Попытка подключения номер: {i}.",
+                 f"OMNITRACKER_URL: {settings.OMNITRACKER_URL}",
+-                f"Ссылка на ACL: https://acl.vesta.ru/acl/info/{str(uuid)}",
+             )
+         except requests.ConnectionError:
+             send_to_mattermost(
+                 "Сервис не отвечает (Connection Error).",
+                 f"Попытка подключения номер: {i}.",
+                 f"OMNITRACKER_URL: {settings.OMNITRACKER_URL}",
+-                f"Ссылка на ACL: https://acl.vesta.ru/acl/info/{str(uuid)}",
+             )
+         except Exception as e:
+             send_to_mattermost(
+                 f"Ошибка Omni request: {e}.",
+                 f"Попытка номер: {i}.",
+                 f"OMNITRACKER_URL: {settings.OMNITRACKER_URL}",
+-                f"Ссылка на ACL: https://acl.vesta.ru/acl/info/ {str(uuid)}",
+             )
+     return result
+ 

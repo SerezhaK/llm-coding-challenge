@@ -1,0 +1,35 @@
+@@ -105,10 +105,10 @@
+ DATABASES = {
+     "default": {
+         "ENGINE": "django.db.backends.postgresql_psycopg2",
+-        "NAME": "acl",
++        "NAME": "test",
+         "USER": DB_USER,
+         "PASSWORD": DB_USER_PASSWORD,
+-        "HOST": "127.0.0.1",
++        "HOST": "test_db",
+         "PORT": "5432",
+     }
+ }
+@@ -249,7 +249,7 @@
+ GITLAB_AUTH_PASSWORD = os.environ["GITLAB_AUTH_PASSWORD"]
+ 
+ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+-EMAIL_ADMIN = "ragulinma@alfastrah.ru"
++EMAIL_ADMIN = "test@alfastrah.ru"
+ EMAIL_SD = os.environ["EMAIL_SD"]
+ 
+ EMAIL_USE_TLS = False
+@@ -261,10 +261,10 @@
+ GIT_ACCESS_TOKEN = os.environ["GIT_ACCESS_TOKEN"]
+ 
+ MATTERMOST_WEBHOOK_URL = (
+-    "https://mattermost.alfastrah.ru/hooks/naht8rbp4fdwpf43pbsyatanka"
++    "test_hook"
+ )
+ 
+-OMNITRACKER_URL = "http://ot10.vesta.ru/otws/v1.asmx"
++OMNITRACKER_URL = ""
+ TIMEOUT = 120
+ ATTEMPS = 3
+ JS_TIMEOUT = 3000  # msec

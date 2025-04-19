@@ -1,0 +1,5110 @@
+{
+  "platform": "github",
+  "request_type": "pr",
+  "request_id": 1,
+  "api_url": "https://api.github.com/repos/AlfaInsurance/devQ_testData_PythonProject/pulls/1",
+  "html_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/pull/1",
+  "state": "closed",
+  "title": "Hackaton",
+  "author_login": "VasilevArtem",
+  "author_association": "COLLABORATOR",
+  "body": null,
+  "created_at": "2025-04-11T10:13:59Z",
+  "updated_at": "2025-04-14T09:00:47Z",
+  "closed_at": "2025-04-14T09:00:46Z",
+  "merged_at": null,
+  "merged_by_login": null,
+  "base_branch": "develop",
+  "base_commit_sha": "c916a6d807e86e2f88a38d1f960dedae53d8e97e",
+  "head_branch": "hackaton",
+  "head_repo_full_name": "AlfaInsurance/devQ_testData_PythonProject",
+  "head_commit_sha": "28b7d14401ca39872a6922ac3df25e1ef95c0750",
+  "reviews": [],
+  "review_comments": [],
+  "issue_comments": [],
+  "commits_list": [
+    {
+      "sha": "c0644ac3d52b1be081e333430ddfe5c6f5a804c3",
+      "message": "Merge branch 'feature/422739' into 'master'\n\nClose 422739\n\nSee merge request global-infrastructure/aclserver/server!99",
+      "author": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2023-12-11T09:35:48Z"
+      },
+      "committer": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2023-12-11T09:35:48Z"
+      },
+      "api_author_login": "antisanin",
+      "api_committer_login": "antisanin",
+      "parents": [
+        "cc5ca95aa9c5d334ba32e18e9c294a06e04f9510",
+        "61b0fe02ed0fcc7444bb80734dcbca7698d07497"
+      ]
+    },
+    {
+      "sha": "687b1c239a323c0af0df0304a2e6329d637a1823",
+      "message": "Close 424069",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2023-12-12T04:29:52Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2023-12-12T04:29:52Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "61b0fe02ed0fcc7444bb80734dcbca7698d07497"
+      ]
+    },
+    {
+      "sha": "295f8e8971541afcc0a4927002be5f2766701214",
+      "message": "Close 426033",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2023-12-20T08:31:37Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2023-12-20T08:31:37Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "687b1c239a323c0af0df0304a2e6329d637a1823"
+      ]
+    },
+    {
+      "sha": "447c430377097dc29429e8433e5ed03acf6fd2e0",
+      "message": "Close 424117",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2023-12-20T10:43:05Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2023-12-20T10:43:05Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "295f8e8971541afcc0a4927002be5f2766701214"
+      ]
+    },
+    {
+      "sha": "7b530d9ba2439643699e568045789c2092c4ef3b",
+      "message": "Merge branch 'feature/424069' into 'master'\n\nClose 424069\n\nSee merge request global-infrastructure/aclserver/server!100",
+      "author": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2023-12-20T11:10:56Z"
+      },
+      "committer": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2023-12-20T11:10:56Z"
+      },
+      "api_author_login": "antisanin",
+      "api_committer_login": "antisanin",
+      "parents": [
+        "c0644ac3d52b1be081e333430ddfe5c6f5a804c3",
+        "687b1c239a323c0af0df0304a2e6329d637a1823"
+      ]
+    },
+    {
+      "sha": "ef692d9d4fa3c0776a30ddbd3f635190d8dbefc3",
+      "message": "Merge branch 'feature/426033' into 'master'\n\nClose 426033\n\nSee merge request global-infrastructure/aclserver/server!101",
+      "author": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2023-12-20T11:11:05Z"
+      },
+      "committer": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2023-12-20T11:11:05Z"
+      },
+      "api_author_login": "antisanin",
+      "api_committer_login": "antisanin",
+      "parents": [
+        "7b530d9ba2439643699e568045789c2092c4ef3b",
+        "295f8e8971541afcc0a4927002be5f2766701214"
+      ]
+    },
+    {
+      "sha": "5b5edf9e087b04810554cb2716702eebb8e1d899",
+      "message": "Merge branch 'feature/424117' into 'master'\n\nClose 424117\n\nSee merge request global-infrastructure/aclserver/server!102",
+      "author": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2023-12-20T11:11:21Z"
+      },
+      "committer": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2023-12-20T11:11:21Z"
+      },
+      "api_author_login": "antisanin",
+      "api_committer_login": "antisanin",
+      "parents": [
+        "ef692d9d4fa3c0776a30ddbd3f635190d8dbefc3",
+        "447c430377097dc29429e8433e5ed03acf6fd2e0"
+      ]
+    },
+    {
+      "sha": "2bb3aebdd5bb034785fdaa6ae0b6f9a010d4fa5a",
+      "message": "Close 416826",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2023-12-28T04:34:42Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2023-12-28T04:34:42Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "447c430377097dc29429e8433e5ed03acf6fd2e0"
+      ]
+    },
+    {
+      "sha": "1958980b5c69be4e545f290fd0fd733c55a58448",
+      "message": "Merge branch 'feature/416826' into 'master'\n\nClose 416826\n\nSee merge request global-infrastructure/aclserver/server!104",
+      "author": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2023-12-28T09:23:55Z"
+      },
+      "committer": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2023-12-28T09:23:55Z"
+      },
+      "api_author_login": "antisanin",
+      "api_committer_login": "antisanin",
+      "parents": [
+        "5b5edf9e087b04810554cb2716702eebb8e1d899",
+        "2bb3aebdd5bb034785fdaa6ae0b6f9a010d4fa5a"
+      ]
+    },
+    {
+      "sha": "6a13ced6a2d632ebf1fb8910cba295389ac8b181",
+      "message": "Close 428000",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2023-12-29T07:16:03Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2023-12-29T07:16:03Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "2bb3aebdd5bb034785fdaa6ae0b6f9a010d4fa5a"
+      ]
+    },
+    {
+      "sha": "07a2d36023a4760583f0a589ab9f4555f20e946d",
+      "message": "Merge branch 'feature/428000' into 'master'\n\nClose 428000\n\nSee merge request global-infrastructure/aclserver/server!105",
+      "author": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-01-09T07:24:47Z"
+      },
+      "committer": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-01-09T07:24:47Z"
+      },
+      "api_author_login": "antisanin",
+      "api_committer_login": "antisanin",
+      "parents": [
+        "1958980b5c69be4e545f290fd0fd733c55a58448",
+        "6a13ced6a2d632ebf1fb8910cba295389ac8b181"
+      ]
+    },
+    {
+      "sha": "05837cf2c9d1c719e7fc226fd17242e62adaf196",
+      "message": "Close 425789",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-09T11:04:58Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-09T11:04:58Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "6a13ced6a2d632ebf1fb8910cba295389ac8b181"
+      ]
+    },
+    {
+      "sha": "f393a221a500277df7783cc7bd731fe764a916cf",
+      "message": "Close 418155",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-10T07:02:18Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-10T07:02:18Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "05837cf2c9d1c719e7fc226fd17242e62adaf196"
+      ]
+    },
+    {
+      "sha": "5aaec1ded3fec275d0a3a1cddf69a1fefc6e43bd",
+      "message": "Close 425264",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-10T09:54:29Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-10T09:54:29Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "f393a221a500277df7783cc7bd731fe764a916cf"
+      ]
+    },
+    {
+      "sha": "097b1fcd3090dc836673117b3e48c235609851cb",
+      "message": "Close 425263",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-15T07:00:49Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-15T07:00:49Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "5aaec1ded3fec275d0a3a1cddf69a1fefc6e43bd"
+      ]
+    },
+    {
+      "sha": "f52d1523d1556f3f2214448758c2215db1a2ed7c",
+      "message": "Merge branch 'feature/425789' into 'master'\n\nClose 425789\n\nSee merge request global-infrastructure/aclserver/server!106",
+      "author": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-01-15T07:15:47Z"
+      },
+      "committer": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-01-15T07:15:47Z"
+      },
+      "api_author_login": "antisanin",
+      "api_committer_login": "antisanin",
+      "parents": [
+        "07a2d36023a4760583f0a589ab9f4555f20e946d",
+        "05837cf2c9d1c719e7fc226fd17242e62adaf196"
+      ]
+    },
+    {
+      "sha": "6a1f4495e4438dfd0121d9751e72808864ef87e0",
+      "message": "Merge branch 'feature/418155' into 'master'\n\nClose 418155\n\nSee merge request global-infrastructure/aclserver/server!107",
+      "author": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-01-15T07:16:26Z"
+      },
+      "committer": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-01-15T07:16:26Z"
+      },
+      "api_author_login": "antisanin",
+      "api_committer_login": "antisanin",
+      "parents": [
+        "f52d1523d1556f3f2214448758c2215db1a2ed7c",
+        "f393a221a500277df7783cc7bd731fe764a916cf"
+      ]
+    },
+    {
+      "sha": "245310fa1110d85744c1006f537073e3a5030c9a",
+      "message": "Merge branch 'feature/425264' into 'master'\n\nClose 425264\n\nSee merge request global-infrastructure/aclserver/server!108",
+      "author": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-01-15T07:17:01Z"
+      },
+      "committer": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-01-15T07:17:01Z"
+      },
+      "api_author_login": "antisanin",
+      "api_committer_login": "antisanin",
+      "parents": [
+        "6a1f4495e4438dfd0121d9751e72808864ef87e0",
+        "5aaec1ded3fec275d0a3a1cddf69a1fefc6e43bd"
+      ]
+    },
+    {
+      "sha": "2a6059d6887d2549ed1f939d5b8ebab3f5a8b123",
+      "message": "Close 429697",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-18T05:53:50Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-18T05:53:50Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "097b1fcd3090dc836673117b3e48c235609851cb"
+      ]
+    },
+    {
+      "sha": "02b58ec603d70d1e4cfb7d14da2e556fc62c611a",
+      "message": "Close 430829",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-18T08:31:52Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-18T08:31:52Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "2a6059d6887d2549ed1f939d5b8ebab3f5a8b123"
+      ]
+    },
+    {
+      "sha": "6b63939c31726bbbd119077f6563f03570d60cc0",
+      "message": "Merge branch 'feature/429697' into 'master'\n\nClose 429697\n\nSee merge request global-infrastructure/aclserver/server!109",
+      "author": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-01-22T07:05:50Z"
+      },
+      "committer": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-01-22T07:05:50Z"
+      },
+      "api_author_login": "antisanin",
+      "api_committer_login": "antisanin",
+      "parents": [
+        "245310fa1110d85744c1006f537073e3a5030c9a",
+        "2a6059d6887d2549ed1f939d5b8ebab3f5a8b123"
+      ]
+    },
+    {
+      "sha": "ad054a23e4b97c491c8bb2f4b2765d6d8e4da76f",
+      "message": "Merge branch 'feature/430829' into 'master'\n\nClose 430829\n\nSee merge request global-infrastructure/aclserver/server!110",
+      "author": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-01-22T07:06:09Z"
+      },
+      "committer": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-01-22T07:06:09Z"
+      },
+      "api_author_login": "antisanin",
+      "api_committer_login": "antisanin",
+      "parents": [
+        "6b63939c31726bbbd119077f6563f03570d60cc0",
+        "02b58ec603d70d1e4cfb7d14da2e556fc62c611a"
+      ]
+    },
+    {
+      "sha": "ba118432929d4c9427b6a39776d095adb73a586a",
+      "message": "Close 428549",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-22T12:05:18Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-22T12:05:18Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "02b58ec603d70d1e4cfb7d14da2e556fc62c611a"
+      ]
+    },
+    {
+      "sha": "8d0c5d1e86f431081dbc23a6259d649dfdaf4e02",
+      "message": "Close 431784",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-23T03:52:31Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-23T03:52:31Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "ba118432929d4c9427b6a39776d095adb73a586a"
+      ]
+    },
+    {
+      "sha": "62d2631960cb9eb689cc8700d0c16bbb1eae1475",
+      "message": "Merge branch 'feature/428549' into 'master'\n\nClose 428549\n\nSee merge request global-infrastructure/aclserver/server!111",
+      "author": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-01-23T07:16:18Z"
+      },
+      "committer": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-01-23T07:16:18Z"
+      },
+      "api_author_login": "antisanin",
+      "api_committer_login": "antisanin",
+      "parents": [
+        "ad054a23e4b97c491c8bb2f4b2765d6d8e4da76f",
+        "ba118432929d4c9427b6a39776d095adb73a586a"
+      ]
+    },
+    {
+      "sha": "a8d6d38f20b9de0dfc28ad0f61f8c157516d1f05",
+      "message": "Merge branch 'feature/431784' into 'master'\n\nClose 431784\n\nSee merge request global-infrastructure/aclserver/server!112",
+      "author": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-01-23T07:16:33Z"
+      },
+      "committer": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-01-23T07:16:33Z"
+      },
+      "api_author_login": "antisanin",
+      "api_committer_login": "antisanin",
+      "parents": [
+        "62d2631960cb9eb689cc8700d0c16bbb1eae1475",
+        "8d0c5d1e86f431081dbc23a6259d649dfdaf4e02"
+      ]
+    },
+    {
+      "sha": "13eb2bbde9248c1cd1d788dd9e1b3faff156c2ea",
+      "message": "Close 432188",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-23T07:44:20Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-23T07:44:20Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "8d0c5d1e86f431081dbc23a6259d649dfdaf4e02"
+      ]
+    },
+    {
+      "sha": "5cc6fd5d15c94d4166b724853f6b0f3730b0db97",
+      "message": "Merge branch 'feature/432188' into 'master'\n\nClose 432188\n\nSee merge request global-infrastructure/aclserver/server!113",
+      "author": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-01-23T08:17:43Z"
+      },
+      "committer": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-01-23T08:17:43Z"
+      },
+      "api_author_login": "antisanin",
+      "api_committer_login": "antisanin",
+      "parents": [
+        "a8d6d38f20b9de0dfc28ad0f61f8c157516d1f05",
+        "13eb2bbde9248c1cd1d788dd9e1b3faff156c2ea"
+      ]
+    },
+    {
+      "sha": "76a637e8326ea12b5fe882fd9840187fadd52f33",
+      "message": "add restart of apache service at the end of deploy",
+      "author": {
+        "name": "Яцковский Владимир",
+        "email": "IatskovskiiVV@alfastrah.ru",
+        "date": "2024-01-23T09:27:13Z"
+      },
+      "committer": {
+        "name": "Яцковский Владимир",
+        "email": "IatskovskiiVV@alfastrah.ru",
+        "date": "2024-01-23T09:27:13Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "5cc6fd5d15c94d4166b724853f6b0f3730b0db97"
+      ]
+    },
+    {
+      "sha": "f776520e5b105902c756d1d786ec2a5261611c01",
+      "message": "add restart of apache service at the end of rollback",
+      "author": {
+        "name": "Яцковский Владимир",
+        "email": "IatskovskiiVV@alfastrah.ru",
+        "date": "2024-01-23T09:30:46Z"
+      },
+      "committer": {
+        "name": "Яцковский Владимир",
+        "email": "IatskovskiiVV@alfastrah.ru",
+        "date": "2024-01-23T09:30:46Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "76a637e8326ea12b5fe882fd9840187fadd52f33"
+      ]
+    },
+    {
+      "sha": "79df54784fa6e8996fea26b53b52b27f3cb17554",
+      "message": "Close 432949",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-29T08:17:16Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-29T08:17:16Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "13eb2bbde9248c1cd1d788dd9e1b3faff156c2ea"
+      ]
+    },
+    {
+      "sha": "d860f24d22d9f63f068d411632be20a31a1f8fd6",
+      "message": "Close 432249",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-29T09:50:00Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-29T09:50:00Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "79df54784fa6e8996fea26b53b52b27f3cb17554"
+      ]
+    },
+    {
+      "sha": "5e2a8377854ffc7456131b8833d3fcf3cb72ac99",
+      "message": "Merge branch 'dev_CI_Add_Apache_Restart' into 'master'\n\nadd restart of apache service at the end of deploy\n\nSee merge request global-infrastructure/aclserver/server!114",
+      "author": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-01-29T12:15:43Z"
+      },
+      "committer": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-01-29T12:15:43Z"
+      },
+      "api_author_login": "antisanin",
+      "api_committer_login": "antisanin",
+      "parents": [
+        "5cc6fd5d15c94d4166b724853f6b0f3730b0db97",
+        "f776520e5b105902c756d1d786ec2a5261611c01"
+      ]
+    },
+    {
+      "sha": "691e741f279e070199d900363a24ec72e34060df",
+      "message": "Close 433162",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-30T07:13:43Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-30T07:13:43Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "d860f24d22d9f63f068d411632be20a31a1f8fd6"
+      ]
+    },
+    {
+      "sha": "8391294b6972ce0783820b7ecfe14d47ab7903a5",
+      "message": "Merge branch 'feature/433162' into 'master'\n\nClose 433162\n\nSee merge request global-infrastructure/aclserver/server!117",
+      "author": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-01-30T07:26:49Z"
+      },
+      "committer": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-01-30T07:26:49Z"
+      },
+      "api_author_login": "antisanin",
+      "api_committer_login": "antisanin",
+      "parents": [
+        "5e2a8377854ffc7456131b8833d3fcf3cb72ac99",
+        "691e741f279e070199d900363a24ec72e34060df"
+      ]
+    },
+    {
+      "sha": "53ae109f6e8c501e0338541a76656cc80d75ff49",
+      "message": "Close 434247",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-30T11:09:21Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-30T11:09:21Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "8391294b6972ce0783820b7ecfe14d47ab7903a5"
+      ]
+    },
+    {
+      "sha": "788053bad28c171e52766bf5f20f4968f2e95ebd",
+      "message": "Merge branch 'feature/434247' into 'master'\n\nClose 434247\n\nSee merge request global-infrastructure/aclserver/server!118",
+      "author": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-01-30T11:21:49Z"
+      },
+      "committer": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-01-30T11:21:49Z"
+      },
+      "api_author_login": "antisanin",
+      "api_committer_login": "antisanin",
+      "parents": [
+        "8391294b6972ce0783820b7ecfe14d47ab7903a5",
+        "53ae109f6e8c501e0338541a76656cc80d75ff49"
+      ]
+    },
+    {
+      "sha": "a86fd3fc2758da614f8b959499b9d7b78fba9fc1",
+      "message": "Close 434225",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-31T05:48:38Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-31T05:48:38Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "53ae109f6e8c501e0338541a76656cc80d75ff49"
+      ]
+    },
+    {
+      "sha": "d0532f47a03d147dd6886c5d8c148bae778d2606",
+      "message": "Merge branch 'feature/434225' into 'master'\n\nClose 434225\n\nSee merge request global-infrastructure/aclserver/server!119",
+      "author": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-01-31T06:35:36Z"
+      },
+      "committer": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-01-31T06:35:36Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "788053bad28c171e52766bf5f20f4968f2e95ebd",
+        "a86fd3fc2758da614f8b959499b9d7b78fba9fc1"
+      ]
+    },
+    {
+      "sha": "3df79f3228e37e92b7acd12e8a690bcaf6becd1c",
+      "message": "Close 434432",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-31T07:11:31Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-01-31T07:11:31Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "a86fd3fc2758da614f8b959499b9d7b78fba9fc1"
+      ]
+    },
+    {
+      "sha": "e07498da438d9f4f3f8287116ae5dba9f3f4abc2",
+      "message": "Merge branch 'feature/434432' into 'master'\n\nClose 434432\n\nSee merge request global-infrastructure/aclserver/server!120",
+      "author": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-01-31T07:14:35Z"
+      },
+      "committer": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-01-31T07:14:35Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "d0532f47a03d147dd6886c5d8c148bae778d2606",
+        "3df79f3228e37e92b7acd12e8a690bcaf6becd1c"
+      ]
+    },
+    {
+      "sha": "ed36e1b8ab2846e69785c38a576429eef67e4d26",
+      "message": "Close 434731",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-02-01T05:36:45Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-02-01T05:36:45Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "3df79f3228e37e92b7acd12e8a690bcaf6becd1c"
+      ]
+    },
+    {
+      "sha": "24cfb9ecbd7d88d4fd4d780a0393f22c399dc946",
+      "message": "Merge branch 'feature/434731' into 'master'\n\nClose 434731\n\nSee merge request global-infrastructure/aclserver/server!121",
+      "author": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-02-01T06:17:41Z"
+      },
+      "committer": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-02-01T06:17:41Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "e07498da438d9f4f3f8287116ae5dba9f3f4abc2",
+        "ed36e1b8ab2846e69785c38a576429eef67e4d26"
+      ]
+    },
+    {
+      "sha": "ccbcb93db8ebfa2f68700bb4e36b1a14ee4297c8",
+      "message": "Close 432936",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-02-02T03:34:26Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-02-02T03:34:26Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "ed36e1b8ab2846e69785c38a576429eef67e4d26"
+      ]
+    },
+    {
+      "sha": "d0434d1f25c5401ecdfa2df9a7a110979cdabebf",
+      "message": "Merge branch 'feature/432936' into 'master'\n\nClose 432936\n\nSee merge request global-infrastructure/aclserver/server!122",
+      "author": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-02-02T07:15:54Z"
+      },
+      "committer": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-02-02T07:15:54Z"
+      },
+      "api_author_login": "antisanin",
+      "api_committer_login": "antisanin",
+      "parents": [
+        "24cfb9ecbd7d88d4fd4d780a0393f22c399dc946",
+        "ccbcb93db8ebfa2f68700bb4e36b1a14ee4297c8"
+      ]
+    },
+    {
+      "sha": "d97f7fb57835b7cb5d98e89c7b047fc5eaefc7ac",
+      "message": "Close 433257",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-02-20T07:26:28Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-02-20T07:26:28Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "ccbcb93db8ebfa2f68700bb4e36b1a14ee4297c8"
+      ]
+    },
+    {
+      "sha": "0b14c261609ead2f80ccb77b1e86b5e771f155d4",
+      "message": "Close 434902",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-02-21T04:54:25Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-02-21T04:54:25Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "d97f7fb57835b7cb5d98e89c7b047fc5eaefc7ac"
+      ]
+    },
+    {
+      "sha": "d479909efa0c4759d334ae525867a337d6594107",
+      "message": "Close 439552",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-02-22T05:47:20Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-02-22T05:47:20Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "0b14c261609ead2f80ccb77b1e86b5e771f155d4"
+      ]
+    },
+    {
+      "sha": "31f118d08bd194e3ffc19ca7306f32d020fcda43",
+      "message": "Merge branch 'feature/433257' into 'master'\n\nClose 433257\n\nSee merge request global-infrastructure/aclserver/server!123",
+      "author": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-02-22T07:04:56Z"
+      },
+      "committer": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-02-22T07:04:56Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "d0434d1f25c5401ecdfa2df9a7a110979cdabebf",
+        "d97f7fb57835b7cb5d98e89c7b047fc5eaefc7ac"
+      ]
+    },
+    {
+      "sha": "707628b4e078bd53f0549a5280c5cb85ea14e094",
+      "message": "Merge branch 'feature/434902' into 'master'\n\nClose 434902\n\nSee merge request global-infrastructure/aclserver/server!124",
+      "author": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-02-22T07:19:46Z"
+      },
+      "committer": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-02-22T07:19:46Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "31f118d08bd194e3ffc19ca7306f32d020fcda43",
+        "0b14c261609ead2f80ccb77b1e86b5e771f155d4"
+      ]
+    },
+    {
+      "sha": "0cac8e3b343f224055f2905bddcf2cbfe40bc90d",
+      "message": "Merge branch 'feature/439552' into 'master'\n\nClose 439552\n\nSee merge request global-infrastructure/aclserver/server!125",
+      "author": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-02-22T07:20:36Z"
+      },
+      "committer": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-02-22T07:20:36Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "707628b4e078bd53f0549a5280c5cb85ea14e094",
+        "d479909efa0c4759d334ae525867a337d6594107"
+      ]
+    },
+    {
+      "sha": "b7fe982a59ed7e2a24f38db1425f6e15fa56c3b1",
+      "message": "Close 441091",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-02-28T05:19:09Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-02-28T05:19:09Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "d479909efa0c4759d334ae525867a337d6594107"
+      ]
+    },
+    {
+      "sha": "f0954cdc7b58906eb952c7b8a3aa0009ef83b176",
+      "message": "Merge branch 'feature/441091' into 'master'\n\nClose 441091\n\nSee merge request global-infrastructure/aclserver/server!126",
+      "author": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-02-28T07:13:47Z"
+      },
+      "committer": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-02-28T07:13:47Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "0cac8e3b343f224055f2905bddcf2cbfe40bc90d",
+        "b7fe982a59ed7e2a24f38db1425f6e15fa56c3b1"
+      ]
+    },
+    {
+      "sha": "1bdc15b23f2a5d2b864a810ad468f30d17388b08",
+      "message": "Close 441816",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-02-29T05:05:39Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-02-29T05:05:39Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "b7fe982a59ed7e2a24f38db1425f6e15fa56c3b1"
+      ]
+    },
+    {
+      "sha": "f5d2047d4a84f6cb1833c3f77bcf3b231556a85a",
+      "message": "Merge branch 'feature/441816' into 'master'\n\nClose 441816\n\nSee merge request global-infrastructure/aclserver/server!127",
+      "author": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-02-29T14:13:51Z"
+      },
+      "committer": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-02-29T14:13:51Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "f0954cdc7b58906eb952c7b8a3aa0009ef83b176",
+        "1bdc15b23f2a5d2b864a810ad468f30d17388b08"
+      ]
+    },
+    {
+      "sha": "15a2a8943b60577eaab04f8b87fb574e55e63f64",
+      "message": "Close 442203",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-03-11T07:56:17Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-03-11T07:56:17Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "1bdc15b23f2a5d2b864a810ad468f30d17388b08"
+      ]
+    },
+    {
+      "sha": "a6d78b16b37343016d3fbe9d5d2e41103e8920d0",
+      "message": "Close 444075",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-03-11T08:05:31Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-03-11T08:05:31Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "15a2a8943b60577eaab04f8b87fb574e55e63f64"
+      ]
+    },
+    {
+      "sha": "01f62dff19b47e2fc447f560643597238ca8e7a0",
+      "message": "Merge branch 'feature/444075' into 'master'\n\nClose 444075\n\nSee merge request global-infrastructure/aclserver/server!129",
+      "author": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-03-12T07:51:37Z"
+      },
+      "committer": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-03-12T07:51:37Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "f5d2047d4a84f6cb1833c3f77bcf3b231556a85a",
+        "a6d78b16b37343016d3fbe9d5d2e41103e8920d0"
+      ]
+    },
+    {
+      "sha": "5893ebed58da4037e0c3e9eca4ec59a995d2aeb9",
+      "message": "Close 435298",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-03-12T08:35:29Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-03-12T08:35:29Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "a6d78b16b37343016d3fbe9d5d2e41103e8920d0"
+      ]
+    },
+    {
+      "sha": "1e98b1032772afe2a11d175ae02e1676d88ed613",
+      "message": "Merge branch 'feature/435298' into 'master'\n\nClose 435298\n\nSee merge request global-infrastructure/aclserver/server!130",
+      "author": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-03-12T12:11:10Z"
+      },
+      "committer": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-03-12T12:11:10Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "01f62dff19b47e2fc447f560643597238ca8e7a0",
+        "5893ebed58da4037e0c3e9eca4ec59a995d2aeb9"
+      ]
+    },
+    {
+      "sha": "629f95f05bf9bd5fbdf7274a3966cacbf0f2faa1",
+      "message": "Close 446892",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-03-21T03:56:38Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-03-21T03:56:38Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "5893ebed58da4037e0c3e9eca4ec59a995d2aeb9"
+      ]
+    },
+    {
+      "sha": "568d0c6d5c863d8b163b3ae29567a6e0ee1c7d3e",
+      "message": "Merge branch 'feature/446892' into 'master'\n\nClose 446892\n\nSee merge request global-infrastructure/aclserver/server!131",
+      "author": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-03-21T06:08:47Z"
+      },
+      "committer": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-03-21T06:08:47Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "1e98b1032772afe2a11d175ae02e1676d88ed613",
+        "629f95f05bf9bd5fbdf7274a3966cacbf0f2faa1"
+      ]
+    },
+    {
+      "sha": "df44c478a7b04fab10adb7b2f3db8a933c011605",
+      "message": "Close 451776",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-04-08T10:29:22Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-04-08T10:29:22Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "629f95f05bf9bd5fbdf7274a3966cacbf0f2faa1"
+      ]
+    },
+    {
+      "sha": "d729dbf6fcef3769ee9fcc47a5d595a9df3014b0",
+      "message": "Close 436543",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-04-10T08:52:44Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-04-10T08:52:44Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "df44c478a7b04fab10adb7b2f3db8a933c011605"
+      ]
+    },
+    {
+      "sha": "ec6251fb99ee1cc2d4ce610c02e8930a3a6a0e14",
+      "message": "Close 453069",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-04-10T10:35:19Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-04-10T10:35:19Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "d729dbf6fcef3769ee9fcc47a5d595a9df3014b0"
+      ]
+    },
+    {
+      "sha": "bef93914959f9d12d654c401c2970ddabc315937",
+      "message": "Close 453092",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-04-11T08:05:52Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-04-11T08:05:52Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "ec6251fb99ee1cc2d4ce610c02e8930a3a6a0e14"
+      ]
+    },
+    {
+      "sha": "46ef74d275aa7f16fe61feb935b542a47debc7db",
+      "message": "Merge branch 'feature/453092' into 'master'\n\nFeature/453092\n\nSee merge request global-infrastructure/aclserver/server!135",
+      "author": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-04-16T14:25:27Z"
+      },
+      "committer": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-04-16T14:25:27Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "568d0c6d5c863d8b163b3ae29567a6e0ee1c7d3e",
+        "bef93914959f9d12d654c401c2970ddabc315937"
+      ]
+    },
+    {
+      "sha": "1bb02decca9929eb5a328dde8eecaf0d32b346a2",
+      "message": "Close 454906",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-04-17T07:10:50Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-04-17T07:10:50Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "bef93914959f9d12d654c401c2970ddabc315937"
+      ]
+    },
+    {
+      "sha": "ea2bfa7ff5d513fe957bc9bb8c472daddab2eb0a",
+      "message": "Merge branch 'feature/454906' into 'master'\n\nClose 454906\n\nSee merge request global-infrastructure/aclserver/server!136",
+      "author": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-04-17T07:13:59Z"
+      },
+      "committer": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-04-17T07:13:59Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "46ef74d275aa7f16fe61feb935b542a47debc7db",
+        "1bb02decca9929eb5a328dde8eecaf0d32b346a2"
+      ]
+    },
+    {
+      "sha": "83e4412b5fbc5a8216e3080061c64a4c00db222d",
+      "message": "Close 458639",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-05-06T08:52:01Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-05-06T08:52:01Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "ea2bfa7ff5d513fe957bc9bb8c472daddab2eb0a"
+      ]
+    },
+    {
+      "sha": "b7b713cc86a66324a10fbe48d2f2ac083d568e19",
+      "message": "Close 458359",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-05-08T10:01:18Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-05-08T10:01:18Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "83e4412b5fbc5a8216e3080061c64a4c00db222d"
+      ]
+    },
+    {
+      "sha": "76c6bba7da015899bad33bedb4b291bb4e89e94b",
+      "message": "Close 458909",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-05-13T05:59:29Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-05-13T05:59:29Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "b7b713cc86a66324a10fbe48d2f2ac083d568e19"
+      ]
+    },
+    {
+      "sha": "6806535241dcc4eb0252d65a77adbb728a34ac74",
+      "message": "Merge branch 'feature/458909' into 'master'\n\nFeature/458909\n\nSee merge request global-infrastructure/aclserver/server!139",
+      "author": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-05-13T12:55:59Z"
+      },
+      "committer": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-05-13T12:55:59Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "ea2bfa7ff5d513fe957bc9bb8c472daddab2eb0a",
+        "76c6bba7da015899bad33bedb4b291bb4e89e94b"
+      ]
+    },
+    {
+      "sha": "c7fa55eb7716ff6177b62077ef41e26fcf0accfd",
+      "message": "Close 455068",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-05-17T11:44:17Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-05-17T11:44:17Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "76c6bba7da015899bad33bedb4b291bb4e89e94b"
+      ]
+    },
+    {
+      "sha": "f542fabd5193c9006ea620c1d7e862f5674640d5",
+      "message": "Merge branch 'feature/455068' into 'master'\n\nClose 455068\n\nSee merge request global-infrastructure/aclserver/server!140",
+      "author": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-05-20T06:41:11Z"
+      },
+      "committer": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-05-20T06:41:11Z"
+      },
+      "api_author_login": "antisanin",
+      "api_committer_login": "antisanin",
+      "parents": [
+        "6806535241dcc4eb0252d65a77adbb728a34ac74",
+        "c7fa55eb7716ff6177b62077ef41e26fcf0accfd"
+      ]
+    },
+    {
+      "sha": "070b9f2c92984edaf3f6b89da40aad36639f1a1d",
+      "message": "Close 462794",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-05-30T10:50:15Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-05-30T10:50:15Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "c7fa55eb7716ff6177b62077ef41e26fcf0accfd"
+      ]
+    },
+    {
+      "sha": "5cf70d6eba7045091bb2030c0bd41d5fb50f01a6",
+      "message": "Close 461979",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-06-04T05:52:42Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-06-04T05:52:42Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "070b9f2c92984edaf3f6b89da40aad36639f1a1d"
+      ]
+    },
+    {
+      "sha": "10d52c8242699f0e6d81628c7b12c16ea55cca7f",
+      "message": "Merge branch 'feature/462794' into 'master'\n\nClose 462794\n\nSee merge request global-infrastructure/aclserver/server!141",
+      "author": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-06-04T07:12:53Z"
+      },
+      "committer": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-06-04T07:12:53Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "f542fabd5193c9006ea620c1d7e862f5674640d5",
+        "070b9f2c92984edaf3f6b89da40aad36639f1a1d"
+      ]
+    },
+    {
+      "sha": "86c5c6c4ebaaa05577d939d59e21a22166bede83",
+      "message": "Merge branch 'feature/461979' into 'master'\n\nFeature/461979\n\nSee merge request global-infrastructure/aclserver/server!142",
+      "author": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-06-04T08:57:32Z"
+      },
+      "committer": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-06-04T08:57:32Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "10d52c8242699f0e6d81628c7b12c16ea55cca7f",
+        "5cf70d6eba7045091bb2030c0bd41d5fb50f01a6"
+      ]
+    },
+    {
+      "sha": "47966441214fe6a81ab642294eb4fa4be56f10e8",
+      "message": "Close 465062",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-06-05T08:52:27Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-06-05T08:52:27Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "5cf70d6eba7045091bb2030c0bd41d5fb50f01a6"
+      ]
+    },
+    {
+      "sha": "12903d708b63e2ebf7503c04cb1ad26f6b6d8d3c",
+      "message": "Merge branch 'feature/465062' into 'master'\n\nClose 465062\n\nSee merge request global-infrastructure/aclserver/server!143",
+      "author": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-06-06T14:50:30Z"
+      },
+      "committer": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-06-06T14:50:30Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "86c5c6c4ebaaa05577d939d59e21a22166bede83",
+        "47966441214fe6a81ab642294eb4fa4be56f10e8"
+      ]
+    },
+    {
+      "sha": "6a4715bf8603243945c216eb9ac3c5d0598717a0",
+      "message": "fix multiple object return",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-06-17T05:42:51Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-06-17T05:42:51Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "12903d708b63e2ebf7503c04cb1ad26f6b6d8d3c"
+      ]
+    },
+    {
+      "sha": "1ea656ef1747a100a021e623ee47fe54185703a2",
+      "message": "fix",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-06-18T14:24:44Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-06-18T14:24:44Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "6a4715bf8603243945c216eb9ac3c5d0598717a0"
+      ]
+    },
+    {
+      "sha": "cbb9b259fddc5381ef0c787479a2c50012689850",
+      "message": "Merge branch '468736' into 'master'\n\nResolve 468736\n\nSee merge request global-infrastructure/aclserver/server!144",
+      "author": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-06-26T06:49:13Z"
+      },
+      "committer": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-06-26T06:49:13Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "12903d708b63e2ebf7503c04cb1ad26f6b6d8d3c",
+        "1ea656ef1747a100a021e623ee47fe54185703a2"
+      ]
+    },
+    {
+      "sha": "5cdd3d30475fa4fb4a4ce9c84486051f2dec529f",
+      "message": "Close 464629",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-07-02T07:48:06Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-07-02T07:48:06Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "47966441214fe6a81ab642294eb4fa4be56f10e8"
+      ]
+    },
+    {
+      "sha": "65dfea035d4a8a6b3c9d384745bcdcc8531f8a14",
+      "message": "Merge branch 'feature/464629' into 'master'\n\nClose 464629\n\nSee merge request global-infrastructure/aclserver/server!145",
+      "author": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-07-03T07:43:34Z"
+      },
+      "committer": {
+        "name": "Исанин Антон Викторович",
+        "email": "isaninav@alfastrah.ru",
+        "date": "2024-07-03T07:43:34Z"
+      },
+      "api_author_login": "antisanin",
+      "api_committer_login": "antisanin",
+      "parents": [
+        "cbb9b259fddc5381ef0c787479a2c50012689850",
+        "5cdd3d30475fa4fb4a4ce9c84486051f2dec529f"
+      ]
+    },
+    {
+      "sha": "1ac66647fa569de7b269de02a61ff660ccce4745",
+      "message": "Close 458734",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-07-09T07:21:43Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-07-09T07:21:43Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "5cdd3d30475fa4fb4a4ce9c84486051f2dec529f"
+      ]
+    },
+    {
+      "sha": "129301e31a0b8c2433b1125a385ade0a2aded7c5",
+      "message": "Merge branch 'feature/458734' into 'master'\n\nClose 458734\n\nSee merge request global-infrastructure/aclserver/server!146",
+      "author": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-07-09T11:27:54Z"
+      },
+      "committer": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-07-09T11:27:54Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "65dfea035d4a8a6b3c9d384745bcdcc8531f8a14",
+        "1ac66647fa569de7b269de02a61ff660ccce4745"
+      ]
+    },
+    {
+      "sha": "6663e6d20ae469a7dd400ff2027cb7b5049c04af",
+      "message": "Close 473611",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-07-09T11:32:14Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-07-09T11:32:14Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "1ac66647fa569de7b269de02a61ff660ccce4745"
+      ]
+    },
+    {
+      "sha": "cb487cb0745bb854ce55ae172144ecbf988f281b",
+      "message": "fix 473611: removed the debug code; change if construction to dict",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-07-10T05:10:05Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-07-10T05:10:05Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "6663e6d20ae469a7dd400ff2027cb7b5049c04af"
+      ]
+    },
+    {
+      "sha": "77263744764bd5dc89bf2fde5b711ae4cb11c96a",
+      "message": "Merge branch 'feature/473611' into 'master'\n\nClose 473611\n\nSee merge request global-infrastructure/aclserver/server!147",
+      "author": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-07-10T05:37:57Z"
+      },
+      "committer": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-07-10T05:37:57Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "129301e31a0b8c2433b1125a385ade0a2aded7c5",
+        "cb487cb0745bb854ce55ae172144ecbf988f281b"
+      ]
+    },
+    {
+      "sha": "e246a3a12fd3b61aef63a4d78807bbef51022d7e",
+      "message": "hotfix send omnitracker xml",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-07-11T08:56:12Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-07-11T08:56:12Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "cb487cb0745bb854ce55ae172144ecbf988f281b"
+      ]
+    },
+    {
+      "sha": "052ef1f44bea904ddd883df31f50ea2b841370bf",
+      "message": "Merge branch 'feature/478583' into 'master'\n\nhotfix send omnitracker xml\n\nSee merge request global-infrastructure/aclserver/server!148",
+      "author": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-07-11T09:15:28Z"
+      },
+      "committer": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-07-11T09:15:28Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "77263744764bd5dc89bf2fde5b711ae4cb11c96a",
+        "e246a3a12fd3b61aef63a4d78807bbef51022d7e"
+      ]
+    },
+    {
+      "sha": "1bdc3b36a41b7a008755dc657bf74b7dc6795f43",
+      "message": "fix input",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-07-25T11:37:59Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-07-25T11:37:59Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "052ef1f44bea904ddd883df31f50ea2b841370bf"
+      ]
+    },
+    {
+      "sha": "76024e9cd4670dec19bd1a2f4843ea94cb4db1f9",
+      "message": "fix scale",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-07-26T10:29:49Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-07-26T10:29:49Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "052ef1f44bea904ddd883df31f50ea2b841370bf"
+      ]
+    },
+    {
+      "sha": "060351773e0889d4638feb5e27ea417d294da7c1",
+      "message": "Merge branch 'feature/482021' into 'master'\n\nResolve 482021\n\nSee merge request global-infrastructure/aclserver/server!149",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-07-26T12:48:34Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-07-26T12:48:34Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "052ef1f44bea904ddd883df31f50ea2b841370bf",
+        "1bdc3b36a41b7a008755dc657bf74b7dc6795f43"
+      ]
+    },
+    {
+      "sha": "c60daff36efaac43076b2b56f16e3c352c3ac559",
+      "message": "Merge branch 'feature/478593' into 'master'\n\nResolve 478593\n\nSee merge request global-infrastructure/aclserver/server!150",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-07-26T12:50:23Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-07-26T12:50:23Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "060351773e0889d4638feb5e27ea417d294da7c1",
+        "76024e9cd4670dec19bd1a2f4843ea94cb4db1f9"
+      ]
+    },
+    {
+      "sha": "495e44ec4531c7e664048c47444c5e9cbfbe28ad",
+      "message": "refactor imports and fix add new line for upload with git",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-07-29T13:36:09Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-07-29T13:36:09Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "c60daff36efaac43076b2b56f16e3c352c3ac559"
+      ]
+    },
+    {
+      "sha": "e4e38d543071e8692d1dcbe8e4e40dabda832a35",
+      "message": "close 477908",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-07-30T12:01:51Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-07-30T12:01:51Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "e246a3a12fd3b61aef63a4d78807bbef51022d7e"
+      ]
+    },
+    {
+      "sha": "bc452e2c267e9f91da97d9d735c6ab7ddfa74338",
+      "message": "Merge branch 'feature/478599' into 'master'\n\nResolve 478599\n\nSee merge request global-infrastructure/aclserver/server!151",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-07-31T09:05:44Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-07-31T09:05:44Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "c60daff36efaac43076b2b56f16e3c352c3ac559",
+        "495e44ec4531c7e664048c47444c5e9cbfbe28ad"
+      ]
+    },
+    {
+      "sha": "35182a7e744f425b43b9fd2d3d3b62185c75be76",
+      "message": "move email body to html template",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-07-31T10:29:12Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-07-31T10:29:12Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "e4e38d543071e8692d1dcbe8e4e40dabda832a35"
+      ]
+    },
+    {
+      "sha": "35fe1be85343f9d195a37160f7760f53068520b7",
+      "message": "Merge branch 'feature/477908' into 'master'\n\nclose 477908\n\nSee merge request global-infrastructure/aclserver/server!152",
+      "author": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-08-01T04:30:04Z"
+      },
+      "committer": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-08-01T04:30:04Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "bc452e2c267e9f91da97d9d735c6ab7ddfa74338",
+        "35182a7e744f425b43b9fd2d3d3b62185c75be76"
+      ]
+    },
+    {
+      "sha": "c783944b124c52dfa95fd9470866fea910592131",
+      "message": "close 468072",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-08-02T05:13:15Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-08-02T05:13:15Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "35182a7e744f425b43b9fd2d3d3b62185c75be76"
+      ]
+    },
+    {
+      "sha": "f4a95c990f64e8d5d7f22bc5da245f9eae72ab0c",
+      "message": "Merge branch 'master' into 'feature/468072'\n\n# Conflicts:\n#   ownerlist/utils.py",
+      "author": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-08-02T05:19:03Z"
+      },
+      "committer": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-08-02T05:19:03Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "c783944b124c52dfa95fd9470866fea910592131",
+        "35fe1be85343f9d195a37160f7760f53068520b7"
+      ]
+    },
+    {
+      "sha": "b4bbc68b735691881c96c0651700fd65d53f7e13",
+      "message": "close 484893",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-08-05T11:11:20Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-08-05T11:11:20Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "c783944b124c52dfa95fd9470866fea910592131"
+      ]
+    },
+    {
+      "sha": "06ce8cbbe8c202ecc5138c07a66faa0c4cf770fd",
+      "message": "refactor send git logic from acl_pusher",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-08-06T06:14:25Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-08-06T06:14:25Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "f4a95c990f64e8d5d7f22bc5da245f9eae72ab0c"
+      ]
+    },
+    {
+      "sha": "2a658d792abdd4ce0d702473fd195d1abc2085fa",
+      "message": "Merge branch 'feature/468072' into 'master'\n\nclose 468072\n\nSee merge request global-infrastructure/aclserver/server!153",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-08-06T08:04:09Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-08-06T08:04:09Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "35fe1be85343f9d195a37160f7760f53068520b7",
+        "06ce8cbbe8c202ecc5138c07a66faa0c4cf770fd"
+      ]
+    },
+    {
+      "sha": "68c10ffb598e2b5bf3e8221fd2272c99f8a1f8eb",
+      "message": "Merge branch 'master' into 'feature/484893'\n\n# Conflicts:\n#   ownerlist/utils.py",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-08-06T08:29:05Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-08-06T08:29:05Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "b4bbc68b735691881c96c0651700fd65d53f7e13",
+        "2a658d792abdd4ce0d702473fd195d1abc2085fa"
+      ]
+    },
+    {
+      "sha": "187ebda74d0ceba852c590461bf0d052c713c3f8",
+      "message": "Merge branch 'feature/484893' into 'master'\n\nFeature/484893\n\nSee merge request global-infrastructure/aclserver/server!154",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-08-06T08:30:20Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-08-06T08:30:20Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "2a658d792abdd4ce0d702473fd195d1abc2085fa",
+        "68c10ffb598e2b5bf3e8221fd2272c99f8a1f8eb"
+      ]
+    },
+    {
+      "sha": "a63c7552e8f4a40db60edc8f6f568f8b79d4c0d0",
+      "message": "close 433585",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-08-07T04:32:40Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-08-07T04:32:40Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "06ce8cbbe8c202ecc5138c07a66faa0c4cf770fd"
+      ]
+    },
+    {
+      "sha": "36ec40dcf31c55ee478f6472655a5eed163d2bb5",
+      "message": "Merge branch 'feature/433585' into 'master'\n\nclose 433585\n\nSee merge request global-infrastructure/aclserver/server!155",
+      "author": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-08-07T07:10:43Z"
+      },
+      "committer": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-08-07T07:10:43Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "187ebda74d0ceba852c590461bf0d052c713c3f8",
+        "a63c7552e8f4a40db60edc8f6f568f8b79d4c0d0"
+      ]
+    },
+    {
+      "sha": "5910ba9b6edd92fb79f01e30525ab51383f64eb3",
+      "message": "close 432169",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-08-13T07:58:28Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-08-13T07:58:28Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "a63c7552e8f4a40db60edc8f6f568f8b79d4c0d0"
+      ]
+    },
+    {
+      "sha": "79dd089742938c1929e922734a478dd6d0aeef6c",
+      "message": "add tag",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-13T13:48:55Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-13T13:48:55Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "35fe1be85343f9d195a37160f7760f53068520b7"
+      ]
+    },
+    {
+      "sha": "6b50545517e1a8a7b837f6523a53e97c8ae28279",
+      "message": "Merge branch 'master' into feature/432199",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-13T13:50:03Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-13T13:50:03Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "79dd089742938c1929e922734a478dd6d0aeef6c",
+        "36ec40dcf31c55ee478f6472655a5eed163d2bb5"
+      ]
+    },
+    {
+      "sha": "e4f05185c7bc128747b7c183e9624f9b6b74ce5a",
+      "message": "add token lifefime, add celery task to disable expired token",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-08-14T10:11:52Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-08-14T10:11:52Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "5910ba9b6edd92fb79f01e30525ab51383f64eb3"
+      ]
+    },
+    {
+      "sha": "4992b2eccb8778b3ae70d6adfbe374788fe5d024",
+      "message": "fix word \"Вернутся\" > \"Вернуться\"",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-08-14T10:12:43Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-08-14T10:12:43Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "e4f05185c7bc128747b7c183e9624f9b6b74ce5a"
+      ]
+    },
+    {
+      "sha": "b9d0a0ed2f5f05ec0fd98ef34821ab9b37b67e26",
+      "message": "Merge branch 'feature/432199' into 'master'\n\nResolve 432199\n\nSee merge request global-infrastructure/aclserver/server!157",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-08-15T05:30:19Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-08-15T05:30:19Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "36ec40dcf31c55ee478f6472655a5eed163d2bb5",
+        "6b50545517e1a8a7b837f6523a53e97c8ae28279"
+      ]
+    },
+    {
+      "sha": "c4aea94bcdaf3c6daf9c7d75a6be155f1051db75",
+      "message": "add file",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-19T15:08:27Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-19T15:08:27Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "6b50545517e1a8a7b837f6523a53e97c8ae28279"
+      ]
+    },
+    {
+      "sha": "cf7c9e1875ddeba284f7d9eac1ec46bc72a4385f",
+      "message": "add file",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-19T15:10:06Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-19T15:10:06Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "c4aea94bcdaf3c6daf9c7d75a6be155f1051db75"
+      ]
+    },
+    {
+      "sha": "abd955725f467697bb1efe34c9b8381cc656db1a",
+      "message": "Merge branch 'feature/432199' into 'master'\n\nResolve 432199\n\nSee merge request global-infrastructure/aclserver/server!158",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-08-20T09:42:44Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-08-20T09:42:44Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "b9d0a0ed2f5f05ec0fd98ef34821ab9b37b67e26",
+        "cf7c9e1875ddeba284f7d9eac1ec46bc72a4385f"
+      ]
+    },
+    {
+      "sha": "0ecd7d6bdf7f7f9d4b09dce8259880c646cd4913",
+      "message": "delete old logic",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-21T13:47:55Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-21T13:47:55Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "4992b2eccb8778b3ae70d6adfbe374788fe5d024"
+      ]
+    },
+    {
+      "sha": "aed4cbafa8bb7a0083ba50e906b5cab2406bd126",
+      "message": "add migrations and swagger",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-21T14:06:27Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-21T14:06:27Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "0ecd7d6bdf7f7f9d4b09dce8259880c646cd4913"
+      ]
+    },
+    {
+      "sha": "43aa85b802ed4d1052a1cae5dae20967c6b438dc",
+      "message": "refactor api",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-22T07:32:44Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-22T07:32:44Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "aed4cbafa8bb7a0083ba50e906b5cab2406bd126"
+      ]
+    },
+    {
+      "sha": "0b6d2de16f99705c8d398828677270fd252eafbd",
+      "message": "merge",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-22T07:36:13Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-22T07:36:13Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "43aa85b802ed4d1052a1cae5dae20967c6b438dc",
+        "abd955725f467697bb1efe34c9b8381cc656db1a"
+      ]
+    },
+    {
+      "sha": "434f04ef3a2736826a3f3cc354141e6f5790b390",
+      "message": "fix",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-22T07:38:37Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-22T07:38:37Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "0b6d2de16f99705c8d398828677270fd252eafbd"
+      ]
+    },
+    {
+      "sha": "bc829ee054f81aa1f4fc0bd7b372b55e17c7bc04",
+      "message": "Merge branch 'feature/432169' into 'master'\n\nclose 432169\n\nSee merge request global-infrastructure/aclserver/server!156",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-08-23T11:29:57Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-08-23T11:29:57Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "abd955725f467697bb1efe34c9b8381cc656db1a",
+        "434f04ef3a2736826a3f3cc354141e6f5790b390"
+      ]
+    },
+    {
+      "sha": "fef7ed84c848d06f327040f0cdf95dc4fd4fe082",
+      "message": "add cors",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-26T12:31:43Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-26T12:31:43Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "434f04ef3a2736826a3f3cc354141e6f5790b390"
+      ]
+    },
+    {
+      "sha": "6441c1cb8ddbd14f96b3aac0c5e009a51a825f48",
+      "message": "Merge branch 'master' into feature/432169",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-26T12:32:53Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-26T12:32:53Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "fef7ed84c848d06f327040f0cdf95dc4fd4fe082",
+        "bc829ee054f81aa1f4fc0bd7b372b55e17c7bc04"
+      ]
+    },
+    {
+      "sha": "f8ca77dc0cd12a96d23c42bca0be1bead52a06b0",
+      "message": "req",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-26T12:34:16Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-26T12:34:16Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "6441c1cb8ddbd14f96b3aac0c5e009a51a825f48"
+      ]
+    },
+    {
+      "sha": "da996163e9910b4e2adb1d27bc0549f08da95ed4",
+      "message": "convert to utf-8",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-26T13:44:15Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-08-26T13:44:15Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "f8ca77dc0cd12a96d23c42bca0be1bead52a06b0"
+      ]
+    },
+    {
+      "sha": "99547ebdb10d353e88a9322135ecc7cd04f6034f",
+      "message": "Merge branch 'feature/432169' into 'master'\n\nFeature/432169\n\nSee merge request global-infrastructure/aclserver/server!159",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-08-26T13:46:17Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-08-26T13:46:17Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "bc829ee054f81aa1f4fc0bd7b372b55e17c7bc04",
+        "da996163e9910b4e2adb1d27bc0549f08da95ed4"
+      ]
+    },
+    {
+      "sha": "5fddbab46810ce531621893a7d1debe1ae1d4c1a",
+      "message": "close 487954",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-02T10:30:40Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-02T10:30:40Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "4992b2eccb8778b3ae70d6adfbe374788fe5d024"
+      ]
+    },
+    {
+      "sha": "3372fea3aae09e32ac816b10d34e17d33cc90f1e",
+      "message": "Merge branch 'master' into 'feature/487954'\n\n# Conflicts:\n#   accesslist/urls.py\n#   accesslist/views.py",
+      "author": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-02T10:44:23Z"
+      },
+      "committer": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-02T10:44:23Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "5fddbab46810ce531621893a7d1debe1ae1d4c1a",
+        "99547ebdb10d353e88a9322135ecc7cd04f6034f"
+      ]
+    },
+    {
+      "sha": "6ff000cf4168f1d91858421aeb886a57a4d899d6",
+      "message": "change name for TaskStatus url",
+      "author": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-03T08:12:54Z"
+      },
+      "committer": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-03T08:12:54Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "3372fea3aae09e32ac816b10d34e17d33cc90f1e"
+      ]
+    },
+    {
+      "sha": "f969a704278f9cce132bc74e6c243232c7fee55d",
+      "message": "Merge branch 'feature/487954' into 'master'\n\nclose 487954\n\nSee merge request global-infrastructure/aclserver/server!160",
+      "author": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-03T08:24:02Z"
+      },
+      "committer": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-03T08:24:02Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "99547ebdb10d353e88a9322135ecc7cd04f6034f",
+        "6ff000cf4168f1d91858421aeb886a57a4d899d6"
+      ]
+    },
+    {
+      "sha": "c54ce3f3f640f6608aeb7eefbf009415d2ffcbe5",
+      "message": "close 441891",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-09T10:03:25Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-09T10:03:25Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "f969a704278f9cce132bc74e6c243232c7fee55d"
+      ]
+    },
+    {
+      "sha": "784e9e0d9a1f66caa821bc84d467c1eb56de352f",
+      "message": "Merge branch 'feature/441891' into 'master'\n\nclose 441891\n\nSee merge request global-infrastructure/aclserver/server!161",
+      "author": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-11T07:13:38Z"
+      },
+      "committer": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-11T07:13:38Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "f969a704278f9cce132bc74e6c243232c7fee55d",
+        "c54ce3f3f640f6608aeb7eefbf009415d2ffcbe5"
+      ]
+    },
+    {
+      "sha": "d11647f2405ca46b1c20596daac6e4e3c9f636f6",
+      "message": "close 484921",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-17T13:26:12Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-17T13:26:12Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "c54ce3f3f640f6608aeb7eefbf009415d2ffcbe5"
+      ]
+    },
+    {
+      "sha": "bc8a0b62544adb5a8ae1cb13f8417c33f7fb54bf",
+      "message": "Merge branch 'feature/484921' into 'master'\n\nclose 484921\n\nSee merge request global-infrastructure/aclserver/server!162",
+      "author": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-23T09:05:35Z"
+      },
+      "committer": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-23T09:05:35Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "784e9e0d9a1f66caa821bc84d467c1eb56de352f",
+        "d11647f2405ca46b1c20596daac6e4e3c9f636f6"
+      ]
+    },
+    {
+      "sha": "c1a5774be0d317bb39fb5b272c8680e1e6c866fd",
+      "message": "fix celery broker url to_redis",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-23T10:34:34Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-23T10:34:34Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "d11647f2405ca46b1c20596daac6e4e3c9f636f6"
+      ]
+    },
+    {
+      "sha": "61b42870fc50308a705a8884534c998a9e14921a",
+      "message": "change CELERY_BROKER_URL and CELERY_RESULT_BACKEND",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-23T10:44:07Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-23T10:44:07Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "c1a5774be0d317bb39fb5b272c8680e1e6c866fd"
+      ]
+    },
+    {
+      "sha": "734b9367275d4bd2237fd11d78a70d431af50b6b",
+      "message": "change default host value",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-23T10:46:11Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-23T10:46:11Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "61b42870fc50308a705a8884534c998a9e14921a"
+      ]
+    },
+    {
+      "sha": "ed80859d904dcd62e217c397e6f838b4d4b6daef",
+      "message": "Merge branch 'feature/484921' into 'master'\n\nFeature/484921\n\nSee merge request global-infrastructure/aclserver/server!163",
+      "author": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-23T10:49:10Z"
+      },
+      "committer": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-23T10:49:10Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "bc8a0b62544adb5a8ae1cb13f8417c33f7fb54bf",
+        "734b9367275d4bd2237fd11d78a70d431af50b6b"
+      ]
+    },
+    {
+      "sha": "3cdedfd0ab870957e3b93c4fc82c19f533d9ee43",
+      "message": "fix omni check status and check_acl_in_omni",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-23T12:15:19Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-23T12:15:19Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "734b9367275d4bd2237fd11d78a70d431af50b6b"
+      ]
+    },
+    {
+      "sha": "060f747ed66db0345e2b8a0465bf1753549572b2",
+      "message": "Merge branch 'feature/484921' into 'master'\n\nfix omni check_status and check_acl_in_omni\n\nSee merge request global-infrastructure/aclserver/server!164",
+      "author": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-23T12:28:58Z"
+      },
+      "committer": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-23T12:28:58Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "ed80859d904dcd62e217c397e6f838b4d4b6daef",
+        "3cdedfd0ab870957e3b93c4fc82c19f533d9ee43"
+      ]
+    },
+    {
+      "sha": "8767d540f324ba31155e5eeb4c2b5f69ffe7410c",
+      "message": "add check status timeout, add logs",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-24T08:24:19Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-24T08:24:19Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "3cdedfd0ab870957e3b93c4fc82c19f533d9ee43"
+      ]
+    },
+    {
+      "sha": "83bada53c44a7a03169a296985bcba8e0dd37053",
+      "message": "Merge branch 'feature/484921' into 'master'\n\nadd check status timeout, add logs\n\nSee merge request global-infrastructure/aclserver/server!165",
+      "author": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-24T08:31:27Z"
+      },
+      "committer": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-24T08:31:27Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "060f747ed66db0345e2b8a0465bf1753549572b2",
+        "8767d540f324ba31155e5eeb4c2b5f69ffe7410c"
+      ]
+    },
+    {
+      "sha": "757a346585771a2ef9742b1520184a91899ec878",
+      "message": "fix check_acl_status filter",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-24T08:57:32Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-24T08:57:32Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "8767d540f324ba31155e5eeb4c2b5f69ffe7410c"
+      ]
+    },
+    {
+      "sha": "9075c45fc94375b7f67c98006551d5b420b43a4f",
+      "message": "change check acl in omni timeout from 3 to 5",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-24T09:09:46Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-24T09:09:46Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "757a346585771a2ef9742b1520184a91899ec878"
+      ]
+    },
+    {
+      "sha": "29fc6b6f9009c89cb3af9e249d287bc89d770be6",
+      "message": "change check acl status task schedule from 10 to 25 min",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-24T09:13:12Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-24T09:13:12Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "9075c45fc94375b7f67c98006551d5b420b43a4f"
+      ]
+    },
+    {
+      "sha": "704761babfe66089275333ab69bf26f6e24a9319",
+      "message": "Merge branch 'feature/484921' into 'master'\n\nFeature/484921\n\nSee merge request global-infrastructure/aclserver/server!166",
+      "author": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-24T09:33:19Z"
+      },
+      "committer": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-24T09:33:19Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "83bada53c44a7a03169a296985bcba8e0dd37053",
+        "29fc6b6f9009c89cb3af9e249d287bc89d770be6"
+      ]
+    },
+    {
+      "sha": "71ea39731ed202147b9d83ba02dd50856b9b140c",
+      "message": "fix filter with \"greater_than\" parameter.",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-24T10:19:58Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-24T10:19:58Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "29fc6b6f9009c89cb3af9e249d287bc89d770be6"
+      ]
+    },
+    {
+      "sha": "d7c1aca99ed66cbce9f94bdf8d7f13d1a9f2dfb4",
+      "message": "add exclude taskid=\"\" for acl_objects",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-24T10:30:34Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-24T10:30:34Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "71ea39731ed202147b9d83ba02dd50856b9b140c"
+      ]
+    },
+    {
+      "sha": "1b38d521f17c4da9c3f615d5d8df0636d0d166c3",
+      "message": "Merge branch 'feature/484921' into 'master'\n\nFeature/484921\n\nSee merge request global-infrastructure/aclserver/server!167",
+      "author": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-24T11:07:48Z"
+      },
+      "committer": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-24T11:07:48Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "704761babfe66089275333ab69bf26f6e24a9319",
+        "d7c1aca99ed66cbce9f94bdf8d7f13d1a9f2dfb4"
+      ]
+    },
+    {
+      "sha": "931792b93552d4474fe9cee338e64736e026ec35",
+      "message": "change check_acl_status timeout and beat_schedule crontab",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-24T12:08:59Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-24T12:08:59Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "d7c1aca99ed66cbce9f94bdf8d7f13d1a9f2dfb4"
+      ]
+    },
+    {
+      "sha": "ce947ae2c0f08884049128af2af28a32c923bdfb",
+      "message": "Merge branch 'feature/484921' into 'master'\n\nchange check_acl_status timeout and beat_schedule crontab\n\nSee merge request global-infrastructure/aclserver/server!168",
+      "author": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-25T07:57:40Z"
+      },
+      "committer": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-25T07:57:40Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "1b38d521f17c4da9c3f615d5d8df0636d0d166c3",
+        "931792b93552d4474fe9cee338e64736e026ec35"
+      ]
+    },
+    {
+      "sha": "0b676526fff157e0259b99411d1bf1982112225d",
+      "message": "Update .gitlab-ci.yml",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-09-25T08:14:28Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-09-25T08:14:28Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "ce947ae2c0f08884049128af2af28a32c923bdfb"
+      ]
+    },
+    {
+      "sha": "c6d4d5828eec3fd21467d9219c4e7c9b5cf28450",
+      "message": "change celery host",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-25T08:28:03Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-25T08:28:03Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "931792b93552d4474fe9cee338e64736e026ec35"
+      ]
+    },
+    {
+      "sha": "d550a4af637adb6e1498862b00cdb073b821d3bc",
+      "message": "Merge branch 'feature/484921' into 'master'\n\nchange celery host\n\nSee merge request global-infrastructure/aclserver/server!169",
+      "author": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-25T08:37:54Z"
+      },
+      "committer": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-25T08:37:54Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "0b676526fff157e0259b99411d1bf1982112225d",
+        "c6d4d5828eec3fd21467d9219c4e7c9b5cf28450"
+      ]
+    },
+    {
+      "sha": "4ad2b809ede5626bc2a22b1e429aa13772b33e5c",
+      "message": "change getenv to environ get",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-25T09:37:54Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-25T09:37:54Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "c6d4d5828eec3fd21467d9219c4e7c9b5cf28450"
+      ]
+    },
+    {
+      "sha": "7c564d8e57c2e65290a0fcbf9a335ace958c26c1",
+      "message": "Merge branch 'feature/484921' into 'master'\n\nchange getenv to environ get\n\nSee merge request global-infrastructure/aclserver/server!170",
+      "author": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-25T10:14:43Z"
+      },
+      "committer": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-25T10:14:43Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "d550a4af637adb6e1498862b00cdb073b821d3bc",
+        "4ad2b809ede5626bc2a22b1e429aa13772b33e5c"
+      ]
+    },
+    {
+      "sha": "3d7769289ae2a96cf1a30d5b6136572b47e7b57d",
+      "message": "add test task",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-09-25T10:47:59Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-09-25T10:47:59Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "7c564d8e57c2e65290a0fcbf9a335ace958c26c1"
+      ]
+    },
+    {
+      "sha": "40b2c4c281ea630c36b2834bdbe96f5861be7123",
+      "message": "Merge branch 'add_test_task' into 'master'\n\nadd test task\n\nSee merge request global-infrastructure/aclserver/server!171",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-09-25T10:51:14Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-09-25T10:51:14Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "7c564d8e57c2e65290a0fcbf9a335ace958c26c1",
+        "3d7769289ae2a96cf1a30d5b6136572b47e7b57d"
+      ]
+    },
+    {
+      "sha": "ec3105ebcef965897becfee92d33a85922af31b9",
+      "message": "Update file __init__.py",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-09-25T15:07:43Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-09-25T15:07:43Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "40b2c4c281ea630c36b2834bdbe96f5861be7123"
+      ]
+    },
+    {
+      "sha": "972e7b1ea6335c53cb16cdb7cddcf8f5d7430d93",
+      "message": "add retryes to snd omny and fix create md",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-09-29T11:16:01Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-09-29T11:16:01Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "ec3105ebcef965897becfee92d33a85922af31b9"
+      ]
+    },
+    {
+      "sha": "45dc43433a112551c7d00b43bc12db5c290f9bda",
+      "message": "close 497597",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-30T08:11:48Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-09-30T08:11:48Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "4ad2b809ede5626bc2a22b1e429aa13772b33e5c"
+      ]
+    },
+    {
+      "sha": "3bffdcfb18bd28092d0c8738e145a137fd888daf",
+      "message": "Merge branch 'feature/499527' into 'master'\n\nResolve 499527\n\nSee merge request global-infrastructure/aclserver/server!172",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-09-30T08:15:26Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-09-30T08:15:26Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "ec3105ebcef965897becfee92d33a85922af31b9",
+        "972e7b1ea6335c53cb16cdb7cddcf8f5d7430d93"
+      ]
+    },
+    {
+      "sha": "3a20e56cfd2be9d0ef02840f2f5752c0b6e9ee61",
+      "message": "Merge branch 'feature/497597' into 'master'\n\nclose 497597\n\nSee merge request global-infrastructure/aclserver/server!173",
+      "author": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-30T08:17:50Z"
+      },
+      "committer": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-09-30T08:17:50Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "3bffdcfb18bd28092d0c8738e145a137fd888daf",
+        "45dc43433a112551c7d00b43bc12db5c290f9bda"
+      ]
+    },
+    {
+      "sha": "4cfbddc7d446518853656d6d6698d86e03287db9",
+      "message": "del strict",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-09-30T08:45:32Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-09-30T08:45:32Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "3a20e56cfd2be9d0ef02840f2f5752c0b6e9ee61"
+      ]
+    },
+    {
+      "sha": "0b8c5c3a80694d49ee56f6ec6c224e822fac2ed6",
+      "message": "Merge branch 'fix_zip' into 'master'\n\ndel strict\n\nSee merge request global-infrastructure/aclserver/server!174",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-09-30T08:53:52Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-09-30T08:53:52Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "3a20e56cfd2be9d0ef02840f2f5752c0b6e9ee61",
+        "4cfbddc7d446518853656d6d6698d86e03287db9"
+      ]
+    },
+    {
+      "sha": "a17f048d45aac6fcaffc3a81798a3d88e0cafe76",
+      "message": "fix create md button",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-09-30T13:02:10Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-09-30T13:02:10Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "4cfbddc7d446518853656d6d6698d86e03287db9"
+      ]
+    },
+    {
+      "sha": "1acc7236b33e2b18d2f3a2101ab1e975b4008258",
+      "message": "fix",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-01T06:22:14Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-01T06:22:14Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "a17f048d45aac6fcaffc3a81798a3d88e0cafe76"
+      ]
+    },
+    {
+      "sha": "ded65c11251ad5b0d20f71c1b0b8307f17aca3e2",
+      "message": "Merge branch 'feature/490058' into 'master'\n\nResolve 490058\n\nSee merge request global-infrastructure/aclserver/server!175",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-10-01T06:36:25Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-10-01T06:36:25Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "0b8c5c3a80694d49ee56f6ec6c224e822fac2ed6",
+        "1acc7236b33e2b18d2f3a2101ab1e975b4008258"
+      ]
+    },
+    {
+      "sha": "21fe5a71769e235b74cea3ced113392cbea1f998",
+      "message": "close 490745",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-10-01T07:09:47Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-10-01T07:09:47Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "45dc43433a112551c7d00b43bc12db5c290f9bda"
+      ]
+    },
+    {
+      "sha": "cc24c2051533f120bd1ea1e93b08e241d120faa0",
+      "message": "Merge branch 'feature/490745' into 'master'\n\nclose 490745\n\nSee merge request global-infrastructure/aclserver/server!176",
+      "author": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-10-01T07:21:29Z"
+      },
+      "committer": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-10-01T07:21:29Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "ded65c11251ad5b0d20f71c1b0b8307f17aca3e2",
+        "21fe5a71769e235b74cea3ced113392cbea1f998"
+      ]
+    },
+    {
+      "sha": "414f99a673e7103af122e037f4747c09efe38815",
+      "message": "add static root",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-01T10:20:58Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-01T10:20:58Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "cc24c2051533f120bd1ea1e93b08e241d120faa0"
+      ]
+    },
+    {
+      "sha": "4615250177c3f9739523fc5657218e5409d8b71b",
+      "message": "fix",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-01T10:23:21Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-01T10:23:21Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "414f99a673e7103af122e037f4747c09efe38815"
+      ]
+    },
+    {
+      "sha": "2059f5e81180917851a2e8e3d28b4b73e9bde1fd",
+      "message": "Merge branch 'fix_static_root' into 'master'\n\nResolve 501609, 486929\n\nSee merge request global-infrastructure/aclserver/server!177",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-10-07T06:14:49Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-10-07T06:14:49Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "cc24c2051533f120bd1ea1e93b08e241d120faa0",
+        "4615250177c3f9739523fc5657218e5409d8b71b"
+      ]
+    },
+    {
+      "sha": "56f0693c0a07cff08b16e8b0394e8a05b7945a28",
+      "message": "close 500867",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-10-07T07:45:07Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-10-07T07:45:07Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "21fe5a71769e235b74cea3ced113392cbea1f998"
+      ]
+    },
+    {
+      "sha": "c4c5ce9b019ab58058b6636c5b8f5e028fde2982",
+      "message": "Merge branch 'master' into 'feature/500867'\n\n# Conflicts:\n#   ownerlist/utils.py",
+      "author": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-10-08T09:16:37Z"
+      },
+      "committer": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-10-08T09:16:37Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "56f0693c0a07cff08b16e8b0394e8a05b7945a28",
+        "2059f5e81180917851a2e8e3d28b4b73e9bde1fd"
+      ]
+    },
+    {
+      "sha": "1a120addfe85d7b3dfef204830a72efe224c1eb4",
+      "message": "Merge branch 'feature/500867' into 'master'\n\nclose 500867\n\nSee merge request global-infrastructure/aclserver/server!178",
+      "author": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-10-09T06:53:51Z"
+      },
+      "committer": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-10-09T06:53:51Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "2059f5e81180917851a2e8e3d28b4b73e9bde1fd",
+        "c4c5ce9b019ab58058b6636c5b8f5e028fde2982"
+      ]
+    },
+    {
+      "sha": "04d3921567726623da11259230c5ce6e97f79872",
+      "message": "add init files",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-10T13:12:49Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-10T13:12:49Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "1a120addfe85d7b3dfef204830a72efe224c1eb4"
+      ]
+    },
+    {
+      "sha": "309fe275ca77c08215abb4681439fc7ef770c7d8",
+      "message": "Merge branch 'fix_imports' into 'master'\n\nadd init files\n\nSee merge request global-infrastructure/aclserver/server!179",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-10-10T13:18:33Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-10-10T13:18:33Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "1a120addfe85d7b3dfef204830a72efe224c1eb4",
+        "04d3921567726623da11259230c5ce6e97f79872"
+      ]
+    },
+    {
+      "sha": "4987d9291ecfde4ae8d1ae114b83b02539df37d7",
+      "message": "fix exeptions",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-10T14:01:25Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-10T14:01:25Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "04d3921567726623da11259230c5ce6e97f79872"
+      ]
+    },
+    {
+      "sha": "353119ed2c5a7b870e9c0fa646aeedc37338594b",
+      "message": "Merge branch 'fix_imports' into 'master'\n\nfix exeptions\n\nSee merge request global-infrastructure/aclserver/server!180",
+      "author": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-10-10T14:02:55Z"
+      },
+      "committer": {
+        "name": "Яцковский Владимир Валерьевич",
+        "email": "iatskovskiivv@alfastrah.ru",
+        "date": "2024-10-10T14:02:55Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "309fe275ca77c08215abb4681439fc7ef770c7d8",
+        "4987d9291ecfde4ae8d1ae114b83b02539df37d7"
+      ]
+    },
+    {
+      "sha": "30a1cfce609a262ab8f6d7098e28923e33323fca",
+      "message": "fix resolve dns",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-16T09:54:46Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-16T09:54:46Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "353119ed2c5a7b870e9c0fa646aeedc37338594b"
+      ]
+    },
+    {
+      "sha": "e1a7cfe5b969bb26ae90ff024dfae75e57d367a8",
+      "message": "close 507076",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-10-17T11:01:15Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-10-17T11:01:15Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "56f0693c0a07cff08b16e8b0394e8a05b7945a28"
+      ]
+    },
+    {
+      "sha": "1d1b66e3f7e669a52db5b85082e3916f58f8d748",
+      "message": "fix the order of condition",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-10-17T13:25:51Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-10-17T13:25:51Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "e1a7cfe5b969bb26ae90ff024dfae75e57d367a8"
+      ]
+    },
+    {
+      "sha": "0a50380899cc0f5d05ec2305a1e3748767dae5c1",
+      "message": "Merge branch 'master' into 'feature/507076'\n\n# Conflicts:\n#   acladmin/tasks.py",
+      "author": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-10-17T13:27:15Z"
+      },
+      "committer": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-10-17T13:27:15Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "1d1b66e3f7e669a52db5b85082e3916f58f8d748",
+        "353119ed2c5a7b870e9c0fa646aeedc37338594b"
+      ]
+    },
+    {
+      "sha": "656c8f82a399cdf8320fa5e231e4ddb604f84efb",
+      "message": "Merge branch 'feature/507076' into 'master'\n\nclose 507076\n\nSee merge request global-infrastructure/aclserver/server!182",
+      "author": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-10-17T13:29:43Z"
+      },
+      "committer": {
+        "name": "Панфилов Вадим Алексеевич",
+        "email": "panfilovva@alfastrah.ru",
+        "date": "2024-10-17T13:29:43Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "353119ed2c5a7b870e9c0fa646aeedc37338594b",
+        "0a50380899cc0f5d05ec2305a1e3748767dae5c1"
+      ]
+    },
+    {
+      "sha": "c4e699a52b7cfb9f519d0745f7b57da0c4db27a8",
+      "message": "add validation on line",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-18T11:27:18Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-18T11:27:18Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "353119ed2c5a7b870e9c0fa646aeedc37338594b"
+      ]
+    },
+    {
+      "sha": "bfb63ed63d9deb02968604f8206e3a010222c37f",
+      "message": "Merge branch 'feature/506484' into 'master'\n\nResolve 506484\n\nSee merge request global-infrastructure/aclserver/server!183",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-10-18T11:37:57Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-10-18T11:37:57Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "656c8f82a399cdf8320fa5e231e4ddb604f84efb",
+        "c4e699a52b7cfb9f519d0745f7b57da0c4db27a8"
+      ]
+    },
+    {
+      "sha": "01d0ee6b6656f778f39c232a062c86ac34adb002",
+      "message": "Merge branch 'master' into feature/504647",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-18T12:02:34Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-18T12:02:34Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "30a1cfce609a262ab8f6d7098e28923e33323fca",
+        "bfb63ed63d9deb02968604f8206e3a010222c37f"
+      ]
+    },
+    {
+      "sha": "22049e8d027533dbf2f9e8e819cb7219e458a5b7",
+      "message": "add timeout",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-19T19:35:09Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-19T19:35:09Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "01d0ee6b6656f778f39c232a062c86ac34adb002"
+      ]
+    },
+    {
+      "sha": "3a61567c86e0e47a8f1c35a9e5df254dce74273c",
+      "message": "fix color",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-21T08:39:18Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-21T08:39:18Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "22049e8d027533dbf2f9e8e819cb7219e458a5b7"
+      ]
+    },
+    {
+      "sha": "a5d87d77444a77f1a018185e00294a7aac730ae2",
+      "message": "close 504651",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-10-21T14:19:25Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-10-21T14:19:25Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "1d1b66e3f7e669a52db5b85082e3916f58f8d748"
+      ]
+    },
+    {
+      "sha": "e00b1783cdb316c87ffe4466f56f59376f3e28ed",
+      "message": "Merge branch 'master' of https://gitlab.alfastrah.ru/global-infrastructure/aclserver/server into fix/504651",
+      "author": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-10-21T14:20:43Z"
+      },
+      "committer": {
+        "name": "PanfilovVA",
+        "email": "PanfilovVA@alfastrah.ru",
+        "date": "2024-10-21T14:20:43Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "a5d87d77444a77f1a018185e00294a7aac730ae2",
+        "bfb63ed63d9deb02968604f8206e3a010222c37f"
+      ]
+    },
+    {
+      "sha": "1f16d72e84b736fbbf3f83aa4918016d6c4b5d5c",
+      "message": "fix mark color for compare",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-21T17:17:10Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-21T17:17:10Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "3a61567c86e0e47a8f1c35a9e5df254dce74273c"
+      ]
+    },
+    {
+      "sha": "837d095be9bfd0b7a83015dacd08e1d729d6641c",
+      "message": "fix broken line",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-22T08:10:07Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-22T08:10:07Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "1f16d72e84b736fbbf3f83aa4918016d6c4b5d5c"
+      ]
+    },
+    {
+      "sha": "23163e05be56ca224954ccae53e772ec782285b6",
+      "message": "Merge branch 'feature/504647' into 'master'\n\nResolve 504647\n\nSee merge request global-infrastructure/aclserver/server!181",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-10-22T16:08:58Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-10-22T16:08:58Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "bfb63ed63d9deb02968604f8206e3a010222c37f",
+        "837d095be9bfd0b7a83015dacd08e1d729d6641c"
+      ]
+    },
+    {
+      "sha": "42cac91e8fd8fed24f12a93f372b089256522262",
+      "message": "remove strict",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-23T06:19:58Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-23T06:19:58Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "837d095be9bfd0b7a83015dacd08e1d729d6641c"
+      ]
+    },
+    {
+      "sha": "94a3d37d2a1cc0b89b620c43b733f610543071e4",
+      "message": "remove strict",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-23T06:21:20Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-23T06:21:20Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "42cac91e8fd8fed24f12a93f372b089256522262"
+      ]
+    },
+    {
+      "sha": "2ab28f6973733a117401b6c5002bed69009acb72",
+      "message": "Merge branch 'feature/504647' into 'master'\n\n504647\n\nSee merge request global-infrastructure/aclserver/server!185",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-10-23T13:21:43Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-10-23T13:21:43Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "23163e05be56ca224954ccae53e772ec782285b6",
+        "94a3d37d2a1cc0b89b620c43b733f610543071e4"
+      ]
+    },
+    {
+      "sha": "bc6f4fc24077508968c7647def2c02ef49cb4180",
+      "message": "fix debug",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-23T14:06:57Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-23T14:06:57Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "2ab28f6973733a117401b6c5002bed69009acb72"
+      ]
+    },
+    {
+      "sha": "f30c48705107e19b1d2728b2bd320edf9089985a",
+      "message": "fix",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-24T07:27:59Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-24T07:27:59Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "bc6f4fc24077508968c7647def2c02ef49cb4180"
+      ]
+    },
+    {
+      "sha": "4e2cea6090c2a3a208098b3e55007d5516e419af",
+      "message": "add autocomplete fields",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-28T13:24:29Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-28T13:24:29Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "f30c48705107e19b1d2728b2bd320edf9089985a"
+      ]
+    },
+    {
+      "sha": "453a4d5ec9c1433e8dfd098c78facf4b1ccd4188",
+      "message": "Merge branch 'add_field' into 'master'\n\nadd autocomplete fields\n\nSee merge request global-infrastructure/aclserver/server!187",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-10-28T13:40:05Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-10-28T13:40:05Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "f30c48705107e19b1d2728b2bd320edf9089985a",
+        "4e2cea6090c2a3a208098b3e55007d5516e419af"
+      ]
+    },
+    {
+      "sha": "425d0ec80744817f1f1fc7d3fa8086979f24e7f4",
+      "message": "add media and refactor create md and docx",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-29T10:50:28Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-29T10:50:28Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "4e2cea6090c2a3a208098b3e55007d5516e419af"
+      ]
+    },
+    {
+      "sha": "33224fc90e6c7fdd0db4074857aae2585ad1f4c3",
+      "message": "Merge branch 'add_field' into 'master'\n\nResolve 510773\n\nSee merge request global-infrastructure/aclserver/server!188",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-10-29T11:02:28Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-10-29T11:02:28Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "453a4d5ec9c1433e8dfd098c78facf4b1ccd4188",
+        "425d0ec80744817f1f1fc7d3fa8086979f24e7f4"
+      ]
+    },
+    {
+      "sha": "bf1bf60bdd62acdf25326146876f6cf2915cd6c9",
+      "message": "add chmode",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-29T18:24:36Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-29T18:24:36Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "425d0ec80744817f1f1fc7d3fa8086979f24e7f4"
+      ]
+    },
+    {
+      "sha": "410f8a71f21d91088ef8f302b501ba42ac4fb27d",
+      "message": "Merge branch 'add_field' into 'master'\n\nadd chmode\n\nSee merge request global-infrastructure/aclserver/server!189",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-10-29T18:27:11Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-10-29T18:27:11Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "33224fc90e6c7fdd0db4074857aae2585ad1f4c3",
+        "bf1bf60bdd62acdf25326146876f6cf2915cd6c9"
+      ]
+    },
+    {
+      "sha": "3545e74bfb68617b531de781959866531149e773",
+      "message": "revert",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-30T06:29:48Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-10-30T06:29:48Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "bf1bf60bdd62acdf25326146876f6cf2915cd6c9"
+      ]
+    },
+    {
+      "sha": "c55a11c47cfdb2ad72bb5276de6b1b558836b2d9",
+      "message": "Merge branch 'add_field' into 'master'\n\nrevert\n\nSee merge request global-infrastructure/aclserver/server!190",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-10-30T06:41:57Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-10-30T06:41:57Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "410f8a71f21d91088ef8f302b501ba42ac4fb27d",
+        "3545e74bfb68617b531de781959866531149e773"
+      ]
+    },
+    {
+      "sha": "12582d6d286bdcf1bc04d10f0ce812d156073cde",
+      "message": "Merge branch 'fix/504651' into 'master'\n\nFix/504651\n\nSee merge request global-infrastructure/aclserver/server!184",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-11-01T07:37:41Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-11-01T07:37:41Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "c55a11c47cfdb2ad72bb5276de6b1b558836b2d9",
+        "e00b1783cdb316c87ffe4466f56f59376f3e28ed"
+      ]
+    },
+    {
+      "sha": "2f64f5b8ca190ca3d833bd3ab20dea269f265d06",
+      "message": "add sleep before save file",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-11-02T09:10:47Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-11-02T09:10:47Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "12582d6d286bdcf1bc04d10f0ce812d156073cde"
+      ]
+    },
+    {
+      "sha": "d112283a2de0025b89faf1412cbdc182081cedbd",
+      "message": "Добавлена ссылка на сформированый файл в лог омни",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-11-02T16:13:52Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-11-02T16:13:52Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "2f64f5b8ca190ca3d833bd3ab20dea269f265d06"
+      ]
+    },
+    {
+      "sha": "36af132e2784365edb5000546d921796512b8fee",
+      "message": "fix url",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-11-02T17:41:01Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-11-02T17:41:01Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "d112283a2de0025b89faf1412cbdc182081cedbd"
+      ]
+    },
+    {
+      "sha": "36eeb64b6e61d5f566a8a97704dcac575d7ffc9b",
+      "message": "fix",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-11-05T14:32:38Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-11-05T14:32:38Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "36af132e2784365edb5000546d921796512b8fee"
+      ]
+    },
+    {
+      "sha": "046bd6638a30086f36312f45296c50b096d5b39f",
+      "message": "Merge branch 'fix_make_doc' into 'master'\n\nfix url\n\nSee merge request global-infrastructure/aclserver/server!191",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-11-05T14:35:34Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-11-05T14:35:34Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "36af132e2784365edb5000546d921796512b8fee",
+        "36eeb64b6e61d5f566a8a97704dcac575d7ffc9b"
+      ]
+    },
+    {
+      "sha": "5f72f315c4e47886c09ddacdafd18f1dd5729fcb",
+      "message": "add select for update and uniq task number",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-11-07T10:35:57Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-11-07T10:35:57Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "046bd6638a30086f36312f45296c50b096d5b39f"
+      ]
+    },
+    {
+      "sha": "058357b6239a9c9bf5858ca38ba2133c65556631",
+      "message": "Merge branch 'feature/513969' into 'master'\n\nResolve 513969\n\nSee merge request global-infrastructure/aclserver/server!192",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-11-07T10:43:54Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-11-07T10:43:54Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "046bd6638a30086f36312f45296c50b096d5b39f",
+        "5f72f315c4e47886c09ddacdafd18f1dd5729fcb"
+      ]
+    },
+    {
+      "sha": "6bb4d589ca721c3a957bb031d76406e3f749e458",
+      "message": "add transaction",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-11-07T13:57:40Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-11-07T13:57:40Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "058357b6239a9c9bf5858ca38ba2133c65556631"
+      ]
+    },
+    {
+      "sha": "df7356d8720d7dac12e8157357bc89317c2ed783",
+      "message": "add check taskid",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-12-05T09:08:35Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-12-05T09:08:35Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "6bb4d589ca721c3a957bb031d76406e3f749e458"
+      ]
+    },
+    {
+      "sha": "21afed19fa8e0bb2f52a723c60efd9b0bab67bea",
+      "message": "Merge branch 'feature/525038' into 'master'\n\nResolve 525038\n\nSee merge request global-infrastructure/aclserver/server!193",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-12-05T11:37:39Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2024-12-05T11:37:39Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "6bb4d589ca721c3a957bb031d76406e3f749e458",
+        "df7356d8720d7dac12e8157357bc89317c2ed783"
+      ]
+    },
+    {
+      "sha": "fef673b88f98fa3180566aa2d2d8cf205d4de9e6",
+      "message": "refactoring",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-12-20T15:44:25Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-12-20T15:44:25Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "21afed19fa8e0bb2f52a723c60efd9b0bab67bea"
+      ]
+    },
+    {
+      "sha": "513fda8b0c8ea9b52f4f1536a3b02d6a9be19f33",
+      "message": "fix",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-12-23T08:33:18Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-12-23T08:33:18Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "fef673b88f98fa3180566aa2d2d8cf205d4de9e6"
+      ]
+    },
+    {
+      "sha": "156592b957e7dd8e36e2f2705d3f4c81abe0f01b",
+      "message": "f",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-12-23T08:40:38Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-12-23T08:40:38Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "513fda8b0c8ea9b52f4f1536a3b02d6a9be19f33"
+      ]
+    },
+    {
+      "sha": "ddff682fe80ad615bb6055b37ca8231805122603",
+      "message": "del type hint",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-12-24T14:35:45Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-12-24T14:35:45Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "156592b957e7dd8e36e2f2705d3f4c81abe0f01b"
+      ]
+    },
+    {
+      "sha": "212ba961b81d8b07219b1f47101f84cb3f1ba113",
+      "message": "fix bugs",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-12-27T12:14:06Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-12-27T12:14:06Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "ddff682fe80ad615bb6055b37ca8231805122603"
+      ]
+    },
+    {
+      "sha": "f9d901e30881aaac3e6300faa0e8177d1dc7a442",
+      "message": "fix reserve",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-12-28T08:25:47Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2024-12-28T08:25:47Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "212ba961b81d8b07219b1f47101f84cb3f1ba113"
+      ]
+    },
+    {
+      "sha": "303a36668f4b9a2da28189abc8f28eddbad8cfa8",
+      "message": "fix api",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-10T09:18:49Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-10T09:18:49Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "f9d901e30881aaac3e6300faa0e8177d1dc7a442"
+      ]
+    },
+    {
+      "sha": "d3370a2ebf1bf8dd16ac24a49d5616efa316a578",
+      "message": "fix search",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-10T10:08:22Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-10T10:08:22Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "303a36668f4b9a2da28189abc8f28eddbad8cfa8"
+      ]
+    },
+    {
+      "sha": "5f97353a98703ecf3a55f39f26c9bc4f4b141c35",
+      "message": "add templates logic",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-17T16:11:25Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-17T16:11:25Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "d3370a2ebf1bf8dd16ac24a49d5616efa316a578"
+      ]
+    },
+    {
+      "sha": "4d8f16f08918af4371e9671be6902a1b45af01ba",
+      "message": "del print",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-19T09:10:26Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-19T09:10:26Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "5f97353a98703ecf3a55f39f26c9bc4f4b141c35"
+      ]
+    },
+    {
+      "sha": "c36caee5cd6fb5a7eac273e97d977076e8514d03",
+      "message": "add ip resolve to form",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-20T09:00:47Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-20T09:00:47Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "4d8f16f08918af4371e9671be6902a1b45af01ba"
+      ]
+    },
+    {
+      "sha": "bd5021fe0eb10c229eece2ff027593692a4fef17",
+      "message": "refactor",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-20T13:57:57Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-20T13:57:57Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "c36caee5cd6fb5a7eac273e97d977076e8514d03"
+      ]
+    },
+    {
+      "sha": "572be0554e721e7c1f15dbdb8c1e04f5f89bee6b",
+      "message": "refactor acl - trafic",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-20T14:37:59Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-20T14:37:59Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "bd5021fe0eb10c229eece2ff027593692a4fef17"
+      ]
+    },
+    {
+      "sha": "b796460593a909c55ab1ca48a2a8ca45080d8481",
+      "message": "Merge branch 'feature/501228' into 'master'\n\nResolve 501228\n\nSee merge request global-infrastructure/aclserver/server!194",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2025-01-21T13:09:17Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2025-01-21T13:09:17Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "21afed19fa8e0bb2f52a723c60efd9b0bab67bea",
+        "d3370a2ebf1bf8dd16ac24a49d5616efa316a578"
+      ]
+    },
+    {
+      "sha": "473b056368aefadabcf33cbd990ea23437f60a9c",
+      "message": "del print",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-22T04:51:31Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-22T04:51:31Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "c36caee5cd6fb5a7eac273e97d977076e8514d03"
+      ]
+    },
+    {
+      "sha": "c864a3b9dcd0ed61da2a749e8c58943a51b717a1",
+      "message": "fix",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-22T04:52:10Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-22T04:52:10Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "572be0554e721e7c1f15dbdb8c1e04f5f89bee6b"
+      ]
+    },
+    {
+      "sha": "75026ba0d8eac537cc1c95f20c986cbe64e6fb89",
+      "message": "fix",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-22T12:17:27Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-22T12:17:27Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "c864a3b9dcd0ed61da2a749e8c58943a51b717a1"
+      ]
+    },
+    {
+      "sha": "02e4617d99fc8d2b724fb321175c0f6630bfea4f",
+      "message": "fix",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-22T14:30:46Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-22T14:30:46Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "75026ba0d8eac537cc1c95f20c986cbe64e6fb89"
+      ]
+    },
+    {
+      "sha": "95d59629e51accfdc1e2b07f80f2e9d9f47dc464",
+      "message": "fix",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-23T13:21:03Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-23T13:21:03Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "02e4617d99fc8d2b724fb321175c0f6630bfea4f"
+      ]
+    },
+    {
+      "sha": "421c73cb009343546ceb5b71a3c6cf2bc4ea4695",
+      "message": "fix title",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-23T14:37:53Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-23T14:37:53Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "95d59629e51accfdc1e2b07f80f2e9d9f47dc464"
+      ]
+    },
+    {
+      "sha": "90e35ea37970adc9ad54009d8e3f78666dfd02f3",
+      "message": "add staticfiles storages",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-27T06:13:45Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-27T06:13:45Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "421c73cb009343546ceb5b71a3c6cf2bc4ea4695"
+      ]
+    },
+    {
+      "sha": "9063764627f683ce5facf06d8ba07c910858bc07",
+      "message": "Merge branch 'feature/533478' into 'master'\n\nResolve 533478\n\nSee merge request global-infrastructure/aclserver/server!197",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2025-01-27T11:07:26Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2025-01-27T11:07:26Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "b796460593a909c55ab1ca48a2a8ca45080d8481",
+        "473b056368aefadabcf33cbd990ea23437f60a9c"
+      ]
+    },
+    {
+      "sha": "366572320f6805a11fc4f9546b604792323f6688",
+      "message": "Merge branch 'feature/537368' into 'master'\n\nResolve 537368\n\nSee merge request global-infrastructure/aclserver/server!196",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2025-01-27T11:08:13Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2025-01-27T11:08:13Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "9063764627f683ce5facf06d8ba07c910858bc07",
+        "90e35ea37970adc9ad54009d8e3f78666dfd02f3"
+      ]
+    },
+    {
+      "sha": "20bf10d51513d1febbb3dca79fab75a2ba40c0d9",
+      "message": "add logic with empty file",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-28T10:48:07Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-01-28T10:48:07Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "90e35ea37970adc9ad54009d8e3f78666dfd02f3"
+      ]
+    },
+    {
+      "sha": "a32789de1fe803367fa8c33a0be55da72d26a9a9",
+      "message": "Merge branch 'feature/541485' into 'master'\n\nResolve 541485\n\nSee merge request global-infrastructure/aclserver/server!198",
+      "author": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2025-01-28T11:55:28Z"
+      },
+      "committer": {
+        "name": "Васильев Артём Романович",
+        "email": "vasilevar@alfastrah.ru",
+        "date": "2025-01-28T11:55:28Z"
+      },
+      "api_author_login": null,
+      "api_committer_login": null,
+      "parents": [
+        "366572320f6805a11fc4f9546b604792323f6688",
+        "20bf10d51513d1febbb3dca79fab75a2ba40c0d9"
+      ]
+    },
+    {
+      "sha": "28b7d14401ca39872a6922ac3df25e1ef95c0750",
+      "message": "v1",
+      "author": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-04-11T10:00:42Z"
+      },
+      "committer": {
+        "name": "Artem Vasilev",
+        "email": "avasilev1992@gmail.com",
+        "date": "2025-04-11T10:00:42Z"
+      },
+      "api_author_login": "VasilevArtem",
+      "api_committer_login": "VasilevArtem",
+      "parents": [
+        "a32789de1fe803367fa8c33a0be55da72d26a9a9"
+      ]
+    }
+  ],
+  "commits_count": 250,
+  "check_runs": [],
+  "statuses": [],
+  "linked_issues_parsed": [],
+  "changed_files_count": 16,
+  "total_additions": 63,
+  "total_deletions": 245,
+  "total_changes": 308,
+  "changed_files_manifest": [
+    {
+      "filename": ".gitlab-ci.yml",
+      "status": "removed",
+      "additions": 0,
+      "deletions": 115,
+      "changes": 115,
+      "sha": "5698facd69c8c5c328d5f9996edf5f7f440d5f3e",
+      "blob_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/blob//.gitlab-ci.yml",
+      "raw_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/raw//.gitlab-ci.yml",
+      "patch_saved": true,
+      "content_base_saved": true,
+      "content_head_saved": false,
+      "previous_filename": null
+    },
+    {
+      "filename": "accesslist/templates/acl_create_info.html",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 4,
+      "changes": 8,
+      "sha": "f560f8590d58205af39207938377f7680bd3623c",
+      "blob_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/blob/28b7d14401ca39872a6922ac3df25e1ef95c0750/accesslist%2Ftemplates%2Facl_create_info.html",
+      "raw_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/raw/28b7d14401ca39872a6922ac3df25e1ef95c0750/accesslist%2Ftemplates%2Facl_create_info.html",
+      "patch_saved": true,
+      "content_base_saved": true,
+      "content_head_saved": true,
+      "previous_filename": null
+    },
+    {
+      "filename": "accesslist/templates/acl_demo.html",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "sha": "0b402721823737c1efd8ac72390c90f5098d6cb3",
+      "blob_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/blob/28b7d14401ca39872a6922ac3df25e1ef95c0750/accesslist%2Ftemplates%2Facl_demo.html",
+      "raw_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/raw/28b7d14401ca39872a6922ac3df25e1ef95c0750/accesslist%2Ftemplates%2Facl_demo.html",
+      "patch_saved": true,
+      "content_base_saved": true,
+      "content_head_saved": true,
+      "previous_filename": null
+    },
+    {
+      "filename": "accesslist/templates/acl_dmz_resources.html",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "sha": "6f4b6b0404c5e2ec58c3dc401b34243a62a6c677",
+      "blob_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/blob/28b7d14401ca39872a6922ac3df25e1ef95c0750/accesslist%2Ftemplates%2Facl_dmz_resources.html",
+      "raw_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/raw/28b7d14401ca39872a6922ac3df25e1ef95c0750/accesslist%2Ftemplates%2Facl_dmz_resources.html",
+      "patch_saved": true,
+      "content_base_saved": true,
+      "content_head_saved": true,
+      "previous_filename": null
+    },
+    {
+      "filename": "accesslist/utils/gitlab.py",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "sha": "407a74e003b861282ad22ddd2361f17665015ec1",
+      "blob_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/blob/28b7d14401ca39872a6922ac3df25e1ef95c0750/accesslist%2Futils%2Fgitlab.py",
+      "raw_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/raw/28b7d14401ca39872a6922ac3df25e1ef95c0750/accesslist%2Futils%2Fgitlab.py",
+      "patch_saved": true,
+      "content_base_saved": false,
+      "content_head_saved": true,
+      "previous_filename": null
+    },
+    {
+      "filename": "accesslist/views.py",
+      "status": "modified",
+      "additions": 13,
+      "deletions": 15,
+      "changes": 28,
+      "sha": "d427fa89fa7eff6f6ccd8d707c9aac3708caddf5",
+      "blob_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/blob/28b7d14401ca39872a6922ac3df25e1ef95c0750/accesslist%2Fviews.py",
+      "raw_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/raw/28b7d14401ca39872a6922ac3df25e1ef95c0750/accesslist%2Fviews.py",
+      "patch_saved": true,
+      "content_base_saved": true,
+      "content_head_saved": true,
+      "previous_filename": null
+    },
+    {
+      "filename": "acladmin/settings.py",
+      "status": "modified",
+      "additions": 5,
+      "deletions": 5,
+      "changes": 10,
+      "sha": "a4e51f8c894e015bd6146b13a7dc760f200f436c",
+      "blob_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/blob/28b7d14401ca39872a6922ac3df25e1ef95c0750/acladmin%2Fsettings.py",
+      "raw_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/raw/28b7d14401ca39872a6922ac3df25e1ef95c0750/acladmin%2Fsettings.py",
+      "patch_saved": true,
+      "content_base_saved": true,
+      "content_head_saved": true,
+      "previous_filename": null
+    },
+    {
+      "filename": "acladmin/tasks.py",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "sha": "2b4604159cf0edf44e9d2dd28ad2171613b1be4a",
+      "blob_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/blob/28b7d14401ca39872a6922ac3df25e1ef95c0750/acladmin%2Ftasks.py",
+      "raw_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/raw/28b7d14401ca39872a6922ac3df25e1ef95c0750/acladmin%2Ftasks.py",
+      "patch_saved": true,
+      "content_base_saved": true,
+      "content_head_saved": true,
+      "previous_filename": null
+    },
+    {
+      "filename": "acladmin/wsgi.py",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "sha": "413feed45560b4471eb71b193a5310d2bac9a410",
+      "blob_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/blob/28b7d14401ca39872a6922ac3df25e1ef95c0750/acladmin%2Fwsgi.py",
+      "raw_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/raw/28b7d14401ca39872a6922ac3df25e1ef95c0750/acladmin%2Fwsgi.py",
+      "patch_saved": true,
+      "content_base_saved": true,
+      "content_head_saved": true,
+      "previous_filename": null
+    },
+    {
+      "filename": "init.sh",
+      "status": "removed",
+      "additions": 0,
+      "deletions": 52,
+      "changes": 52,
+      "sha": "0b4c710e25d1981cb4d11fba905aba72590ffe81",
+      "blob_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/blob//init.sh",
+      "raw_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/raw//init.sh",
+      "patch_saved": true,
+      "content_base_saved": false,
+      "content_head_saved": false,
+      "previous_filename": null
+    },
+    {
+      "filename": "ownerlist/templates/registration/login.html",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "sha": "22640b83ccf9ccee1759c9b7841b393b64fe0c66",
+      "blob_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/blob/28b7d14401ca39872a6922ac3df25e1ef95c0750/ownerlist%2Ftemplates%2Fregistration%2Flogin.html",
+      "raw_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/raw/28b7d14401ca39872a6922ac3df25e1ef95c0750/ownerlist%2Ftemplates%2Fregistration%2Flogin.html",
+      "patch_saved": true,
+      "content_base_saved": true,
+      "content_head_saved": true,
+      "previous_filename": null
+    },
+    {
+      "filename": "ownerlist/utils.py",
+      "status": "modified",
+      "additions": 26,
+      "deletions": 39,
+      "changes": 65,
+      "sha": "65baa1febc2bb6f09042dbcda4590d858c8881c0",
+      "blob_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/blob/28b7d14401ca39872a6922ac3df25e1ef95c0750/ownerlist%2Futils.py",
+      "raw_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/raw/28b7d14401ca39872a6922ac3df25e1ef95c0750/ownerlist%2Futils.py",
+      "patch_saved": true,
+      "content_base_saved": true,
+      "content_head_saved": true,
+      "previous_filename": null
+    },
+    {
+      "filename": "panel/templates/panel.html",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "sha": "1ea284d5c44a78016f35890c25d794133ce5616c",
+      "blob_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/blob/28b7d14401ca39872a6922ac3df25e1ef95c0750/panel%2Ftemplates%2Fpanel.html",
+      "raw_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/raw/28b7d14401ca39872a6922ac3df25e1ef95c0750/panel%2Ftemplates%2Fpanel.html",
+      "patch_saved": true,
+      "content_base_saved": true,
+      "content_head_saved": true,
+      "previous_filename": null
+    },
+    {
+      "filename": "panel/views.py",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "sha": "93ad9d657d338c944029264de9f9f6f9f2f46fd4",
+      "blob_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/blob/28b7d14401ca39872a6922ac3df25e1ef95c0750/panel%2Fviews.py",
+      "raw_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/raw/28b7d14401ca39872a6922ac3df25e1ef95c0750/panel%2Fviews.py",
+      "patch_saved": true,
+      "content_base_saved": true,
+      "content_head_saved": true,
+      "previous_filename": null
+    },
+    {
+      "filename": "requirements.txt",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "sha": "3b7a7b1460c93eb8c563b1a6ca7ab2985a654304",
+      "blob_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/blob/28b7d14401ca39872a6922ac3df25e1ef95c0750/requirements.txt",
+      "raw_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/raw/28b7d14401ca39872a6922ac3df25e1ef95c0750/requirements.txt",
+      "patch_saved": true,
+      "content_base_saved": true,
+      "content_head_saved": true,
+      "previous_filename": null
+    },
+    {
+      "filename": "templates/base.html",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "sha": "8d21b12f013b14b9b13820af41eef883a84b97ec",
+      "blob_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/blob/28b7d14401ca39872a6922ac3df25e1ef95c0750/templates%2Fbase.html",
+      "raw_url": "https://github.com/AlfaInsurance/devQ_testData_PythonProject/raw/28b7d14401ca39872a6922ac3df25e1ef95c0750/templates%2Fbase.html",
+      "patch_saved": true,
+      "content_base_saved": true,
+      "content_head_saved": true,
+      "previous_filename": null
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+<div class="justify-content-md-center">
+<div class="col mt-1">
+    Пожалуйста подождите ...
+</div>
+  <div class="modal" tabindex="-1" role="dialog" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Добро пожаловать</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+<div class="photo rounded pr-2" style="width: 60px; height: 60px;color: #6c757d;border-radius:50%!important;border:1px solid #ccc;margin:0 auto;margin-bottom: 10px">
+<div class="w-80" style="margin-top: 10px;margin-left: 15px;">
+<svg class="svg-inline--fa fa-user fa-w-14 fa-2x" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path></svg><!-- <i class="fas fa-user fa-2x"></i> Font Awesome fontawesome.com -->
+</div>
+</div>
+
+ {% if form.errors %}
+  <p class="text-danger">Неправильное имя пользователя или пароль</p>
+{% endif %}
+
+{% if next %}
+  {% if user.is_authenticated %}
+    <p>У вас нехватает прав для данной страницы</p>
+  {% else %}
+    <p>Пожалуйста, авторизуйтесь</p>
+  {% endif %}
+{% endif %}
+        {% for item in form.fields %}
+            {{ item.value }}
+        {%endfor %}
+<script>
+    $("input.w-100[type='submit']").attr('disabled', 'fasle').val('Войти');
+</script>
+<form id="loginform" class="form-horizontal p-2" role="form" method="post" name="loginform" action="{% url 'login' %}">
+                            {% csrf_token %}
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                        <input id="login-username" value="{{ request.POST.username }}" type="text" class="form-control" name="username" placeholder="Имя пользователя (IvanovII)" autofocus required>
+                                    </div>
+
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                        <input id="login-password" type="password" class="form-control" name="password" placeholder="Пароль" value="{{ request.POST.password }}" required autocomplete="current-password">
+                            </div>
+
+                                <div style="margin-top:10px" class="form-group">
+                                    <div class="col-sm-12 controls">
+                                      <input type="submit" value="Войти" class="btn btn-danger w-100" role="button">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12 control">
+                                        <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%">
+                                            Забыли пароль !?
+                                        <a href="mailto:test@alfastrah.ru?subject=Восстановление пароля">
+                                            Восстановить
+                                        </a>
+                                        </div>
+                                    </div>
+                                </div>
+</form>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+<script>
+{#{% if user.id is not None %}#}
+   document.location.href='/';
+{#{% endif %}#}
+{##}
+{#$(".modal-auth").modal('show');#}
+{#$("#login-username").focus();#}
+</script>
+
+{% endblock %}

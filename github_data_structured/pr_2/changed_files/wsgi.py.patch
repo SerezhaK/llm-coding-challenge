@@ -1,0 +1,10 @@
+@@ -1,7 +1,7 @@
+ import os
+ import sys
+ from django.core.wsgi import get_wsgi_application
+-sys.path.append('/var/www/acl.vesta.ru')
+-sys.path.append('/var/www/acl.vesta.ru/acladmin')
++sys.path.append('/var/www/test.ru')
++sys.path.append('/var/www/test.ru/acladmin')
+ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'acladmin.settings')
+ application = get_wsgi_application()

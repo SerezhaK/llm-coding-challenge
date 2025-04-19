@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+#printf "Init deploying..."
+#mv /var/www/ACL /var/www/acl.vesta.ru -f
+#mkdir -p /var/www/acl.vesta.ru/log
+#chown -R www-data:www-data /var/www/acl.vesta.ru/log
+#cp /var/tmp/ACL.docx /var/www/acl.vesta.ru/templates/
+#chmod 777 /var/www/acl.vesta.ru/templates/ACL/docx
+#chmod 777 /var/www/acl.vesta.ru/static/docx
+#apt-get update
+#apt-get install libxslt-dev libxml2-dev libpam-dev libedit-dev
+#apt-get install python3-pip apache2 libapache2-mod-wsgi-py3
+#apt-get install python-psycopg2
+#sudo a2enmod wsgi
+#pip3 install Django==3.1.6
+#pip3 install psycopg2
+#pip3 install xlrd
+#pip3 install python-docx
+#pip3 install fontawesome-free==5.15.2
+#rintf "Finish"
+
+
+
+
+sudo apt install python3-pip
+sudo pip install virtualenv
+
+
+virtualenv eacl
+source eacl/bin/activate
+
+sudo apt install postgresql postgresql-contrib #Install local postgreSQL
+sudo -u postgres psql -c "CREATE DATABASE acl;"
+sudo -u postgres psql -c "CREATE USER acladmin WITH PASSWORD 'ABCabc123';"
+sudo -u postgres psql -c "grant all privileges on database acl to acladmin;"
+
+
+
+sudo apt-get install build-dep python3-lxml  #fix pip install lxml==4.6.2
+sudo apt-get install python3-dev default-libmysqlclient-dev build-essential #fix pip install  mysqlclient==2.0.3
+sudo apt-get install libpq-dev #fix pip install psycopg2==2.8.6
+
+pip install --upgrade python-docx #fix ImportError: cannot import name 'Sequence' from 'collections'
+
+pip install -r requirements.txt
+
+sudo apt install -y postgresql-client #Для тестирования соединения если django.db.utils.OperationalError
+
+sudo apt install plocate #setup locate
+
+#Тестовая среда:
+while true; do { echo -ne "HTTP/1.0 200 OK\r\nContent-Length: $(wc -c <test)\r\n\r\n"; cat test; } | nc -l -p 8080; done
+python3 -m smtpd -c DebuggingServer -n 127.0.0.1:1025

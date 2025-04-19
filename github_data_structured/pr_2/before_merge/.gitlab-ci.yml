@@ -1,0 +1,115 @@
+
+variables:
+  SITE_ROOT: /var/www/acl.vesta.ru
+  
+stages:
+  - lint
+  - deploy
+  - rollback
+  - cleanup
+
+workflow:
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^prod_/
+    - if: $CI_COMMIT_TAG =~ /^test_/
+
+lint_code:
+  image: nx-docker-proxy.alfastrah.ru/pipelinecomponents/pylint:amd64-3ea6e68
+  stage: lint
+  script:
+    - ls -las
+    - pylint --exit-zero --load-plugins=pylint_gitlab --output-format=gitlab-codeclimate:codeclimate.json **/*.py
+  artifacts:
+    reports:
+      codequality: codeclimate.json
+    when: always
+  allow_failure: true
+
+  tags: [ k8s-alfastrah]
+
+.deploy_web:
+  stage: deploy
+  script:
+    - backup_archive=/var/tmp/acl-backup$(date "+%Y%m%d$H%M%S")
+    - echo "BACKUP_ARCHIVE=$backup_archive" >> deploy_web.env
+    - tar -czf $backup_archive.tar.gz $SITE_ROOT
+    - ls -las $CI_PROJECT_DIR
+    - cp -r $CI_PROJECT_DIR/* $SITE_ROOT
+    - if grep -q '^COMMIT_TAG=' $SITE_ROOT/.env; then
+        sudo sed -i "s/^COMMIT_TAG=.*/COMMIT_TAG=$CI_COMMIT_TAG/" $SITE_ROOT/.env;
+      else
+        echo "COMMIT_TAG=$CI_COMMIT_TAG" | sudo tee -a $SITE_ROOT/.env;
+      fi
+    - sudo python -m pip config set global.index https://nx.alfastrah.ru/repository/pypi-proxy/pypi
+    - sudo python -m pip config set global.index-url https://nx.alfastrah.ru/repository/pypi-proxy/simple
+    - sudo python -m pip config set global.trusted-host nx.alfastrah.ru
+    - sudo python -m pip install --upgrade -r requirements.txt
+    - sudo service apache2 restart
+    - sudo service celery restart
+    - sudo service celerybeat restart
+  allow_failure: true
+  artifacts:
+    reports:
+      dotenv: deploy_web.env
+
+deploy-to-test:
+  extends: .deploy_web
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^test_/
+  tags: [acl-vesta-ru-test]
+
+deploy-to-prod:
+  extends: .deploy_web
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^prod_/  
+  tags: [acl-vesta-ru-prod]
+
+.rollback_deployment:
+  stage: rollback
+  script:
+    - >
+      if [ -s "$BACKUP_ARCHIVE" ]; then
+        echo "Restoring $BACKUP_ARCHIVE"
+        rm -r $SITE_ROOT
+        tar -vxf $BACKUP_ARCHIVE --directory /
+        sudo service apache2 restart
+      else
+        echo "BACKUP_ARCHIVE not found."
+      fi
+
+rollback-deployment-test:
+  extends: .rollback_deployment
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^test_/
+      when: on_failure
+  tags: [acl-vesta-ru-test]
+  dependencies: 
+    - deploy-to-test
+
+rollback-deployment-prod:
+  extends: .rollback_deployment
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^prod_/  
+      when: on_failure    
+  tags: [acl-vesta-ru-prod]
+  dependencies: 
+    - deploy-to-prod
+
+.runner-cleanup:
+  stage: cleanup
+  script:
+    - echo "Cleaning up $CI_PROJECT_DIR"
+  after_script:
+    - rm -rf $CI_PROJECT_DIR
+
+runner-cleanup-test:
+  extends: .runner-cleanup
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^test_/
+  tags: [acl-vesta-ru-test]
+
+runner-cleanup-prod:
+  extends: .runner-cleanup
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^prod_/
+  tags: [acl-vesta-ru-prod]

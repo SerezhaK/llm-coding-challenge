@@ -3,14 +3,16 @@ import streamlit as st
 from components.sidebar import sidebar
 from components.page import init_page
 from datetime import datetime, timedelta
-from components.user_selector import user_selector, get_contributors
+from components.user_selector import user_selector
 import sys
 from pathlib import Path
 import os
+from components.user_date_validation import url_validations
 
 sys.path.append(str(Path(__file__).parent.parent))
 
 from llm_logic.api_request import make_api_request
+from llm_logic.code_reviewer import code_review
 
 
 def main():
@@ -23,7 +25,8 @@ def main():
         help="Введите ссылку на конкретный репозиторий"
     )
 
-    # if github_url:
+    if github_url:
+        owner, repo = url_validations(github_url)
     # st.markdown( get_contributors(github_url, token=os.environ.get("GITHUB_TOKEN")))
     # github_username = user_selector(contributors)
 
@@ -54,16 +57,21 @@ def main():
         "Если хотите уточнить запрос к review, то можете написать тут:",
         height=150
     )
-
+    # if st.button("фывф"):
+    #     st.text([start_date, end_date])
     if st.button("Выполнить code review"):
         if github_url and (len(github_username) != 0) and (len(branch_for_merge_history) != 0):
             with st.spinner("Анализирую код..."):
 
                 # big analysis
-                response = make_api_request(user_query)
-                if response:
-                    st.markdown("### Результат анализа")
-                    st.markdown(response)
+                code_review(
+                    github_owner=owner,
+                    github_repo=repo,
+                    coder_to_analyze_login=github_username,
+                    branch_for_merge_history=branch_for_merge_history,
+                    analysis_start_date_str=start_date,
+                    analysis_end_date_str=end_date,
+                )
         else:
             st.warning("Пожалуйста заполните данные")
 
